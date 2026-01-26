@@ -14,26 +14,27 @@
 // }
 
 
+
+
 import React from 'react'
-import User from './User'
+import User from './User.jsx'
 
 export default function Component8() {
-    const UserObj = {
-        name : '안예슬',
+    const UserProps = {
+        name : '홍길동',
         age : 32,
-        body : '164cm',
+        body : '180cm',
     }
-
-    const handlerClick = () => {
-        console.log('버튼 클릭됨')
+    
+    const handlerCLick = () => {
+        console.log('click')
     }
     return (
         <>
-            <User Obj={UserObj} Handler={handlerClick}/>
+            <User Obj={UserProps} Habdler={handlerCLick}/>
         </>
     )
 }
-
 
 
 

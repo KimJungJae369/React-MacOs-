@@ -21,30 +21,21 @@ import React from 'react'
 import User from './User'
 
 export default function Component() {
-    const UserObj = {
+    const UserObj  = {
         name : '홍길동',
-        age : 20,
-        body : '나는 홍길동이다',
+        age : 32,
+        body : '건강함',
     }
 
-    const hnadlerClick = () => {
-        console.log('클릭이 되었습니다')
+    const handlerClick = () => {
+        console.log('clicked')
     }
     return (
         <>
-            <User {...UserObj} Handler={hnadlerClick}/>
+            <User {...UserObj} Handler={handlerClick}/>
         </>
     )
 }
-
-
-
-
-
-
-
-
-
 
 
 

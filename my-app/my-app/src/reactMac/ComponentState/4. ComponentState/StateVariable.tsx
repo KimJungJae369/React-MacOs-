@@ -16,6 +16,7 @@ export default function StateVariable() {
     = '상태 값'은 '상태 변수'가 현재 가지고 있는 값
         ex) const [state, setState] = useState(10); // 초깃값 : 10, 상태 변수 : state , 상태 값 : 10
 
+        
     = 변수에 값을 직접 재할당하면 안된다
         ex) const [state, setState] = useState(10);
             state = 20; // ❌ 이렇게 하면 안됨

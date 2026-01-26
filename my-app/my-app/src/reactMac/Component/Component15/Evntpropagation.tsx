@@ -19,20 +19,24 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handlerCaptrue = () => {
-//         console.log('정재')
+//     const handllerCaptrue = () => {
+//         console.log('부모')
 //     }
 
 //     const handlerBubble = () => {
-//         console.log('에슬')
+//         console.log('자식')
 //     }
 //   return (
-//     <div onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClickCapture={handllerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
 
 
 
@@ -80,17 +84,23 @@
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handlerCaptrue = () => {
-//         console.log('정재')
+//     const handllerCaptrue = () => {
+//         console.log('부모')
 //     }
 
 //     const handlerBubble = () => {
-//         console.log('에슬')
+//         console.log('자식')
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClick={handllerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
+
+
+
 
 
 
@@ -133,21 +143,29 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
 //     const handlerCaptrue = () => {
-//         console.log('정재')
+//         console.log('부모')
 //     }
 
 //     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         e.stopPropagation();
-//         console.log('에슬')
-//     }
+//         console.log('자식')
+//     } 
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>onClick</button></div>
 //   )
 // }
+
+
+
+
+
+
+
 
 
 
@@ -189,27 +207,20 @@
 //     )
 // }
 
+
 import React from 'react'
 
 export default function Evntpropagation() {
-    return (
-        <>
-            <form onSubmit={(e) => {e.preventDefault();}}>
-                <input type="text" />
-                <input type="password" />
-                <button type="submit">click</button>
-            </form>
-        </>
-    )
+  return (
+    <>
+        <form onSubmit={(e) => e.preventDefault()}>
+            <input type="text" />
+            <input type="password" />
+            <button type="submit">전송</button>
+        </form>
+    </>
+  )
 }
-
-
-
-
-
-
-
-
 
 
 

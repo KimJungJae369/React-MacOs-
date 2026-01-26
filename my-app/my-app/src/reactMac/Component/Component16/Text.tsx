@@ -18,18 +18,19 @@
         4. 버튼을 클릭하면 부모 컴포넌트 에서 전달받은 이벤트 핸들러가 실행된다 이벤트 핸들러의 로직은 자유롭게 구현
       */}
 
-
 import React from 'react'
 import Button from './Button'
 
 export default function Text() {
   return (
     <>
-      <Button handlerClick = {() => alert('login')}>login</Button>
-      <Button handlerClick = {() => alert('logout')}>logout</Button>
+      <Button handlerLCick = {() => alert('login')}>login</Button>
+      <Button handlerLCick = {() => alert('logout')}>logout</Button>
     </>
   )
 }
+
+
 
 
 

@@ -54,7 +54,7 @@
 function Header(){
   return(
     <header>
-      <h1>Header</h1>
+      <h1>My Website</h1>
       <Nav />
     </header>
   )
@@ -63,7 +63,7 @@ function Header(){
 function Nav(){
   return(
     <nav>
-      <h2>Home | About | Services | Content</h2>
+      <h2>Home | About | Services | Contact</h2>
     </nav>
   )
 }
@@ -71,7 +71,7 @@ function Nav(){
 function Article(){
   return(
     <article>
-      <h3>Article</h3>
+      <h3>Main Article</h3>
     </article>
   )
 }
@@ -79,7 +79,7 @@ function Article(){
 function Section(){
   return(
     <section>
-      <h4>Section</h4>
+      <h4>More Detail</h4>
     </section>
   )
 }
@@ -87,7 +87,7 @@ function Section(){
 function Aside(){
   return(
     <aside>
-      <h4>Aside</h4>
+      <h5>Related links</h5>
     </aside>
   )
 }
@@ -95,8 +95,8 @@ function Aside(){
 function Footer(){
   return(
     <footer>
-      <h4>Footer</h4>
-    </footer> 
+      <h6>&copy; 2025 My Website All rights reserved.</h6>
+    </footer>
   )
 }
 

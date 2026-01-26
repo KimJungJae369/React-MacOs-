@@ -15,7 +15,6 @@ export default function Component3() {
 }
 
 
-
 /*
     Function Component(함수형 컴포넌트)
     = 함수를 사용해 컴포넌트를 작성하는 방식

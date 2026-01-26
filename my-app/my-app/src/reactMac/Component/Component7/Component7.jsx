@@ -6,15 +6,16 @@
 
 
 import React from 'react'
-import User from './User.jsx'
+import User from './User'
 
 export default function Component7() {
     return (
         <>
-            <User name="안예슬" age={32} body="16cm" />
+            <User name="철수"  age={31} body="180cm"/>
         </>
     )
 }
+
 
 
 /*

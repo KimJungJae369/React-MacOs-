@@ -19,14 +19,18 @@ import User from './User'
 export default function Children() {
     return (
         <>
-            <User title="Children Component">
-                <h2>안녕하세요</h2>
-                <h3>잘부탁드립니다</h3>
-                <h4>반갑습니다</h4>
+            <User title="User Component">
+                <h2>React</h2>
+                <h3>JavaScript</h3>
+                <h4>CSS</h4>
+                <h5>HTML</h5>
+                <h6>GitHub</h6>
             </User>
         </>
     )
 }
+
+
 
 
 

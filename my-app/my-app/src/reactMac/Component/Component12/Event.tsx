@@ -9,19 +9,16 @@
 //     )
 // }
 
-
 import React from 'react'
 import Button from './Button'
 
 export default function Event() {
     return (
         <>
-            <Button ondkasl={() => alert('안녕하세요')}></Button>
+            <Button ldkasldklas={() => alert('이상한 이름이라도 이벤트가 된다')}></Button>
         </>
     )
 }
-
-
 
 
 /*

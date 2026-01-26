@@ -9,9 +9,20 @@
 
 // export default function Handler() {
 //   return (
-//     <button onClick={() => alert('인라인 방식')}>Handler</button>
+//     <button onClick={() => alert('인라인 핸들러')}>Handler</button>
 //   )
 // }
+
+// import React from 'react'
+
+// export default function Handler() {
+//     return (
+//         <button onClick={() => alert('인라인 핸들러 방식')}>Handler</button>
+//     )
+// }
+
+
+
 
 
 
@@ -45,13 +56,21 @@
 // import React from 'react'
 
 // export default function Handler() {
-//     const handlerClick = () => {
-//         console.log('함수 참조 방식')
+//     const handlerLcick = () => {
+//         alert('Function reference handler')
 //     }
 //   return (
-//     <button onClick={handlerClick}>Handler</button>
+//     <button onClick={handlerLcick}>Handler</button>
 //   )
 // }
+
+
+
+
+
+
+
+
 
 
 
@@ -85,13 +104,16 @@
 import React from 'react'
 
 export default function Handler() {
-    const handlerClick = (mess : string) => {
-        console.log(mess)
-    } 
-    return (
-        <button onClick={() => {handlerClick('함수 참조 매개변수')}}>Handler</button>
-    )
+    const handlerClick = (title : string) => {
+        alert(title)
+    }
+  return (
+    <button onClick={() => handlerClick('argument')}>Handler</button>
+  )
 }
+
+
+
 
 
 

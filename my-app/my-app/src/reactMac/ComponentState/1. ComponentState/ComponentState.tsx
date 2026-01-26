@@ -15,6 +15,8 @@ export default function ComponentState() {
         </div>
     )
 }
+
+
 /*
     ComponentState(컴포넌트 상태)란
     = 리액트 컴포넌트에서 데이터를 정의하는 가장 간단한 방법은 자바스크립트의 'let'이나 'const' 키워드를 사용해 변수를 선언하는 것

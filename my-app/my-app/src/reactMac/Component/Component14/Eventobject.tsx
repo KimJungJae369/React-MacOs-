@@ -32,6 +32,7 @@
 
 
 
+
 // 2. 이벤트 객체와 함수 참조
 // import React from 'react'
 
@@ -49,13 +50,20 @@
 // import React from 'react'
 
 // export default function Eventobject() {
-//     const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//     const handelerClick = (e : React.MouseEvent <HTMLButtonElement, MouseEvent>) => {
 //         console.log(e)
 //     }
 //   return (
-//     <button onClick={clickHandler}>Eventobject</button>
+//     <button onClick={handelerClick}>Eventobject</button>
 //   )
 // }
+
+
+
+
+
+
+
 
 
 
@@ -104,17 +112,14 @@
 import React from 'react'
 
 export default function Eventobject() {
-    const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, title : string) => {
+    const handelerClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, title : string) => {
         console.log(e);
-        alert(title);
+        alert(title)
     }
   return (
-    <button onClick={(e) => {clickHandler(e, 'Hello!')}}>Eventobject</button>
+    <button onClick={(e) => handelerClick(e, 'Hello!')}>Eventobject</button>
   )
 }
-
-
-
 
 
 
@@ -134,11 +139,12 @@ export default function Eventobject() {
         ex) <button onClick={(e) => {console.log(e);}}>click</button>  // 출력값 : SyntheticBaseEvent 
         - 코드에서 'e'는 이벤트 객체를 의미
         - 보통 'e' 또는 'event'라는 이름을 사용
-        - e를 넣을 때 상황 : 이벤트 핸들러에서 이벤트 객체를 사용해야 할 때 사용
-        - e를 넣지 않아도 될 때 상황 : 이벤트 핸들러에서 이벤트 객체를 사용하지 않을 때는 생략 가능
+        - e를 넣을 때 상황 : 이벤트 핸들러에서 이벤트 객체를 사용해야 할 때 사용 ex) e.target.value, e.preventDefault() 등
+        - e를 넣지 않아도 될 때 상황 : 이벤트 핸들러에서 이벤트 객체를 사용하지 않을 때는 생략 가능 ex) <button onClick={() => {alert('clicked!');}}>click</button>
 
     = 리액트는 '타입스크립트' 환경에서도 이벤트 객체의 타입을 자동으로 추론하므로 타입을 명시하지 않아도 기본적인 속성과 메서드를 사용할 수 있다
     = 예를 들어 'e.target.value, e.preventDefault()'같은 메서드는 타입을 생략해도 문제없이 작동
+        target : 이벤트가 발생한 요소
 
     <이벤트 객체와 함수 참조>
     = '함수 참조' 방식에서는 이벤트 핸들러에 이벤트 객체를 직접 전달하지 않아도 리액트가 자동으로 이벤트 객체를 해당함수의 첫 번째 매개변수로 전달

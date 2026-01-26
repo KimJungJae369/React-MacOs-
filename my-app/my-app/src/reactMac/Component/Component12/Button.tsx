@@ -8,10 +8,11 @@
 
 import React from 'react'
 
-export default function Button({ondkasl,} : {ondkasl : () => void}) {
+export default function Button({ldkasldklas} : {ldkasldklas : () => void}) {
     return (
         <>
-            <button onClick={ondkasl}>click</button>
+            <button onClick={ldkasldklas}>click</button>
         </>
     )
 }
+
