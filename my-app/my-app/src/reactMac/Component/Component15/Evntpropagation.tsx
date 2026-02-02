@@ -19,11 +19,10 @@
 //     )
 // }
 
-
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handllerCaptrue = () => {
+//     const handlerCaptrue = () => {
 //         console.log('부모')
 //     }
 
@@ -31,7 +30,7 @@
 //         console.log('자식')
 //     }
 //   return (
-//     <div onClickCapture={handllerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
 
@@ -81,10 +80,11 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handllerCaptrue = () => {
+//     const handlerCaptrue = () => {
 //         console.log('부모')
 //     }
 
@@ -92,12 +92,9 @@
 //         console.log('자식')
 //     }
 //   return (
-//     <div onClick={handllerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
-
-
-
 
 
 
@@ -150,15 +147,16 @@
 //     const handlerCaptrue = () => {
 //         console.log('부모')
 //     }
-
 //     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         e.stopPropagation();
 //         console.log('자식')
-//     } 
+//     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>onClick</button></div>
+//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
 
 
 
@@ -207,20 +205,24 @@
 //     )
 // }
 
-
 import React from 'react'
 
 export default function Evntpropagation() {
   return (
     <>
         <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" />
-            <input type="password" />
-            <button type="submit">전송</button>
-        </form>
+            <input type="text" />    
+            <input type="password" />    
+            <button type='submit'>click</button>
+        </form> 
     </>
   )
 }
+
+
+
+
+
 
 
 

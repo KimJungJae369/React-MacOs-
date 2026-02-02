@@ -17,7 +17,6 @@ export default class Component2 extends Component {
 }
 
 
-
 /*
     Class Component(클래스 컴포넌트)
     = 'ES6'에서 도입된 클래스 문법을 사용해 컴포넌트를 정의

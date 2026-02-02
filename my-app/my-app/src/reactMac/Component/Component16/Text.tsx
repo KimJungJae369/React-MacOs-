@@ -24,14 +24,11 @@ import Button from './Button'
 export default function Text() {
   return (
     <>
-      <Button handlerLCick = {() => alert('login')}>login</Button>
-      <Button handlerLCick = {() => alert('logout')}>logout</Button>
+      <Button dllsakl={() => alert('login')}>login</Button>
+      <Button dllsakl={() => alert('logout')}>logout</Button>
     </>
   )
 }
-
-
-
 
 
 

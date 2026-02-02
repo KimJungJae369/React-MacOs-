@@ -6,13 +6,14 @@
 //     )
 // }
 
+
 import React from 'react'
 
-export default function Button({ldkasldklas} : {ldkasldklas : () => void}) {
-    return (
-        <>
-            <button onClick={ldkasldklas}>click</button>
-        </>
-    )
+export default function Button({ksasl} : {ksasl : () => void}) {
+  return (
+    <>
+      <button onClick={ksasl}>click</button>
+    </>
+  )
 }
 

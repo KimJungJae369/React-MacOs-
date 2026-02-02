@@ -13,13 +13,9 @@
 //   )
 // }
 
-// import React from 'react'
 
-// export default function Handler() {
-//     return (
-//         <button onClick={() => alert('인라인 핸들러 방식')}>Handler</button>
-//     )
-// }
+
+
 
 
 
@@ -56,13 +52,16 @@
 // import React from 'react'
 
 // export default function Handler() {
-//     const handlerLcick = () => {
-//         alert('Function reference handler')
+//     const handlerClick = () => {
+//         console.log('Function reference handler')
 //     }
 //   return (
-//     <button onClick={handlerLcick}>Handler</button>
+//     <button onClick={handlerClick}>Handler</button>
 //   )
 // }
+
+
+
 
 
 
@@ -104,13 +103,14 @@
 import React from 'react'
 
 export default function Handler() {
-    const handlerClick = (title : string) => {
-        alert(title)
+    const handlerLCick = (title : string) => {
+        console.log(title)
     }
   return (
-    <button onClick={() => handlerClick('argument')}>Handler</button>
+    <button onClick={() => {handlerLCick('argument')}}>Handler</button>
   )
 }
+
 
 
 

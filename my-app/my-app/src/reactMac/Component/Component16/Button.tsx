@@ -18,11 +18,10 @@
 
 import React from 'react'
 
-export default function Button({children,handlerLCick}:{children : React.ReactNode, handlerLCick : () => void}) {
+export default function Button({dllsakl,children} : {dllsakl : () => void, children : React.ReactNode}) {
   return (
     <>
-      <button onClick={handlerLCick}>{children}</button>
+      <button onClick={dllsakl}>{children}</button>
     </>
   )
 }
-

@@ -21,13 +21,12 @@ type UserProps = {
     age : number,
     body : string,
   },
-  Handler : () => void
+  Handler : () => void,
 }
-
 import React from 'react'
 
 export default function User(props : UserProps) {
-  const {name, age, body, Handler} = props;
+  const{name,age,body,Handler} = props;
   return (
     <>
       <h1>name : {name}</h1>
@@ -37,9 +36,6 @@ export default function User(props : UserProps) {
     </>
   )
 }
-
-
-
 
 
 

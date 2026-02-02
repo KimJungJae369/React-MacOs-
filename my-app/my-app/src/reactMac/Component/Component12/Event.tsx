@@ -15,11 +15,10 @@ import Button from './Button'
 export default function Event() {
     return (
         <>
-            <Button ldkasldklas={() => alert('이상한 이름이라도 이벤트가 된다')}></Button>
+            <Button ksasl={() => alert('이상한 이름도 상관없다')}></Button>
         </>
     )
 }
-
 
 /*
     컴포넌트와 이벤트
