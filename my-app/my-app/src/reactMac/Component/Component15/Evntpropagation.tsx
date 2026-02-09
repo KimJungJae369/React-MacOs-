@@ -55,8 +55,6 @@
 
 
 
-
-
 // 2. 버블링
 // import React from 'react'
 
@@ -80,11 +78,10 @@
 //     )
 // }
 
-
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handlerCaptrue = () => {
+//      const handlerCaptrue = () => {
 //         console.log('부모')
 //     }
 
@@ -95,6 +92,9 @@
 //     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
 
 
 
@@ -144,10 +144,11 @@
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handlerCaptrue = () => {
+//      const handlerCaptrue = () => {
 //         console.log('부모')
 //     }
-//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+
+//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement>) => {
 //         e.stopPropagation();
 //         console.log('자식')
 //     }
@@ -155,6 +156,9 @@
 //     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
 
 
 
@@ -199,11 +203,13 @@
 //             >
 //                 <input type="text" name='email'/>
 //                 <input type="password" />
-//                 <button type='submit'>전송</button>
+//                 <button type
+// sutype='submit'>전송</button>
 //             </form>
 //         </>
 //     )
 // }
+
 
 import React from 'react'
 
@@ -211,13 +217,14 @@ export default function Evntpropagation() {
   return (
     <>
         <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" />    
-            <input type="password" />    
+            <input type="text" />
+            <input type="password" />
             <button type='submit'>click</button>
-        </form> 
+        </form>
     </>
   )
 }
+
 
 
 

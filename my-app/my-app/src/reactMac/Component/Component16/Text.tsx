@@ -24,8 +24,8 @@ import Button from './Button'
 export default function Text() {
   return (
     <>
-      <Button dllsakl={() => alert('login')}>login</Button>
-      <Button dllsakl={() => alert('logout')}>logout</Button>
+          <Button dsakld={() => alert('login')}>login</Button>
+          <Button dsakld={() => alert('logout')}>logout</Button>
     </>
   )
 }

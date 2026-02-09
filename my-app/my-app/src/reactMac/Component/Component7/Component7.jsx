@@ -5,21 +5,24 @@
 // }
 
 
+
 import React from 'react'
 import User from './User'
 
 export default function Component7() {
     return (
         <>
-            <User name='철수' age={32} body="180cm"/>
+            <User name="철수" age={32} body="180cm"/>
         </>
     )
 }
 
 
 
+
+
 /*
-    컴포넌트와 props 객체
+    컴포넌트와 props 객체 
     = 리액트에서 '부모 컴포넌트'가 '자식 컴포넌트'에 데이터를 전달할 수 있다
 
     <props 객체란>

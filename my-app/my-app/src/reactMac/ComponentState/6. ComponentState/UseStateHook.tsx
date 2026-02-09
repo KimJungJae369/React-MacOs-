@@ -2,13 +2,22 @@ import React from 'react'
 import { useState } from 'react'
 
 export default function UseStateHook() {
-    const [count,setCount] = useState(0);
+    // const [count,setCount] = useState(0);
+    // const clickHandler = () => setCount(count => count + 1);
 
-    const clickHandler = () => setCount(count => count + 1);
+
+    
+    const [count, setCount] = useState(0);
+    const handlkerClick = () =>setCount(count + 1);
+``
     return (
         <>
+            {/* <h1>Count : {count}</h1>
+            <button onClick={clickHandler}>click</button> */}
+
+
             <h1>Count : {count}</h1>
-            <button onClick={clickHandler}>click</button>
+            <button onClick={handlkerClick}>Click</button>
         </>
     )
 }
@@ -37,7 +46,7 @@ export default function UseStateHook() {
     1. useState 훅으로 상태를 생성
     2. '상태_변경_함수(새로운 값)'을 호출해 상태로 변경
     3. 리액트는 이전 상태 값과 새로운 값을 비교해 변경 여부를 판단
-    4. 상태가 변경되었다면 해감 컴포넌트를 리렌더링한다
+    4. 상태가 변경되었다면 해당 컴포넌트를 리렌더링한다
 
     Tip) 콜백함수 형태로 작성하는 방식을 더 권장 이 방식은 상태 값을 안전하게 참조할 수 있어 예기치 않은 문제를 방지할 수 있다
 */

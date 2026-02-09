@@ -13,21 +13,19 @@
 //     )
 // }
 
-
-
 import React from 'react'
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
 
 export default function Component5() {
-    return (
-        <>
-            <Header />
-            <Main />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+        <Header />
+        <Main />
+        <Footer />
+    </>
+  )
 }
 
 

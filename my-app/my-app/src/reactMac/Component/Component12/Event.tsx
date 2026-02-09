@@ -15,7 +15,7 @@ import Button from './Button'
 export default function Event() {
     return (
         <>
-            <Button ksasl={() => alert('이상한 이름도 상관없다')}></Button>
+            <Button dasop={() => alert('이상한 이름이라도 상관없다')}></Button>
         </>
     )
 }

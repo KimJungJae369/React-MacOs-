@@ -16,12 +16,13 @@
         4. 버튼을 클릭하면 부모 컴포넌트에서 전달받은 이벤트 핸들러가 실행된다 이벤트 핸들러의 로직(로직 : 입력 결과)은 자유롭게 구현
 */}
 
+
 import React from 'react'
 
-export default function Button({dllsakl,children} : {dllsakl : () => void, children : React.ReactNode}) {
+export default function Button({dsakld,children} : {dsakld : ()=> void, children : React.ReactNode}) {
   return (
     <>
-      <button onClick={dllsakl}>{children}</button>
+        <button onClick={dsakld}>{children}</button>
     </>
   )
 }

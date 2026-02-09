@@ -32,7 +32,7 @@ export default function Component() {
     }
     return (
         <>
-            <User {...UserObj} Handler={handlerClick}/>
+            <User {...UserObj} Handler={handlerClick} />
         </>
     )
 }

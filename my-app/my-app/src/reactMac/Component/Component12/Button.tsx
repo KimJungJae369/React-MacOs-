@@ -6,14 +6,12 @@
 //     )
 // }
 
-
 import React from 'react'
 
-export default function Button({ksasl} : {ksasl : () => void}) {
+export default function Button({dasop} : {dasop : ()=> void}) {
   return (
     <>
-      <button onClick={ksasl}>click</button>
+      <button onClick={dasop}>click</button>
     </>
   )
 }
-

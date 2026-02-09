@@ -63,7 +63,6 @@ function Article(){
   return(
     <article>
       <h2>Main Article</h2>
-      <Nav />
     </article>
   )
 }
@@ -79,6 +78,7 @@ function Nav(){
 function Section(){
   return(
     <section>
+      <Nav />
       <h4>More Detail</h4>
     </section>
   )
