@@ -7,11 +7,11 @@
 // }
 
 
-interface UserProps{
+interface UserPorps{
   Obj : {
-    name : string,
+    name : string, 
     age : number,
-    body : string,
+    body : string
   },
   Handler : () => void;
 }

@@ -31,7 +31,8 @@ import './index.css'
 // import ComponentState from './reactMac/ComponentState/4. ComponentState/StateVariable'
 // import ComponentState from './reactMac/ComponentState/5. ComponentState/useState'
 // import ComponentState from './reactMac/ComponentState/6. ComponentState/UseStateHook'
-import ComponentState from './reactMac/ComponentState/7. ComponentState/UseStateHook2'
+// import ComponentState from './reactMac/ComponentState/7. ComponentState/UseStateHook2'
+import ComponentState from './reactMac/ComponentState/8. ComponentState/UseStateHook3'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

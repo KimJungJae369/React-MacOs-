@@ -9,11 +9,9 @@
 
 // export default function Handler() {
 //   return (
-//     <button onClick={() => alert('인라인 핸들러')}>Handler</button>
+//     <button onClick={() => alert('inline handler')}>Handler</button>
 //   )
 // }
-
-
 
 
 
@@ -51,11 +49,11 @@
 // import React from 'react'
 
 // export default function Handler() {
-//     const handlerLCick = () => {
+//     const handlerClick = () => {
 //         alert('Function reference handler')
 //     }
 //   return (
-//     <button onClick={handlerLCick}>Handler</button>
+//     <button onClick={handlerClick}>Handler</button>
 //   )
 // }
 
@@ -96,17 +94,17 @@
 //     )
 // }
 
-
 import React from 'react'
 
 export default function Handler() {
-    const handlerLCik = (title : string) => {
-        console.log(title)
-    }  
+    const hadnerlClick = (title : string) => {
+        console.log(title);
+    } 
   return (
-    <button onClick={() => {handlerLCik('Button clicked')}}>Handler</button>
+    <button onClick={() => hadnerlClick('Hello')}>Handler</button>
   )
 }
+
 
 
 

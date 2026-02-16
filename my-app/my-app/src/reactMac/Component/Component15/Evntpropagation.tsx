@@ -55,6 +55,9 @@
 
 
 
+
+
+
 // 2. 버블링
 // import React from 'react'
 
@@ -78,6 +81,7 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
@@ -92,6 +96,8 @@
 //     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
 
 
 
@@ -144,7 +150,7 @@
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//      const handlerCaptrue = () => {
+//     const handlerCaptrue = () => {
 //         console.log('부모')
 //     }
 
@@ -156,6 +162,8 @@
 //     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
 
 
 
@@ -219,11 +227,12 @@ export default function Evntpropagation() {
         <form onSubmit={(e) => e.preventDefault()}>
             <input type="text" />
             <input type="password" />
-            <button type='submit'>click</button>
+            <button typeof='submit'>click</button>
         </form>
     </>
   )
 }
+
 
 
 

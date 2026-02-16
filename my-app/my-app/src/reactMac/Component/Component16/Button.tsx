@@ -14,15 +14,18 @@
         2. Button 컴포넌트에는 버튼을  내용과 이벤트 핸들러를 전달
         3. Button 컴포넌트는 부모 컴포넌트에서 전달한 내용과 이벤트 핸들러를 받아 내용은 렌더링하고 이벤트 핸들러는 클릭 이벤트 속성에 할당
         4. 버튼을 클릭하면 부모 컴포넌트에서 전달받은 이벤트 핸들러가 실행된다 이벤트 핸들러의 로직(로직 : 입력 결과)은 자유롭게 구현
+        : () => void = 함수의 타입스크립트 문법 / 함수의 매개변수로 함수를 전달할 때 사용 / 반환값이 없는 함수
 */}
 
 
 import React from 'react'
 
-export default function Button({dsakld,children} : {dsakld : ()=> void, children : React.ReactNode}) {
+export default function Button({dasd,children} : {dasd : () => void, children : React.ReactNode}) {
   return (
     <>
-        <button onClick={dsakld}>{children}</button>
+      <button onClick={dasd}>{children}</button>
     </>
   )
 }
+
+

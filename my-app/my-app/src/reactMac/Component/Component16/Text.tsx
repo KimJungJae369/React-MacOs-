@@ -24,8 +24,8 @@ import Button from './Button'
 export default function Text() {
   return (
     <>
-          <Button dsakld={() => alert('login')}>login</Button>
-          <Button dsakld={() => alert('logout')}>logout</Button>
+      <Button dasd={() => alert('login')}>login</Button>
+      <Button dasd={() => alert('logout')}>logout</Button>
     </>
   )
 }

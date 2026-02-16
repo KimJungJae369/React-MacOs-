@@ -6,10 +6,12 @@ export default function UseStateHook() {
     // const clickHandler = () => setCount(count => count + 1);
 
 
+    const [count, setCount]= useState<number>(0);
+    const result = () => {
+        setCount((count) => count + 1)
+    }
     
-    const [count, setCount] = useState(0);
-    const handlkerClick = () =>setCount(count + 1);
-``
+
     return (
         <>
             {/* <h1>Count : {count}</h1>
@@ -17,7 +19,7 @@ export default function UseStateHook() {
 
 
             <h1>Count : {count}</h1>
-            <button onClick={handlkerClick}>Click</button>
+            <button onClick={result}>click</button>
         </>
     )
 }

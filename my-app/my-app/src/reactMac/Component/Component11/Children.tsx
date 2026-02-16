@@ -19,7 +19,7 @@ import User from './User'
 export default function Children() {
     return (
         <>
-            <User title="Frontend Developer">
+            <User title = 'User Component'>
                 <h2>React</h2>
                 <h3>JavaScript</h3>
                 <h4>TypeScript</h4>

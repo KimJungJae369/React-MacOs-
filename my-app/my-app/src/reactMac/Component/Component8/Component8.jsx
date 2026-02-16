@@ -22,12 +22,12 @@ import User from './User.jsx'
 export default function Component8() {
     const UserObj = {
         name : '홍길동',
-        age : `28세`,
-        body : '180cm',
+        age : 32,
+        body : '건강함',
     }
-    
+
     const handlerClick = () => {
-        console.log('click')
+        console.log('클릭')
     }
     return (
         <>
