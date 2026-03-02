@@ -9,11 +9,11 @@ import React from 'react'
 import User from './User'
 
 export default function Component7() {
-    return (
-        <>
-            <User name = "철수" age = {30} body = "180cm"/>
-        </>
-    )
+  return (
+    <>
+        <User name="철수" age={30} body="180cm"/>
+    </>
+  )
 }
 
 
@@ -21,7 +21,7 @@ export default function Component7() {
 
 /*
     컴포넌트와 props 객체 
-    = 리액트에서 '부모 컴포넌트'가 '자식 컴포넌트'에 데이터를 전달할 수 있다
+    = 리액트에서 '부모 컴포넌트'가 '자식 컴포넌트'에 데이터를 전달할 수 있다    
 
     <props 객체란>
     = 컴포넌트를 마치 HTML 태그처럼 사용해 값을 속성 형태로 전달

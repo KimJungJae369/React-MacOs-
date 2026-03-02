@@ -32,7 +32,8 @@ import './index.css'
 // import ComponentState from './reactMac/ComponentState/5. ComponentState/useState'
 // import ComponentState from './reactMac/ComponentState/6. ComponentState/UseStateHook'
 // import ComponentState from './reactMac/ComponentState/7. ComponentState/UseStateHook2'
-import ComponentState from './reactMac/ComponentState/8. ComponentState/UseStateHook3'
+// import ComponentState from './reactMac/ComponentState/8. ComponentState/UseStateHook3'
+import UseReduceHook from './reactMac/useReducer/1. UseReduceHook/UseReduceHook'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -45,7 +46,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Jsx4/> */}
     {/* <Component1 /> */}
     {/* <Component2 /> */}
-    {/* <Component3 /> */}
+    {/* <Component3 />   */}
     {/* <Component4 /> */}
     {/* <Component5 /> */}
     {/* <Component6 /> */}
@@ -60,6 +61,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Component15 /> */}
     {/* <Text/> */}
     
-    <ComponentState />
+    {/* <ComponentState /> */}
+    
+    <UseReduceHook />
   </StrictMode>
 )

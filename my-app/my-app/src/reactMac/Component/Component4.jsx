@@ -32,7 +32,6 @@
 // }
 // export default Component4;
 
-
 // 3. 화살표 함수
 // const Component4 = () => {
 //     return(
@@ -60,8 +59,8 @@ export default Component4
 
     <컴포넌트 확장자>
     = 리액트에서는 컴포넌트를 작성할 때 '.js, .jsx, .ts, .tsx'같은 파일 확장자를 사용할 수 있다
-    = 하지만 확장자에 따라 'JXS'문법을 사용할 수 있는지 여부가 달라진다
-
+    = 하지만 확장자에 따라 'JSX'문법을 사용할 수 있는지 여부가 달라진다
+    
     .js = CRA : JSX지원 / Vite : JSX지원
     .jsx = CRA : JSX지원 / Vite : JSX지원
     .ts = CRA : JSX지원 안함 / Vite : JSX지원 안함
@@ -73,7 +72,7 @@ export default Component4
     export default function 컴포넌트_이름(){
         return(
             <>
-                <h1>Hello, Funcrion Component</h1>
+                <h1>Hello, Function Component</h1>
             </>
         )
     }
@@ -98,7 +97,7 @@ export default Component4
     const 컴포넌트_이름 = function(){
         return(
             <>
-                <h1>Hello, Funcrion Component</h1>
+                <h1>Hello, Function Component</h1>
             </>
         )
     }
@@ -111,7 +110,7 @@ export default Component4
     const 컴포넌트_이름 = () => {
         return(
             <>
-                <h1>Hello, Funcrion Component</h1>
+                <h1>Hello, Function Component</h1>
             </>
         )
     }

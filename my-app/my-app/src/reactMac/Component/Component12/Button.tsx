@@ -8,10 +8,10 @@
 
 import React from 'react'
 
-export default function Button({dasdas} : {dasdas : () => void}) {
+export default function Button({sadsad} : {sadsad : () => void}) {
   return (
     <>
-      <button onClick={dasdas}>click</button>
+      <button onClick={sadsad}>click</button>
     </>
   )
 }

@@ -22,17 +22,21 @@
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handlerCaptrue = () => {
-//         console.log('부모')
+//     const handlerCapture = () => {
+//         console.log('부모');
 //     }
 
 //     const handlerBubble = () => {
-//         console.log('자식')
+//         console.log('자식');
 //     }
 //   return (
-//     <div onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClickCapture={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
+
 
 
 
@@ -81,21 +85,29 @@
 //     )
 // }
 
-
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//      const handlerCaptrue = () => {
-//         console.log('부모')
+//      const handlerCapture = () => {
+//         console.log('부모');
 //     }
 
 //     const handlerBubble = () => {
-//         console.log('자식')
+//         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClick={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -146,22 +158,26 @@
 //     )
 // }
 
-
 // import React from 'react'
 
 // export default function Evntpropagation() {
-//     const handlerCaptrue = () => {
-//         console.log('부모')
+//      const handlerCapture = () => {
+//         console.log('부모');
 //     }
 
-//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement>) => {
+//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         e.stopPropagation();
-//         console.log('자식')
+//         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClick={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
+
+
 
 
 
@@ -211,13 +227,11 @@
 //             >
 //                 <input type="text" name='email'/>
 //                 <input type="password" />
-//                 <button type
-// sutype='submit'>전송</button>
+//                 <button type="submit">전송</button>
 //             </form>
 //         </>
 //     )
 // }
-
 
 import React from 'react'
 
@@ -227,11 +241,17 @@ export default function Evntpropagation() {
         <form onSubmit={(e) => e.preventDefault()}>
             <input type="text" />
             <input type="password" />
-            <button typeof='submit'>click</button>
+            <button type='submit'>전송</button>
         </form>
     </>
   )
 }
+
+
+
+
+
+
 
 
 

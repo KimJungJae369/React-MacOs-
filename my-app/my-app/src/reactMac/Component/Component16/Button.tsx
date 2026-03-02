@@ -20,12 +20,10 @@
 
 import React from 'react'
 
-export default function Button({dasd,children} : {dasd : () => void, children : React.ReactNode}) {
+export default function Button({dsadas, children} : {dsadas : () => void, children : React.ReactNode}) {
   return (
     <>
-      <button onClick={dasd}>{children}</button>
+      <button onClick={dsadas}>{children}</button>
     </>
   )
 }
-
-

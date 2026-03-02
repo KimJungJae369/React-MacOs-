@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {use, useState} from 'react'
 
 // 1. 초기 타입 지정 
 // export default function UseStateHook3() {
@@ -28,6 +28,40 @@ import {useState} from 'react'
 //     )
 // }
 
+// import React from 'react'
+
+// export default function UseStateHook3() {
+//     const [name, setName] = useState<string | null>(null)
+//     const [age, setAge] = useState<number | null>(null)
+//     const [gender, setGender] = useState<string | null>(null)
+
+//     const clickHandler = () => {
+//         setName ('Maike')
+//         setAge(30)
+//         setGender('Male')
+//     }
+//   return (
+//     <>
+//         <h1>Name : {name}</h1>
+//     <h2>age : {age}</h2>
+//     <h3>gender : {gender}</h3>
+//     <button onClick={clickHandler}>변경</button>
+//   </>
+//   )
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -48,26 +82,74 @@ import {useState} from 'react'
 //     )
 // }
 
+// import React from 'react'
+
+// export default function UseStateHook3() {
+//     const [count, setCount] = useState(0);
+
+//     const clickHandler = () => {
+//         setCount (count + 1)
+//         setCount (count + 1)
+//         setCount (count + 1)
+//     }
+//   return (
+//     <>
+//         <h1>Count : {count}</h1>
+//         <button onClick={clickHandler}>UseStateHook3</button>
+//     </>
+//   )
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 // 3. 상태 변경 함수에서 값을 직접 전달할 때 주의할 점 - 콜백함수 전달 방식 - 
+// export default function UseStateHook3() {
+//     const [count, setCount] = useState(0);
+
+//     const clickHandler = () => {
+//         setCount((count) => count + 1);
+//         setCount((count) => count + 1);
+//         setCount((count) => count + 1);
+//     }
+//     return (
+//         <>
+//             <h1>Count : {count}</h1>
+//             <button onClick={clickHandler}>click</button>
+//         </>
+//     )
+// }
+
+
+import React from 'react'
+
 export default function UseStateHook3() {
     const [count, setCount] = useState(0);
 
     const clickHandler = () => {
-        setCount((count) => count + 1);
-        setCount((count) => count + 1);
-        setCount((count) => count + 1);
+        setCount ((count) => count + 1)
+        setCount ((count) => count + 1)
+        setCount ((count) => count + 1)
     }
-    return (
-        <>
-            <h1>Count : {count}</h1>
-            <button onClick={clickHandler}>click</button>
-        </>
-    )
+  return (
+    <>
+        <h1>Count : {count}</h1>
+        <button onClick={clickHandler}>UseStateHook3</button>
+    </>
+  )
 }
+
 
 
 

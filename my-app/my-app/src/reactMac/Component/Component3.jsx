@@ -15,11 +15,14 @@ export default function Component3() {
 }
 
 
+
+
+
 /*
     Function Component(함수형 컴포넌트)
     = 함수를 사용해 컴포넌트를 작성하는 방식
-    = 'function'키워드로 함수를 선언한 뒤 'return'문 안에 JXS를 사용해 화면에 표시할 UI 구조를 정의
-    = 함수형 컴포넌트가 실행하면 'return' 문에 작성한 JXS가 반환
+    = 'function'키워드로 함수를 선언한 뒤 'return'문 안에 JSX를 사용해 화면에 표시할 UI 구조를 정의
+    = 함수형 컴포넌트가 실행하면 'return' 문에 작성한 JSX가 반환
     = 리액트는 반환된 JSX를 HTML로 변환해 웹 브라우저에 렌더링한다
     = 즉 JSX로 실제 화면(UI)이 어떻게 보여야 할지 구성하는 것
     = 상속이나 복잡한 구조없이 함수 하나만으로 컴포넌트를 만들 수 있어 가독성이 뛰어나고 작성하기도 쉽다

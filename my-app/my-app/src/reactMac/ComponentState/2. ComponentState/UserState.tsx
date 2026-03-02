@@ -16,7 +16,7 @@ export default function UserState() {
     = 이를 통해 동적인 사용자 인터페이스를 쉽게 구현할 수 있다
 
     <형식>
-        const [state, setState] = userState<Type>(initialState);
+        const [state(상태변수), setState(상태변경함수)] = userState<Type>(initialState);
         1) state 
         - 상태값을 저장하는 변수 보통 '상태변수'라고 부른다
         - 상태의 성격에 맞게 자유롭게 이름을 지어도 상관없다

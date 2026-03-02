@@ -54,7 +54,7 @@
 function Header(){
   return(
     <header>
-        <h1>My Website</h1>
+      <h1>My Website</h1>
     </header>
   )
 }
@@ -84,7 +84,7 @@ function Aside(){
 }
 
 function Nav(){
-  return(
+return(
     <nav>
       <h5>Home | About | Services | Contact</h5>
     </nav>

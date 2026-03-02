@@ -15,7 +15,7 @@ import Button from './Button'
 export default function Event() {
     return (
         <>
-            <Button dasdas={() => alert('이상한 이름도 사용가능')}></Button>
+            <Button sadsad={() => {alert('five')}}></Button>
         </>
     )
 }
