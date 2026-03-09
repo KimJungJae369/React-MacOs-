@@ -25,6 +25,7 @@ import './index.css'
 // import Component14 from './reactMac/Component/Component14/Eventobject'
 // import Component15 from './reactMac/Component/Component15/Evntpropagation'
 // import Text from './reactMac/Component/Component16/Text'
+
 // import ComponentState from './reactMac//ComponentState/1. ComponentState/ComponentState'
 // import ComponentState from './reactMac/ComponentState/2. ComponentState/userState'
 // import ComponentState from './reactMac/ComponentState/3. ComponentState/GenericType'
@@ -33,7 +34,9 @@ import './index.css'
 // import ComponentState from './reactMac/ComponentState/6. ComponentState/UseStateHook'
 // import ComponentState from './reactMac/ComponentState/7. ComponentState/UseStateHook2'
 // import ComponentState from './reactMac/ComponentState/8. ComponentState/UseStateHook3'
-import UseReduceHook from './reactMac/useReducer/1. UseReduceHook/UseReduceHook'
+
+// import UseReduceHook from './reactMac/useReducer/1. UseReduceHook/UseReduceHook'
+import UseReducerHook from './reactMac/useReducer/2. UseReduceHook/UseReducerHook'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -63,6 +66,6 @@ createRoot(document.getElementById('root')).render(
     
     {/* <ComponentState /> */}
     
-    <UseReduceHook />
+    <UseReducerHook />
   </StrictMode>
 )

@@ -23,14 +23,15 @@ export default function Component8() {
     const UserObj = {
         name : '홍길동',
         age : 30,
-        body : '건강'
+        body : '건강',
     }
-    const handlerClick = () => {
+
+    const clickHandler = () => {
         console.log('클릭')
     }
     return (
         <>
-            <User Obj={UserObj} Handler={handlerClick}/>
+            <User Obj={UserObj} Handler={clickHandler}/>
         </>
     )
 }

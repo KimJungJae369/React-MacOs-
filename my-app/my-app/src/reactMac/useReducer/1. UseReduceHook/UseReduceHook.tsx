@@ -1,27 +1,57 @@
 import { useReducer, useState } from "react"
 
+// export default function UseReduceHook(state : number, action : {type : string}) {
+//     switch(action.type){
+//         case "INCREMENT" : {
+//             return state + 1
+//         }
+
+//         case "DECREMENT" : {
+//             return state - 1
+//         }
+
+//         case "RESET" : {
+//             return 0
+//         }
+
+//         default : {
+//             return state
+//         }
+//     }
+//   return (
+//     <></>
+//   )
+// }
+
+import React from 'react'
+
 export default function UseReduceHook(state : number, action : {type : string}) {
     switch(action.type){
         case "INCREMENT" : {
-            return state + 1
+            return state + 1;
         }
 
         case "DECREMENT" : {
-            return state - 1
+            return state - 1;
         }
 
         case "RESET" : {
-            return 0
+            return 0;
         }
 
         default : {
-            return state
+            return state;
         }
     }
+
   return (
-    <></>
+    <div>UseReduceHook</div>
   )
 }
+
+
+
+
 
 /*
     UseReduceHook : 복잡한 상태 관리
@@ -75,7 +105,7 @@ export default function UseReduceHook(state : number, action : {type : string}) 
             - 일반적으로 액션은 객체로 정의하는 것이 가독성과 유지보수 면에서 좋다
             - 그러나 리듀서 함수의 설계에 따라 숫자, 문자열, 배열, 함수 등 다양한 형태의 액션을 사용할 수 있다
                 Tip)
-                    - 액션은 꼭 객체일 필요는 없으며 객체라고 해도 반드시 'type.payload' 속성을 가져야 하는 것은 아니다
+                    - 액션은 꼭 객체일 필요는 없으며 객체라고 해도 반드시 'type,payload' 속성을 가져야 하는 것은 아니다
                     - 중요한 것은 액션이 상태 변경의 기준이 된다는 것이고 그 형식은 구현 방식에 따라 자유롭게 설정할 수 있다
 
     <리듀서 함수>
@@ -137,6 +167,6 @@ export default function UseReduceHook(state : number, action : {type : string}) 
         default : {
             return state
         }
-        - 정의하지 앟는 'action.type'이면 기존 상태 값을 그대로 반환해 오류를 방지
+        - 정의하지 않은 'action.type'이면 기존 상태 값을 그대로 반환해 오류를 방지
     }
 */

@@ -4,18 +4,16 @@
 //     return <User name = '철수' age = {20}/>
 // }
 
-
 import React from 'react'
 import User from './User'
 
 export default function Component7() {
   return (
     <>
-        <User name="철수" age={30} body="180cm"/>
+        <User name="철수" age={20} body="180cm"/>
     </>
   )
 }
-
 
 
 

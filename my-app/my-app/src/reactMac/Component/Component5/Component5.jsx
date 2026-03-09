@@ -33,6 +33,7 @@ export default function Component5() {
 
 
 
+
 /*
     <컴포넌트 추가>
     = 리액트 애플리케이션은 여러 컴포넌트 파일이 결합되어 하나의 화면을 구성

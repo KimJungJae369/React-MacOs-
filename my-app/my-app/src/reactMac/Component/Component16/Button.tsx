@@ -17,13 +17,12 @@
         : () => void = 함수의 타입스크립트 문법 / 함수의 매개변수로 함수를 전달할 때 사용 / 반환값이 없는 함수
 */}
 
-
 import React from 'react'
 
-export default function Button({dsadas, children} : {dsadas : () => void, children : React.ReactNode}) {
+export default function Button({dsadaw,children} : {dsadaw : () => void, children : React.ReactNode}) {
   return (
     <>
-      <button onClick={dsadas}>{children}</button>
+      <button onClick={dsadaw}>{children}</button>
     </>
   )
 }

@@ -6,12 +6,13 @@
 //     )
 // }
 
+
 import React from 'react'
 
-export default function Button({sadsad} : {sadsad : () => void}) {
+export default function Button({sadas} : {sadas : () => void}) {
   return (
     <>
-      <button onClick={sadsad}>click</button>
+      <button onClick={sadas}>click</button>
     </>
   )
 }

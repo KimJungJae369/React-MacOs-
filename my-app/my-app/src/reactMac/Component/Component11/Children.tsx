@@ -87,8 +87,8 @@ export default function Children() {
                 </>
             )
         }
-        = 두 값을 모두 받을 수 있도록 props 타입 정의
-        = User 컴포넌트는 'title'이라는 일반 문자열 속성과 <p> 요소 3개로 구성된 'Children'을 함께 전달받아 렌더링
+        - 두 값을 모두 받을 수 있도록 props 타입 정의
+        - User 컴포넌트는 'title'이라는 일반 문자열 속성과 <p> 요소 3개로 구성된 'Children'을 함께 전달받아 렌더링
 
     <ref와 key 속성은 props로 전달 불가능 -리액트 18기준- >
     = 리액트에서는 보통 부모 컴포넌트가 자식 컴포넌트에 데이터를 전달할 때 'props'를 사용

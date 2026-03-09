@@ -15,7 +15,7 @@ import Button from './Button'
 export default function Event() {
     return (
         <>
-            <Button sadsad={() => {alert('five')}}></Button>
+            <Button sadas={() => alert('five')}></Button>
         </>
     )
 }

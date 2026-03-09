@@ -31,24 +31,26 @@ import {use, useState} from 'react'
 // import React from 'react'
 
 // export default function UseStateHook3() {
-//     const [name, setName] = useState<string | null>(null)
-//     const [age, setAge] = useState<number | null>(null)
-//     const [gender, setGender] = useState<string | null>(null)
+//     const [name, setName] = useState<string | null>(null);
+//     const [age, setAge] = useState<number | null>(null);
+//     const [gender, setGender] = useState<string | null>(null);
 
 //     const clickHandler = () => {
-//         setName ('Maike')
-//         setAge(30)
-//         setGender('Male')
+//         setName("Maike");
+//         setAge(30);
+//         setGender("Male");
 //     }
 //   return (
 //     <>
-//         <h1>Name : {name}</h1>
-//     <h2>age : {age}</h2>
-//     <h3>gender : {gender}</h3>
-//     <button onClick={clickHandler}>변경</button>
-//   </>
+//         <h1>name : {name}</h1>
+//         <h2>age : {age}</h2>
+//         <h3>gender : {gender}</h3>
+//         <button onClick={clickHandler}>click</button>
+//     </>
 //   )
 // }
+
+
 
 
 
@@ -88,17 +90,18 @@ import {use, useState} from 'react'
 //     const [count, setCount] = useState(0);
 
 //     const clickHandler = () => {
-//         setCount (count + 1)
-//         setCount (count + 1)
-//         setCount (count + 1)
-//     }
+//         setCount(count + 1);
+//         setCount(count + 1);
+//         setCount(count + 1);
+//     } 
 //   return (
 //     <>
 //         <h1>Count : {count}</h1>
-//         <button onClick={clickHandler}>UseStateHook3</button>
+//         <button onClick={clickHandler}>click</button>
 //     </>
 //   )
 // }
+
 
 
 
@@ -131,24 +134,27 @@ import {use, useState} from 'react'
 //     )
 // }
 
-
 import React from 'react'
 
 export default function UseStateHook3() {
     const [count, setCount] = useState(0);
 
     const clickHandler = () => {
-        setCount ((count) => count + 1)
-        setCount ((count) => count + 1)
-        setCount ((count) => count + 1)
-    }
+        setCount((count) => count + 1);
+        setCount((count) => count + 1);
+        setCount((count) => count + 1);
+    } 
   return (
     <>
         <h1>Count : {count}</h1>
-        <button onClick={clickHandler}>UseStateHook3</button>
+        <button onClick={clickHandler}>click</button>
     </>
   )
 }
+
+
+
+
 
 
 
@@ -217,7 +223,7 @@ export default function UseStateHook3() {
         }
         - 코드에서 버튼을 클릭하면 'setCount()' 함수가 3번 호출한다
         - 많은 사람이 버튼을 한 번 클릭할 때마다 3씩 증가할 것이라고 예상하지만 실제로는 실행하면 count는 1씩 증가한다
-        - 이러한 형상은 리액트의 상태 업데이트 방식 때문이다
+        - 이러한 현상은 리액트의 상태 업데이트 방식 때문이다
         - 리액트는 여러 상태 변경을 즉시 처리하지 않고 비동기적으로 처리해 렌더링이 끝난 뒤 한 번에 모아서 적용
         - 이 방식을 '일괄 업데이트'라고 하며 불필요한 리렌더링을 줄여 성능을 최적화하는 방식 
         - 위 코드에서 'setCount(count + 1)'을 연속으로 3번 호출하더라도 세 번 모두 현재 count 값(0)을 기준으로 1을 더하는 연산이 수행
@@ -246,5 +252,4 @@ export default function UseStateHook3() {
         - 이 방식은 'count'에 각각 이전 상태 값이 전달되므로 버튼을 클릭할 때마다 정상적으로 3씩 증가
         - 'setCount(count + 3)'처럼 한 번에 3을 더하는 방식도 가능하다
         - 하지만 이 방식도 여전히 기준이 되는 count 값이 최신 상태가 아닐 수 있으므로 상태 변경이 연속적으로 일어나는 경우에는 이전 상태 값을 기반으로 계산하는 '콜백 함수'형태가 더 안전하다
-
 */

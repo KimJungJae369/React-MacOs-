@@ -3,22 +3,32 @@ import { useState } from 'react'
 
 export default function UseStateHook2() {
     // 여러 개의 상태 변수를 각각 정의
-    const [name, setName] = useState(null);
-    const [age, setAge] = useState(null);
-    const [gender, setGender] = useState(null);
+    // const [name, setName] = useState(null);
+    // const [age, setAge] = useState(null);
+    // const [gender, setGender] = useState(null);
 
-    // 여러 상태 변수를 하나의 객체로 묶어 정의
+    // // 여러 상태 변수를 하나의 객체로 묶어 정의
+    // const [formState, setFormState] = useState({
+    //     name : '홍길동',
+    //     age : 31,
+    //     gender : '남자'
+    // });
+
+    const [name, setName] = useState<string | null>(null);
+    const [age, setAge] = useState<number | null>(null);
+    const [gender, setGender] = useState<string | null>(null);
+
     const [formState, setFormState] = useState({
         name : '홍길동',
         age : 31,
         gender : '남자'
-    });
- 
+    })
     return (
-        <div>UseStateHook2</div>
+        <div>
+            <h2>useState 훅 여러 번 사용하기</h2>
+        </div>
     )
 }
-
 /*
     useState 훅 여러 번 사용하기
     = 'useState' 훅은 한 번에 하나의 상태 값만 관리할 수 있다

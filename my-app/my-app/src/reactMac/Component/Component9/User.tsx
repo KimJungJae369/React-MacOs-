@@ -17,13 +17,13 @@
 
 import React from 'react'
 
-export default function User(props : UserProps) {
+export default function User(props : UserPorps) {
   const {
     Obj : {name, age, body},
     Handler
-  } = props
+  } = props;
   return (
-    <>  
+    <>
       <h1>name : {name}</h1>
       <h2>age : {age}</h2>
       <h3>body : {body}</h3>
@@ -31,4 +31,3 @@ export default function User(props : UserProps) {
     </>
   )
 }
-
