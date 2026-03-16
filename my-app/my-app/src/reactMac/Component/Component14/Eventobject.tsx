@@ -13,7 +13,7 @@
 
 // export default function Eventobject() {
 //   return (
-//     <button onClick={(e) => {alert(e)}}>Eventobject</button>
+//     <button onClick={(e) => alert(e)}>Eventobject</button>
 //   )
 // }
 
@@ -91,6 +91,10 @@
 
 
 
+
+
+
+
 // 3. 이벤트 객체와 매개변수
 // import React from 'react'
 
@@ -115,12 +119,13 @@ import React from 'react'
 export default function Eventobject() {
     const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, title : string) => {
         console.log(e);
-        alert(title);
+        alert(title)
     }
   return (
-    <button onClick={(e) => {clickHandler(e, 'Hello')}}>Eventobject</button>
+    <button onClick={(e) => clickHandler(e, 'Hello~')}>Eventobject</button>
   )
 }
+
 
 
 

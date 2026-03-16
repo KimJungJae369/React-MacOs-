@@ -32,6 +32,7 @@
 // }
 // export default Component4;
 
+
 // 3. 화살표 함수
 // const Component4 = () => {
 //     return(
@@ -51,7 +52,6 @@ const Component4 = () => {
 }
 
 export default Component4
-
 
 /*
     컴포넌트 기초

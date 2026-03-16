@@ -15,7 +15,7 @@
 //     )
 // }
 
-type UserProps = {
+type UserProps  = {
   name : string,
   age : number,
   body : string,
@@ -25,7 +25,7 @@ type UserProps = {
 import React from 'react'
 
 export default function User(props : UserProps) {
-  const {name, age, body, Handler} = props;
+  const {name, age, body, Handler} = props; 
   return (
     <>
       <h1>name : {name}</h1>
@@ -35,6 +35,7 @@ export default function User(props : UserProps) {
     </>
   )
 }
+
 
 
 

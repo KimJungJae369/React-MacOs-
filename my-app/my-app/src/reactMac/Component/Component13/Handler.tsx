@@ -34,6 +34,7 @@
 
 
 
+
 // 2. 함수 참조 방식
 // export default function Handler() {
 //     const clickHeandler = () => {
@@ -49,13 +50,14 @@
 // import React from 'react'
 
 // export default function Handler() {
-//     const cickHandler = () => {
+//     const clickHandler = () => {
 //         console.log('Function reference handler')
 //     }
 //   return (
-//     <button onClick={cickHandler}>Handler</button>
+//     <button onClick={clickHandler}>Handler</button>
 //   )
 // }
+
 
 
 
@@ -105,9 +107,10 @@ export default function Handler() {
         console.log(title)
     }
   return (
-    <button onClick={() => clickHandler('Hello~')}>Handler</button>
+    <button onClick={() => clickHandler('hello~')}>Handler</button>
   )
 }
+
 
 
 

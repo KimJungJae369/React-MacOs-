@@ -10,6 +10,8 @@ export default function UseStateHook2() {
     // // 여러 상태 변수를 하나의 객체로 묶어 정의
     // const [formState, setFormState] = useState({
     //     name : '홍길동',
+           // 변경시
+        // {...formState, name : '김길동'},
     //     age : 31,
     //     gender : '남자'
     // });
@@ -18,16 +20,15 @@ export default function UseStateHook2() {
     const [age, setAge] = useState<number | null>(null);
     const [gender, setGender] = useState<string | null>(null);
 
-    const [formState, setFormState] = useState({
-        name : '홍길동',
-        age : 31,
-        gender : '남자'
-    })
-    return (
-        <div>
-            <h2>useState 훅 여러 번 사용하기</h2>
-        </div>
-    )
+        // 여러 상태 변수를 하나의 객체로 묶어 정의
+        const [formState, setFormState] = useState({
+            name: '홍길동',
+            age: 31,
+            gender: '남자'
+        });
+
+        // 상태 업데이트 예시
+        // setFormState(prev => ({ ...prev, name: '김길동' }));
 }
 /*
     useState 훅 여러 번 사용하기

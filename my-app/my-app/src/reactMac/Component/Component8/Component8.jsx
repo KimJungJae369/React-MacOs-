@@ -23,7 +23,7 @@ export default function Component8() {
     const UserObj = {
         name : '홍길동',
         age : 30,
-        body : '건강',
+        body : '건장'
     }
 
     const clickHandler = () => {
@@ -45,7 +45,7 @@ export default function Component8() {
     props 객체 타입 알아내기
     = 리액트에서는 컴포넌트로 전달할 데이터 개수에 제한이 없다
     = 각 데이터를 개별 props로 지정할 수도 있지만 전달할 데이터가 많아질수록 props를 하나하나 지정하면 코드가 길어지고 복잡해질 수 있다
-    = 이럴 땐 전달할 데이터를 하나의 객체나 배열로 묶어 한 번에 전달하는 것이 더 깔끔하고 효율적이다
+    = 이럴 때 전달할 데이터를 하나의 객체나 배열로 묶어 한 번에 전달하는 것이 더 깔끔하고 효율적이다
     ex)
         1. const UserObj= {
             name : '홍길동',

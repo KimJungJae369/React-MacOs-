@@ -36,9 +36,9 @@ import {use, useState} from 'react'
 //     const [gender, setGender] = useState<string | null>(null);
 
 //     const clickHandler = () => {
-//         setName("Maike");
+//         setName('Maike');
 //         setAge(30);
-//         setGender("Male");
+//         setGender('Male');
 //     }
 //   return (
 //     <>
@@ -49,6 +49,9 @@ import {use, useState} from 'react'
 //     </>
 //   )
 // }
+
+
+
 
 
 
@@ -93,7 +96,8 @@ import {use, useState} from 'react'
 //         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
-//     } 
+//         setCount(count + 1);
+//     }
 //   return (
 //     <>
 //         <h1>Count : {count}</h1>
@@ -101,6 +105,9 @@ import {use, useState} from 'react'
 //     </>
 //   )
 // }
+
+
+
 
 
 
@@ -140,10 +147,11 @@ export default function UseStateHook3() {
     const [count, setCount] = useState(0);
 
     const clickHandler = () => {
-        setCount((count) => count + 1);
-        setCount((count) => count + 1);
-        setCount((count) => count + 1);
-    } 
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+    }
   return (
     <>
         <h1>Count : {count}</h1>

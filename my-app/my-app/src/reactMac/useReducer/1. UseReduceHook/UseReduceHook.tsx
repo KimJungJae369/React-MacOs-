@@ -27,23 +27,19 @@ import React from 'react'
 
 export default function UseReduceHook(state : number, action : {type : string}) {
     switch(action.type){
-        case "INCREMENT" : {
-            return state + 1;
-        }
-
-        case "DECREMENT" : {
-            return state - 1;
-        }
-
-        case "RESET" : {
-            return 0;
-        }
-
-        default : {
-            return state;
-        }
+            case 'INCREMENT' : {
+                return state + 1;
+            }
+            case 'DECREMENT' : {
+                return state - 1;
+            }
+            case 'RESET' : {
+                return 0;
+            }
+            default : {
+                return state;
+            }
     }
-
   return (
     <div>UseReduceHook</div>
   )
@@ -53,14 +49,27 @@ export default function UseReduceHook(state : number, action : {type : string}) 
 
 
 
+
+
+
 /*
     UseReduceHook : 복잡한 상태 관리
     = 상태를 관리하는 또 다른 방법으로 '이전 상태'와 '액션'에 따라 새로운 상태를 반환하는 방식
     = 특히 '상태 변경 로직'이 복잡하거나 업데이트해야 하는 경우가 많으면 'useState'보다 더 적합하다
+    = 쉽게말해 '상태 변경 로직'을 컴포넌트에서 분리하여 별도의 함수로 관리할 수 있게 해주는 훅
+    = 상태를 바꾸는 규칙이 여러 개고 복작할 때 사용
+    = 상태 업데이트 로직이 복잡해져서 하눈에 파악하기 힘들 때 로직을 컴포넌트 밖으로 분리해 관리할 때 사용
+    = 'useReducer' 훅은 '리듀서 함수'와 '초깃값'을 매개변수로 받아서 상태와 디스패치 함수를 반환
+    = '리듀서 함수'는 상태를 변경하는 함수로 '이전 상태'와 '액션'을 받아서 새로운 상태를 반환
+    = '액션'은 상태 변경을 일으키는 이벤트나 명령을 나타내는 객체로 보통 'type'과 'payload' 속성을 가진다
+    = '디스패치 함수'는 액션을 리듀서 함수로 전달하는 함수로 이 함수를 호출하면 리듀서 함수가 실행되고 새로운 상태가 계산된다
+    = 'useReducer' 훅은 상태 변경 로직을 컴포넌트에서 분리하여 별도의 함수로 관리할 수 있게 해주므로 복잡한 상태 관리에 유용
+    = 'useState'보다 더 명확하게 상태 변경 로직을 표현할 수 있고, 여러 상태 변경이 연관되어 있을 때 일관된 방식으로 관리할 수 있다
+    = 'useReducer'는 'Redux'와 같은 상태 관리 라이브러리의 핵심 개념인 '리듀서' 패턴을 따르므로, 리액트 애플리케이션에서 복잡한 상태 관리를 구현하는 데 도움이 된다
 
     1. useReducer 훅 기본 문법
     = 'useReducer' 훅을 호출하면 2개의 값을 담은 배열을 반환
-    = 이 값을 구조 분해 할당하여 '상태'와 '디스패치 함수'로 사용할 수 있다
+    = 이 값을 구조 분해 할당하여 '상태'와 '디스패치 함수'로 사용할 수 있다 
         const [state, dispatch] = useReducer<Type>(reducer, initialState);
         <state>
         - 상태를 나타내는 '상태 변수'로 'useReducer' 훅이 반환하는 첫 번째 값을 저장
@@ -108,7 +117,7 @@ export default function UseReduceHook(state : number, action : {type : string}) 
                     - 액션은 꼭 객체일 필요는 없으며 객체라고 해도 반드시 'type,payload' 속성을 가져야 하는 것은 아니다
                     - 중요한 것은 액션이 상태 변경의 기준이 된다는 것이고 그 형식은 구현 방식에 따라 자유롭게 설정할 수 있다
 
-    <리듀서 함수>
+    <리듀서 함수 = reducer>
     = '이전 상태(state)'와 '액션(action)'을 매개변수로 받아 새로운 상태를 반환하는 함수
     = 이때 반환하는 값이 컴포넌트의 새로운 상태 값이 된다
     = 리듀서 함수 내부에서는 주로 'switch'문을 사용해 'action.type'에 따라 실행할 로직을 결정

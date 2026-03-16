@@ -1,21 +1,39 @@
 import { useReducer } from "react"
 import {counterReducer} from './counterReducer';
 
+// export default function UseReducerHook() {
+//     const [count, countDispatch] = useReducer(counterReducer, 0);
+//     return (
+//         <>
+//             <h1>Count: {count}</h1>
+//             <button onClick={() => countDispatch({type: "INCREMENT"})}>Increment</button>
+//             <button onClick={() => countDispatch({type: "RESET"})}>Reset</button>
+//             <button onClick={() => countDispatch({type: "DECREMENT"})}>Decrement</button>
+//         </>
+//     )
+// }
+
+import React from 'react'
+
 export default function UseReducerHook() {
     const [count, countDispatch] = useReducer(counterReducer, 0);
-    return (
-        <>
-            <h1>Count: {count}</h1>
-            <button onClick={() => countDispatch({type: "INCREMENT"})}>Increment</button>
-            <button onClick={() => countDispatch({type: "RESET"})}>Reset</button>
-            <button onClick={() => countDispatch({type: "DECREMENT"})}>Decrement</button>
-        </>
-    )
+  return (
+    <>
+        <h1>Count : {count}</h1>
+        <button onClick={() => countDispatch({type: "INCREMENT"})}>Increment</button>
+        <button onClick={() => countDispatch({type: "RESET"})}>Reset</button>
+        <button onClick={() => countDispatch({type: "DECREMENT"})}>Decrement</button>
+    </>
+  )
 }
+
+
+
 
 /*
     useReducer 훅 사용하기
-    throw new Error : 예외를 발생시키는 함수. 이 함수는 주어진 메시지를 포함하는 새로운 Error 객체를 생성하고 예외를 발생시킨다
+    throw new Error : 예외를 발생시키는 함수. 이 함수는 주어진 메시지를 포함하는 새로운 Error 객체를 생성하고 예외를 발생시킨다 / 예외 처리를 위해 사용 
+        / 이 코드가 실행되면 현재 실행 중인 함수의 실행이 중단되고 제어가 호출자에게 전달 / 호출자는 이 예외를 처리하거나 다시 던질 수 있다
 
     <버튼 클릭시 증가,감소,리셋 예제>
         import { useReducer } from "react"
@@ -26,7 +44,7 @@ export default function UseReducerHook() {
         - action : 상태를 변경할 때 참조할 정보가 담긴 객체, type 속성을 포함 / 상태를 어떻게 바꾸고 싶은지 적어서 전달하는 일종의 메시지 객체 / 즉 담당자에게 전달하는 업무
 
                 switch(action.type){
-                - 'switch문'을 사용해 'action.type'의 값에 따라 상태 변경 로직을 실핼
+                - 'switch문'을 사용해 'action.type'의 값에 따라 상태 변경 로직을 실행
 
                 case "INCREMENT":
                     return state + 1
@@ -74,7 +92,7 @@ export default function UseReducerHook() {
     3. 'countDispatch()'함수는 두개의 매개변수를 받는다 
         (첫 번째)
         - 매개변수는 이전 상태 값(state)으로 컴포넌트가 처음 렌더링될 때는 초기값이 전달
-        - 이후에는 이전 레더링에서 리듀서가 반환한 상태 값이 전달
+        - 이후에는 이전 렌더링에서 리듀서가 반환한 상태 값이 전달
         (두 번째)
         - 매개변수는 액션 객체(action)로 이벤트 핸들러에서 전달한 값
         - 'countDispatch()'함수는 'action.type'에 따라 상태 변경 로직을 실행한 뒤 변경된 새로운 상태 값을 반환
@@ -90,7 +108,7 @@ export default function UseReducerHook() {
 
     Tip) 파일 확장자
     - 'counterReducer.ts'는 리액트 컴포넌트가 아니고 'JSX'를 전혀 사용하지 않아서 'JSX'를 해석할 필요가 없다 
-    - 따라서 '.tsx'확장자를 쓸 이유가 없고 더 명확하게 목적에 맞게 '.ts' 확장자를 사용하느 것이 좋다
+    - 따라서 '.tsx'확장자를 쓸 이유가 없고 더 명확하게 목적에 맞게 '.ts' 확장자를 사용하는 것이 좋다
         .tsx : 'JSX'를 포함하는 리액트 컴포넌트 파일
         .ts : 'JSX'를 포함하지 않는 일반 TypeScript 파일
 
