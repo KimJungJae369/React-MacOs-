@@ -45,6 +45,7 @@ const UerObj = {
     = 따라서 'User' 컴포넌트에서 'props.uerObj'로 객체 전체에 접근할 수 있다
     = 만약 'uerObj' 객체의 속성을 각각 전달하고 싶다면 '전개연산자(...)'를 사용
         전개 연산자 : 객체의 속성을 개별적인 속성으로 분해하여 전달 / 객체의 속성을 풀어 해당 위치에 하나하나 나열해주는 역할
+        비구조화 할당 : 한 번에 여러 변수에 값을 할당하는 방법 / 객체나 배열의 구조를 분해하여 개별적인 변수에 값을 할당하는 문법
 
     <User UserObj={UserObj} clickHandler={clickHandler}/> --> <User {...UserObj} clickHandler={clickHandler}/>
     = 이와 같이 작성하면 props에 name,age,clickHandler라는 3개 속성이 개별로 전달되는 효과

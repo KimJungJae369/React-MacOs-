@@ -13,12 +13,13 @@ import React from 'react'
 import Button from './Button'
 
 export default function Event() {
-    return (
-        <>
-            <Button dsadas={() => alert('five')}></Button>
-        </>
-    )
+  return (
+    <>
+        <Button dsdsa={() => console.log('클릭됨')}></Button>
+    </>
+  )
 }
+
 
 /*
     컴포넌트와 이벤트

@@ -20,18 +20,17 @@
 //     )
 // }
 
+
 import React from 'react'
 
 export default function User({children, title} : {children : React.ReactNode, title : string}) {
   return (
-    <>
-      <h1>{title}</h1>
-      {children}
-    </>
+    <div>
+        <h1>{title}</h1>
+        {children}
+    </div>
   )
 }
-
-
 
 
 

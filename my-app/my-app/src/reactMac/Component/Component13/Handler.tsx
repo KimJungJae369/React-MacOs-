@@ -34,7 +34,6 @@
 
 
 
-
 // 2. 함수 참조 방식
 // export default function Handler() {
 //     const clickHeandler = () => {
@@ -88,6 +87,9 @@
 
 
 
+
+
+
 // 3. 이벤트 핸들러 매개변수
 // export default function Handler() {
 //     const clickHandler = (msg : string) => {
@@ -103,15 +105,13 @@
 import React from 'react'
 
 export default function Handler() {
-    const clickHandler = (title : string) => {
-        console.log(title)
+    const clickHandler = (msg : string) => {
+        console.log(msg)
     }
   return (
-    <button onClick={() => clickHandler('hello~')}>Handler</button>
+    <button onClick={() => {clickHandler('Hello')}}>Handler</button>
   )
 }
-
-
 
 
 
@@ -157,7 +157,7 @@ export default function Handler() {
     = '함수 참조'방식으로는 매개변수를 전달할 수 없다
         ex)
             export default function Handler() {
-                const clickHandler = (msg : string => '.tsx'이라서 타입을 정의) => {
+                const clickHandler = (msg : string) => { // '.tsx'이라서 타입을 정의
                     alert(msg);
                 } 
                 return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import { useState } from 'react'
 
 export default function UseStateHook2() {
@@ -16,20 +16,20 @@ export default function UseStateHook2() {
     //     gender : '남자'
     // });
 
-    const [name, setName] = useState<string | null>(null);
-    const [age, setAge] = useState<number | null>(null);
-    const [gender, setGender] = useState<string | null>(null);
-
-        // 여러 상태 변수를 하나의 객체로 묶어 정의
-        const [formState, setFormState] = useState({
-            name: '홍길동',
-            age: 31,
-            gender: '남자'
-        });
 
         // 상태 업데이트 예시
         // setFormState(prev => ({ ...prev, name: '김길동' }));
 }
+
+    const [name, setName]= useState(null);
+    const [age, setAge] = useState(null);
+    const [gender, setGender] = useState(null);
+
+    const [formState, setFormState] = useState({
+        name : '홍길동',
+        age : 31,   
+        gender : '남자'
+    })
 /*
     useState 훅 여러 번 사용하기
     = 'useState' 훅은 한 번에 하나의 상태 값만 관리할 수 있다

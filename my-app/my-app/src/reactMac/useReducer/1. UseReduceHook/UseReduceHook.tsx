@@ -25,25 +25,35 @@ import { useReducer, useState } from "react"
 
 import React from 'react'
 
-export default function UseReduceHook(state : number, action : {type : string}) {
-    switch(action.type){
-            case 'INCREMENT' : {
-                return state + 1;
+export default function UseReduceHook(state : number, actoion : {type : string}) {
+    switch(actoion.type){
+            case "INCREMENT" : {
+                return state + 1
             }
-            case 'DECREMENT' : {
-                return state - 1;
+
+            case "DECREMENT" : {
+                return state - 1
             }
-            case 'RESET' : {
-                return 0;
+
+            case "RESET" : {
+                return 0
             }
+
             default : {
-                return state;
+                return state
             }
     }
   return (
-    <div>UseReduceHook</div>
+    <>
+
+    </>
   )
 }
+
+
+
+
+
 
 
 
@@ -58,7 +68,7 @@ export default function UseReduceHook(state : number, action : {type : string}) 
     = 특히 '상태 변경 로직'이 복잡하거나 업데이트해야 하는 경우가 많으면 'useState'보다 더 적합하다
     = 쉽게말해 '상태 변경 로직'을 컴포넌트에서 분리하여 별도의 함수로 관리할 수 있게 해주는 훅
     = 상태를 바꾸는 규칙이 여러 개고 복작할 때 사용
-    = 상태 업데이트 로직이 복잡해져서 하눈에 파악하기 힘들 때 로직을 컴포넌트 밖으로 분리해 관리할 때 사용
+    = 상태 업데이트 로직이 복잡해져서 한눈에 파악하기 힘들 때 로직을 컴포넌트 밖으로 분리해 관리할 때 사용
     = 'useReducer' 훅은 '리듀서 함수'와 '초깃값'을 매개변수로 받아서 상태와 디스패치 함수를 반환
     = '리듀서 함수'는 상태를 변경하는 함수로 '이전 상태'와 '액션'을 받아서 새로운 상태를 반환
     = '액션'은 상태 변경을 일으키는 이벤트나 명령을 나타내는 객체로 보통 'type'과 'payload' 속성을 가진다

@@ -65,6 +65,7 @@
 
 
 
+
 // 2. 버블링
 // import React from 'react'
 
@@ -99,9 +100,14 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClickCapture={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
+
+
+
+
 
 
 
@@ -225,6 +231,12 @@
 
 
 
+
+
+
+
+
+
 // 4, 이벤트 기본 동작 막기
 // import React from 'react'
 
@@ -250,13 +262,18 @@ export default function Evntpropagation() {
   return (
     <>
         <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" />
-            <input type="password" />
+            <input type="text"/>
+            <input type="password"/>
             <button type='submit'>click</button>
         </form>
     </>
   )
 }
+
+
+
+
+
 
 
 

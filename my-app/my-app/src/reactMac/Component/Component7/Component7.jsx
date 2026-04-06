@@ -10,7 +10,7 @@ import User from './User'
 export default function Component7() {
   return (
     <>
-        <User name="윤희" age={27} body="170cm"/>
+        <User name="철수" age={30} body="180cm"/>
     </>
   )
 }
@@ -71,7 +71,7 @@ export default function Component7() {
                 1, export default function User(props) {
                 - props의 타입을 명시
                 - 이 객체는 name(문자열)과 age(숫자) 속성을 가져야 한다
-                - 잘못된 타입을 전달하면 타입스크립트가 컴파일(프로그래밍 언어(C,Jave 등) 컴퓨터가 이해하는 언어로 변경) 시점에 오류가 발생
+                - 잘못된 타입을 전달하면 타입스크립트가 컴파일(프로그래밍 언어(C,Jave 등) 컴퓨터가 이해하는 언어로 변경 시점에 오류를 알려준다
 
                     return (
                         <>

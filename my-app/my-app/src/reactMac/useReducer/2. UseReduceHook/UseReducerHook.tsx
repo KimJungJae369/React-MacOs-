@@ -1,5 +1,5 @@
 import { useReducer } from "react"
-import {counterReducer} from './counterReducer';
+import CounterReducer from "./counterReducer"
 
 // export default function UseReducerHook() {
 //     const [count, countDispatch] = useReducer(counterReducer, 0);
@@ -16,13 +16,13 @@ import {counterReducer} from './counterReducer';
 import React from 'react'
 
 export default function UseReducerHook() {
-    const [count, countDispatch] = useReducer(counterReducer, 0);
+    const [count, countDispatch] = useReducer(CounterReducer, 0);
   return (
     <>
-        <h1>Count : {count}</h1>
-        <button onClick={() => countDispatch({type: "INCREMENT"})}>Increment</button>
-        <button onClick={() => countDispatch({type: "RESET"})}>Reset</button>
-        <button onClick={() => countDispatch({type: "DECREMENT"})}>Decrement</button>
+        <h1>Count: {count}</h1>
+        <button onClick={() => {countDispatch({type :'INCREMENT'})}}>Increment</button>
+        <button onClick={() => {countDispatch({type :'RESET'})}}>Reset</button>
+        <button onClick={() => {countDispatch({type :'DECREMENT'})}}>Decrement</button>
     </>
   )
 }
@@ -30,9 +30,12 @@ export default function UseReducerHook() {
 
 
 
+
+
+
 /*
     useReducer 훅 사용하기
-    throw new Error : 예외를 발생시키는 함수. 이 함수는 주어진 메시지를 포함하는 새로운 Error 객체를 생성하고 예외를 발생시킨다 / 예외 처리를 위해 사용 
+    throw(트로우) new Error : 예외를 발생시키는 함수. 이 함수는 주어진 메시지를 포함하는 새로운 Error 객체를 생성하고 예외를 발생시킨다 / 예외 처리를 위해 사용 
         / 이 코드가 실행되면 현재 실행 중인 함수의 실행이 중단되고 제어가 호출자에게 전달 / 호출자는 이 예외를 처리하거나 다시 던질 수 있다
 
     <버튼 클릭시 증가,감소,리셋 예제>

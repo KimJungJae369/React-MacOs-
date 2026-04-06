@@ -55,24 +55,24 @@ function Header(){
   return(
     <header>
       <h1>My Website</h1>
-    </header>
-  )
-}
-
-function Article(){
-  return(
-    <article>
-      <h2>Main Article</h2>
       <Nav />
-    </article>
+    </header>
   )
 }
 
 function Nav(){
   return(
     <nav>
-      <h3>Home | About | Services | Contact</h3>
+      <h2>Home | About | Services | Contact</h2>
     </nav>
+  )
+}
+
+function Article(){
+  return(
+    <article>
+      <h3>Main Article</h3>
+    </article>
   )
 }
 

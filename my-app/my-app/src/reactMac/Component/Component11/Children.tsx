@@ -17,18 +17,15 @@ import React from 'react'
 import User from './User'
 
 export default function Children() {
-    return (
-        <>
-            <User title= 'User Component'>
-                <h2>React</h2>
-                <h3>JavaScript</h3>
-                <h4>TypeScript</h4>
-                <h5>Node.js</h5>
-                <h6>Express</h6>
-            </User>
-        </>
-    )
+  return (
+    <>
+        <User title="공지사항">
+            <p>오늘은 휴강입니다</p>
+        </User>
+    </>
+  )
 }
+
 
 
 
