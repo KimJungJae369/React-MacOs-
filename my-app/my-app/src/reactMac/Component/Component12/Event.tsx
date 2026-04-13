@@ -1,24 +1,32 @@
-// import React from 'react'
-// import Button from './Button'
+import React from "react";
+import Button from "./Button";
 
-// export default function Event() {
-//     return (
-//         <>
-//             <Button onFive = {() => {alert('five')}}></Button>
-//         </>
-//     )
-// }
-
-import React from 'react'
-import Button from './Button'
+const products = [
+    { id: 1, name: "무선 키보드" },
+    { id: 2, name: "게이밍 마우스" },
+    { id: 3, name: "모니터 받침대" },
+];
 
 export default function Event() {
-  return (
-    <>
-        <Button dsdsa={() => console.log('클릭됨')}></Button>
-    </>
-  )
+    const handleDelete = (id: number) => {
+        alert(`삭제된 id: ${id}`);
+    };
+
+    return (
+        <div>
+        {products.map((product) => (
+            <Button
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                onDelete={handleDelete}
+            />
+        ))}
+        </div>
+    );
 }
+
+
 
 
 /*

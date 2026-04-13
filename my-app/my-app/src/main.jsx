@@ -9,6 +9,7 @@ import './index.css'
 // import Jsx2 from './reactMac/Jsx2.jsx'
 // import Jsx3 from './reactMac/Jsx3.jsx'
 // import Jsx4 from './reactMac/Jsx/Jsx4.jsx'
+// JSX : JavaScript XML
 
 
 // import Component1 from './reactMac/Component/Component1.jsx'
@@ -57,7 +58,8 @@ import './index.css'
 // import UseReduceHook from './reactMac/useReducer/1. UseReduceHook/UseReduceHook'
 // import UseReducerHook from './reactMac/useReducer/2. UseReduceHook/UseReducerHook'
 // import UseReducerHook from './reactMac/useReducer/3. UseReduceHook/UseReducerHook'
-import UseReducerHook from './reactMac/useReducer/4. UseReduceHook/UseReducerHook'
+// import UseReducerHook from './reactMac/useReducer/4. UseReduceHook/UseReducerHook'
+import UseReducerHook from './reactMac/useReducer/5. UseReduceHook/UseReducerHook'
 // useReducer Hook
 
 createRoot(document.getElementById('root')).render(
@@ -65,15 +67,17 @@ createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     {/* <React /> */}
     {/* <Vite /> */}
+
     {/* <Jsx1 /> */}
     {/* <Jsx2/> */}
     {/* <Jsx3/> */}
     {/* <Jsx4/> */}
+    {/* JSX : JavaScript XML */}
 
     {/* <Component1 /> */}
     {/* <Component2 /> */}
-    {/* <Component3 />   */}
-    {/* <Component4 /> */}
+    {/* <Component3 /> */}
+    {/* <Component4 />   */}
     {/* 클래스, 함수, 화살표 함수, 익명 함수, 콜백 함수 */}
 
     {/* <Component5 /> */}
@@ -100,6 +104,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Component15 /> */}
     {/* <Text/> */}
     {/* 캡처링, 버블링, 이벤트 전파 막기, 이벤트 기본 동작 막기 */}
+    
     
     {/* <ComponentState /> */}
     {/* <Text /> */}

@@ -1,17 +1,16 @@
-// import React from 'react'
+import React from "react";
 
-// export default function Button({onFive} : {onFive : () => void}) {
-//     return (
-//         <button onClick={onFive}>click</button>
-//     )      
-// }
+interface ButtonProps {
+  id: number;
+  name: string;
+  onDelete: (id: number) => void;
+}
 
-import React from 'react'
-
-export default function Button({dsdsa} : {dsdsa : () => void}) {
+export default function Button({ id, name, onDelete }: ButtonProps) {
   return (
-    <>
-      <button onClick={dsdsa}>click</button>
-    </>
-  )
+    <div>
+      <span>{name}</span>
+      <button onClick={() => onDelete(id)}>삭제</button>
+    </div>
+  );
 }

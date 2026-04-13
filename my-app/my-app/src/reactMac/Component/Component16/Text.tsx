@@ -1,41 +1,30 @@
-// import React from 'react'
-// import Button from './Button'
-// import UserCard from './UserCard'
-
-// export default function Text() {
-//   const users = [
-//     {name : '만수', age : 25, color : 'blue'},
-//     {name : '영희', age : 30, color : 'red'},
-//   ]
-//   return (
-//     <>
-//         {users.map((user, index) => (
-//           <Button key={index}>
-//             <UserCard {...user}>
-//                 <p>추가 내용</p>
-//             </UserCard>
-//           </Button>
-//         ))}
-//     </>
-//   )
-// }
-// HTMLAnchorElement : a 태그의 이벤트 객체 타입
-
 import React from 'react'
 import UserCard from './UserCard'
 
 export default function Text() {
- 
+  const products = [
+    { id: 1, name: "무선 키보드" },
+    { id: 2, name: "게이밍 마우스" },
+  ];
+
+  const clickCard = (name : string) => {
+    alert(`상품 상세보기 ${name}`);
+  }
+
+  const clickDeleteCard = (name : string) => {
+    alert(`상품 삭제하기 ${name}`);
+  }
   return (
     <>
-      <UserCard title="테스트">
-        <button>클릭</button>
-      </UserCard>
+      {products.map(product => (
+        <UserCard 
+          key={product.id}
+          id={product.id}
+          name={product.name}
+          cxzc={() => clickCard(product.name)}
+          zxc={() => clickDeleteCard(product.name)}
+        />
+      ))}
     </>
   )
 }
-
-
-
-
-

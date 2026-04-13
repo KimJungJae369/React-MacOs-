@@ -1,85 +1,33 @@
-// import React from 'react'
-// import { useState } from 'react'
+import React, { useState } from "react";
+import Productitem from "./8. ComponentState/Productitem";
 
-// export default function Text() {
-//     const [count, setCount] = useState(0);
+    const initialProducts = [
+        { id: 1, name: "무선 키보드" },
+        { id: 2, name: "게이밍 마우스" },
+        { id: 3, name: "모니터 받침대" },
+    ];
 
-//     // 증감 0이상 파랑색
-//     const handlerIncrease = () => {
-//         setCount((count) => count + 1);
-//     }
-    
-//     // 감소 0이하 빨강색, 0으로 안 떨어지게
-//     const handlerDecrease = () => {
-//         if(count > 0){
-//             setCount((count) => count - 1);
-//         }
-//     }
+    export default function Text() {
+    const [products, setProducts] = useState(initialProducts);
 
-//     const color = count > 0 ? 'blue' : 'red';
-//   return (
-//     <>
-//         <h1 style={{ color }}>Count : {count}</h1>
-//         <button onClick={handlerIncrease}>증가</button>
-//         <button onClick={handlerDecrease}>감소</button>
-//     </>
-//   )
-// }
+    const handleDelete = (id) => {
+        setProducts(prev => prev.filter(item => item.id !== id));
+        // prev : 이전 상태값
+        // 삭제 버튼 누른 애만 빼고 다시 그려줘
+        // 현재 기준 상태로 삭제를 버튼을 누른 값은 안보이고 나머지는 보이게 상태를 변경하는 함수
+        // 현재 상태에서 삭제한 값만 제외하고 나머지를 보이게 상태를 변경하는 함수
+    };
 
-
-
-// import React from 'react'
-
-// export default function Text() {
-//     const [count, setCount] = React.useState(0);
-
-//     const handlerClickPlus = () => {
-//         setCount((count) => count + 1)
-//     }
-
-//     const handlerClickMinus = () => {
-//         setCount((count) => count - 1)
-//     }
-
-//     const result = count > 0 ? '양수' : count === 0 ? '0입니다' : '음수';
-//   return (
-//     <>
-//         <h1>현재 스코어 : {count}입니다</h1>
-//         <p>결과 : {result}</p>
-//         <button onClick={handlerClickPlus}>+</button>
-//         <button onClick={handlerClickMinus}>-</button>
-//     </>
-//   )
-// }
-
-
-import React from 'react'
-import { useState } from 'react'
-
-export default function text() {
-    const [input, setInput] = useState('');
-    const [list, setList] = useState([]);
-
-    const handlerChange = (e) => {
-        setInput(e.target.value); // input의 value값을 input state에 저장
-    }
-
-    const handlerAdd = () => {
-        if(input === '') return // input이 빈 문자열이면 추가하지 않음
-
-        setList((list) => [...list, input]); // list state에 input값 추가
-        setInput(''); // input 초기화
-    }
-  return (
-    <>
-        <input type="text" value={input} onChange={handlerChange}/>
-        <button onClick={handlerAdd}>추가하기</button>
-
-        {list.map((item, index) => (
-            <li key={index}>{item}</li>
+    return (
+        <div>
+        {products.map(product => (
+            <Productitem
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            onDelete={handleDelete}
+            />
         ))}
-    </>
-  )
+        </div>
+    );
 }
-
-

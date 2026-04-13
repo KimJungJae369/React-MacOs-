@@ -23,25 +23,26 @@ import { useReducer, useState } from "react"
 //   )
 // }
 
+
 import React from 'react'
 
-export default function UseReduceHook(state : number, actoion : {type : string}) {
-    switch(actoion.type){
-            case "INCREMENT" : {
-                return state + 1
-            }
+export default function UseReduceHook(state : number, action : {type : string}) {
+    switch(action.type){
+        case "INCREMENT" : {
+            return state + 1
+        }
 
-            case "DECREMENT" : {
-                return state - 1
-            }
+        case "DECREMENT" : {
+            return state - 1
+        }
 
-            case "RESET" : {
-                return 0
-            }
+        case "RESET" : {
+            return 0
+        }
 
-            default : {
-                return state
-            }
+        default : {
+            return state
+        }
     }
   return (
     <>
@@ -61,9 +62,9 @@ export default function UseReduceHook(state : number, actoion : {type : string})
 
 
 
-
 /*
     UseReduceHook : 복잡한 상태 관리
+    = 복잡한 값을 규칙대로 바꾸는 훅
     = 상태를 관리하는 또 다른 방법으로 '이전 상태'와 '액션'에 따라 새로운 상태를 반환하는 방식
     = 특히 '상태 변경 로직'이 복잡하거나 업데이트해야 하는 경우가 많으면 'useState'보다 더 적합하다
     = 쉽게말해 '상태 변경 로직'을 컴포넌트에서 분리하여 별도의 함수로 관리할 수 있게 해주는 훅
@@ -116,7 +117,7 @@ export default function UseReduceHook(state : number, actoion : {type : string})
         
         <payload>
         - 선택 속성으로 상태 변경에 필요한 데이터를 담는다
-        - 예를 들어 다음과 같이 액션에 'INCREMENT'라는 유형의 액션이 5만큼 증가하는 동장을 수행
+        - 예를 들어 다음과 같이 액션에 'INCREMENT'라는 유형의 액션이 5만큼 증가하는 동작을 수행
             {type : 'INCREMENT', payload : 5}
             - 정의한 액션은 액션 발생 함수를 통해 리듀서 함수로 전달
 

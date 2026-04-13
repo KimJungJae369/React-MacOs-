@@ -7,6 +7,7 @@ export default function StateVariable() {
 }
 /*
     상태변수(StateVariable)
+    = 저장값
     = 리액트에서 컴포넌트의 상태를 관리하기 위해 사용하는 특별한 변수
     = 'useState' 훅을 사용해 선언하면 'let, const'로 선언한 변수와 달리 리액트 내부에서 값의 변경을 감지
     = 따라서 상태 변수의 값이 변경되면 해당 컴포넌트는 자동으로 리렌더링되어 UI가 업데이트

@@ -1,31 +1,16 @@
-// import React from 'react'
-// import User from './User'
-
-// export default function Children() {
-//     return (
-//         <>
-//             <User title= 'User Component'>
-//                 <p>Yumhui</p>
-//                 <p>26</p>
-//                 <p>C</p>
-//             </User>
-//         </>
-//     )
-// }
-
 import React from 'react'
 import User from './User'
 
 export default function Children() {
   return (
-    <>
-        <User title="공지사항">
-            <p>오늘은 휴강입니다</p>
+    <div>
+        <User>
+            <h1>로그인이 필요합니다</h1>
+            <button onClick={() => alert('로그인이 필요합니다')}>로그인 버튼</button>
         </User>
-    </>
+    </div>
   )
 }
-
 
 
 
@@ -102,5 +87,4 @@ export default function Children() {
         key
         = 리스트를 랜더링할 때 가상DOM에서 항목을 효율적으로 식별하고 업데이트하기 위해 사용
         = 자식 컴포넌트에서 고유 값으로 사용하고 싶다면 'id'와 같은 별도의 속성으로 전달
-        
 */

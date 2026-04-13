@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
 
-interface UserProps{
-  name : string;
-  age : number;
-}
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  isSale: boolean;
+};
 
-export default function UserCart(props : UserProps) {
-  const {name, age} = props;
+export default function UserCart(props: Product) {
+  const { name, price, isSale } = props;
+
   return (
-    <>
-      <h1>{name}님은 {age > 19 ? "성인" : "미성년자"}입니다.</h1>
-    </>
-  )
+    <div style={{ border: "1px solid #ddd", padding: "10px", margin: "10px 0" }}>
+      <p>상품명: {name}</p>
+      <p>가격: {price}원</p>
+      {isSale && <p>🔥 세일 중</p>}
+    </div>
+  );
 }

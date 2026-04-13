@@ -25,14 +25,12 @@
 //     )
 // }
 
-    // const Component4 = function(){
-    //     return(
-    //         <>
-    //             <h1>함수 표현식</h1>
-    //         </>
-    //     )
-    // }
-    // export default Component4;
+// const Component4 = function(){
+//     return(
+//         <h1>함수 표현식</h1>
+//     )
+// }
+// export default Component4;
 
 // 3. 화살표 함수
 // const Component4 = () => {
@@ -69,6 +67,7 @@ export default Component4
     .tsx = CRA : JSX지원 / Vite : JSX지원
     = 자바스크립트 기반 리액트 애플리케이션에선에서는 '.jsx' 사용
     = 타입스크립트 기반의 리액트 애플리케이션에서는 JSX 문법을 함께 사용할 수 있는 '.tsx'확장자를 사용
+    = '.ts'는 타입스크립트 파일이지만 JSX 문법을 사용할 수 없기 때문에 리액트 컴포넌트를 작성할 때는 일반적으로 '.tsx' 확장자를 사용한다
 
     // 1. 함수 선언문 
     export default function 컴포넌트_이름(){

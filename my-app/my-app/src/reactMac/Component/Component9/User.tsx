@@ -17,17 +17,17 @@
 
 import React from 'react'
 
-export default function User(props : UserPorps) {
+export default function User(props : USerPorps) {
   const {
     Obj : {name, age, body},
-    Handler
+    Handler 
   } = props;
   return (
     <>
-        <h1>name : {name}</h1>
-        <h2>age : {age}</h2>
-        <h3>body : {body}</h3>
-        <button onClick={Handler}>click</button>
+      <h1>name : {name}</h1>
+      <h2>age : {age}</h2>
+      <h3>body : {body}</h3>
+      <button onClick={Handler}>click</button>
     </>
   )
 }
