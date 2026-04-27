@@ -1,8 +1,7 @@
-  
-import { useReducer } from "react";
-import counterReducer from "./counterReducer.ts";
-import { userReducer, initialUser } from './useReducer.ts';
-import { cartReducer as CartReducer, CartItem } from './cartReducer .ts';
+// import { useReducer } from "react";
+// import counterReducer from "./counterReducer.ts";
+// import { userReducer, initialUser } from './useReducer.ts';
+// import { cartReducer as CartReducer, CartItem } from './cartReducer .ts';
 
 // export default function      UseReducerHook() {
 //     // 카운터 상태 관리
@@ -31,6 +30,11 @@ import { cartReducer as CartReducer, CartItem } from './cartReducer .ts';
 //     )
 // }
 
+import { useReducer } from 'react';
+import counterReducer from './counterReducer.ts';
+import userReducer, { initialUser } from './useReducers.ts';
+import { cartReducer as CartReducer, CartItem } from './cartReducer .ts';
+
 import React from 'react'
 
 export default function UseReducerHook() {
@@ -40,9 +44,7 @@ export default function UseReducerHook() {
   return (
     <>
         <h1>Count : {count}</h1>
-        <button onClick={() => countDispatch({type : 'INCREMENT'})}>Increment</button>
-        <button onClick={() => countDispatch({type : 'DECREMENT'})}>Decrement</button>
-        <button onClick={() => countDispatch({type : 'RESET'})}>Reset</button>
+        <button onClick={() => countDispatch({ type: "INCREMENT" })}>Increment</button>
 
         <br />
 
@@ -56,6 +58,7 @@ export default function UseReducerHook() {
     </>
   )
 }
+
 
 
 

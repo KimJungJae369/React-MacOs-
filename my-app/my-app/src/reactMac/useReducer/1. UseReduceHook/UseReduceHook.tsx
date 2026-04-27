@@ -23,7 +23,6 @@ import { useReducer, useState } from "react"
 //   )
 // }
 
-
 import React from 'react'
 
 export default function UseReduceHook(state : number, action : {type : string}) {
@@ -45,11 +44,12 @@ export default function UseReduceHook(state : number, action : {type : string}) 
         }
     }
   return (
-    <>
+    <div>
 
-    </>
+    </div>
   )
 }
+
 
 
 
@@ -68,7 +68,7 @@ export default function UseReduceHook(state : number, action : {type : string}) 
     = 상태를 관리하는 또 다른 방법으로 '이전 상태'와 '액션'에 따라 새로운 상태를 반환하는 방식
     = 특히 '상태 변경 로직'이 복잡하거나 업데이트해야 하는 경우가 많으면 'useState'보다 더 적합하다
     = 쉽게말해 '상태 변경 로직'을 컴포넌트에서 분리하여 별도의 함수로 관리할 수 있게 해주는 훅
-    = 상태를 바꾸는 규칙이 여러 개고 복작할 때 사용
+    = 상태를 바꾸는 규칙이 여러 개고 복잡할 때 사용
     = 상태 업데이트 로직이 복잡해져서 한눈에 파악하기 힘들 때 로직을 컴포넌트 밖으로 분리해 관리할 때 사용
     = 'useReducer' 훅은 '리듀서 함수'와 '초깃값'을 매개변수로 받아서 상태와 디스패치 함수를 반환
     = '리듀서 함수'는 상태를 변경하는 함수로 '이전 상태'와 '액션'을 받아서 새로운 상태를 반환
@@ -87,7 +87,7 @@ export default function UseReduceHook(state : number, action : {type : string}) 
         - 보통 관리하려는 상태의 의미에 맞는 이름으로 저장
 
         <dispatch>
-        - '리듀서 함수'에 액션을 전달하는 함수 // 액션 : 상태 변경을 일으키는 이벤트나 명령을 나타내는 객체
+        - '리듀서 함수'에 액션을 전달하는 함수 // 액션 : 상태 변경을 일으키는 이벤트나 명령을 나타내는 객체 / '무슨 일이 일어났는지'를 설명하는 객체
         - 이 함수를 호출하면 '리듀서 함수'가 실행되고 새로운 상태가 계산된다
         - 흔히 '액션 발생 함수'라고 하며 보통 식별자는 상태 변수 이름에 'Dispatch'를 붙여서 사용
         - 예를 들어 상태 변수가 'count'라면 디스패치 함수는 'countDispatch'로 명명하는 것이 일반적

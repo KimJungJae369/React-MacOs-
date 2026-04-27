@@ -17,13 +17,13 @@
 // 	}
 // }
 
-export const initialUser = {name : ''}
+export const initialUser = { name: '' };
 
-export function userReducer(state : typeof initialUser, action : {type : string, payload ? : any}){
-	switch(action.type){
-	case 'SET_USER' :
-		return {...state, ...action.payload};
-	default : 
-		return state;
+export default function userReducer(state: typeof initialUser, action: { type: string; payload?: any }) {
+	switch (action.type) {
+		case 'SET_USER':
+			return { ...state, ...action.payload };
+		default:
+			return state;
 	}
 }

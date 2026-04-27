@@ -59,7 +59,8 @@ import './index.css'
 // import UseReducerHook from './reactMac/useReducer/2. UseReduceHook/UseReducerHook'
 // import UseReducerHook from './reactMac/useReducer/3. UseReduceHook/UseReducerHook'
 // import UseReducerHook from './reactMac/useReducer/4. UseReduceHook/UseReducerHook'
-import UseReducerHook from './reactMac/useReducer/5. UseReduceHook/UseReducerHook'
+// import UseReducerHook from './reactMac/useReducer/5. UseReduceHook/UseReducerHook'
+import UseReduceHook from './reactMac/useReducer/6. UseReduceHook/UseReduceHook'
 // useReducer Hook
 
 createRoot(document.getElementById('root')).render(
@@ -75,9 +76,9 @@ createRoot(document.getElementById('root')).render(
     {/* JSX : JavaScript XML */}
 
     {/* <Component1 /> */}
-    {/* <Component2 /> */}
+    {/* <Component2 />   */}
     {/* <Component3 /> */}
-    {/* <Component4 />   */}
+    {/* <Component4 />    */}
     {/* 클래스, 함수, 화살표 함수, 익명 함수, 콜백 함수 */}
 
     {/* <Component5 /> */}
@@ -97,20 +98,20 @@ createRoot(document.getElementById('root')).render(
     {/* <Component12 /> */}
     {/* 컴포넌트와 이벤트  */}
 
-    {/* <Component13 />  */}
+    {/* <Component13 />   */}
     {/* <Component14 /> */}
     {/* 인라인, 함수참조, 함수 매개변수 */}
 
     {/* <Component15 /> */}
     {/* <Text/> */}
     {/* 캡처링, 버블링, 이벤트 전파 막기, 이벤트 기본 동작 막기 */}
-    
-    
+
+
     {/* <ComponentState /> */}
     {/* <Text /> */}
     {/* state, state 변수, useState, useState Hook */}
-    
-    <UseReducerHook />
+
+    <UseReduceHook />
     {/* useReducer Hook 핵심 */}
   </StrictMode>
 )

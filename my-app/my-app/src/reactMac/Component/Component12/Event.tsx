@@ -1,30 +1,29 @@
-import React from "react";
-import Button from "./Button";
-
-const products = [
-    { id: 1, name: "무선 키보드" },
-    { id: 2, name: "게이밍 마우스" },
-    { id: 3, name: "모니터 받침대" },
-];
+import React from 'react'
+import Cart from './Cart'
+import ActionButton from './ActionButton'
 
 export default function Event() {
-    const handleDelete = (id: number) => {
-        alert(`삭제된 id: ${id}`);
-    };
 
-    return (
-        <div>
-        {products.map((product) => (
-            <Button
-                key={product.id}
-                id={product.id}
-                name={product.name}
-                onDelete={handleDelete}
-            />
-        ))}
-        </div>
-    );
+    function handleClick(item: string){
+        console.log(`${item}이 선택되었습니다.`)
+        alert(`${item}이 선택되었습니다.`)
+    }
+  return (
+    <>
+        <Cart title="과일 선택">
+            <ActionButton label="사과" onAction={() => handleClick("사과")} />
+            <ActionButton label="바나나" onAction={() => handleClick("바나나")} />
+        </Cart>
+
+        <Cart title="동물 선택">
+            <ActionButton label="강아지" onAction={() => handleClick("강아지")} />
+            <ActionButton label="고양이" onAction={() => handleClick("고양이")} />
+        </Cart>
+    </>
+  )
 }
+
+
 
 
 

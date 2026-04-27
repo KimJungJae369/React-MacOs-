@@ -11,14 +11,20 @@ import Count from './Count'
 //   )
 // }
 
+// import React from 'react'
+
 // export default function UseReducerHook() {
 //     const [count, setCount] = useState(0);
 //   return (
-//     <>
+//     <div>
 //         <Count count={count} setCount={setCount} />
-//     </>
+//     </div>
 //   )
 // }
+
+
+
+
 
 
 
@@ -39,14 +45,17 @@ import React from 'react'
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
     const increment = () => setCount((count) => count + 1);
-    const decrement = () => setCount((count) => count - 1);
-    const reset = () => setCount(0);
   return (
-    <>
-        <Count count={count} increment={increment} decrement={decrement} reset={reset} />
-    </>
+    <div>
+        <Count count={count} increment={increment} />
+    </div>
   )
 }
+
+
+
+
+
 
 
 
@@ -76,7 +85,7 @@ export default function UseReducerHook() {
     
     = 부모 컴포넌트에서 전달한 count와 setCount()를 Count(자식 컴포넌트) 컴포넌트에서 사용하려면 props 객체의 타입을 명확하게 정의
     = 타입스크립트를 사용할 때 props의 타입을 명확히 지정하지 않으면 타입 추론이 제대로 되지 않아 컴파일 오류 또는 경고가 발생
-    = 이때 오류 메시지를 보려면 Count 컴포넌트에 다음처럼 빈 형태라도 코드를 작성
+    = 이때 오류 메시지를 보려면 Count 컴포넌트에 다음 처럼 빈 형태라도 코드를 작성
         ex) 빈형태로 작성
             import React from 'react'
             
@@ -171,5 +180,5 @@ export default function UseReducerHook() {
     - increment()처럼 의미 있는 이름을 가진 함수를 전달하면 코드를 읽는 사람도 이 함수가 어떤 목적을 가지고 있는지 쉽게 이해할 수 있다
 
     = 이는 절대적인 기준이 아니며 상황에 따라 방식을 선택
-    = 첫 번째 방법이 더 간단할 수 있도 복잡한 상태 관리나 재사용이 필요한 경우에는 두 번째 방법이 더 유리하다
+    = 첫 번째 방법이 더 간단할 수 있고 복잡한 상태 관리나 재사용이 필요한 경우에는 두 번째 방법이 더 유리하다
 */

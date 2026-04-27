@@ -14,7 +14,7 @@
 
 import React from 'react'
 
-export default function counterReducer(state : number, action : {type :string}) {
+export default function CounterReducer(state : number, action : {type : string}){
     switch(action.type){
         case "INCREMENT":
             return state + 1
@@ -23,6 +23,8 @@ export default function counterReducer(state : number, action : {type :string}) 
         case "RESET":
             return 0
         default:
-            throw new Error(`Unhandled action type: ${action.type}`)
+            throw new Error(`Unhandled action type: ${action.type}`) 
     }
+
 }
+

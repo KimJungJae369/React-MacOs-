@@ -25,6 +25,10 @@
 
 
 
+
+
+
+
 // 2. 이벤트 객체와 함수 참조
 // import React from 'react'
 
@@ -42,13 +46,16 @@
 // import React from 'react'
 
 // export default function Eventobject() {
-//     const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//     const clickHander = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         console.log(e);
 //     }
 //   return (
-//     <button onClick={clickHandler}>Eventobject</button>
+//     <button onClick={clickHander}>Eventobject</button>
 //   )
 // }
+
+
+
 
 
 
@@ -118,14 +125,21 @@
 import React from 'react'
 
 export default function Eventobject() {
-    const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, title : string) => {
+    const clickHander = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, title : string) => {
         console.log(e);
         alert(title);
     }
   return (
-    <button onClick={(e) => clickHandler(e, 'Hello!')}>Eventobject</button>
+    <button onClick={(e) => clickHander(e, 'Hello!')}>Eventobject</button>
   )
 }
+
+
+
+
+
+
+
 
 
 
@@ -179,7 +193,7 @@ export default function Eventobject() {
             console.log(e)
         } 
         <button onClick={clickHandler}>click</button> // 출력값 : SyntheticBaseEvent
-            - 타입 명시 : React.MouseEvent<HTMLButtonElement, MouseEvent> / HTMLButtonElement : 이벤트가 발생한 요소의 타입 : 이건 버튼이야 하는 뜻 / MouseEvent : 이벤트 종류 : 마우스 이벤트야 하는 뜻
+            - 타입 명시 : React.MouseEvent<HTMLButtonElement, MouseEvent> / HTMLButtonElement : 이벤트가 발생한 요소의 타입 : 이건 버튼이야 하는 뜻 / MouseEvent : 이벤트 종류 : 무슨 이벤트인지 명시하는 것
                 타입 명시 : 이벤트 객체 타입값에 어떤 데이터 타입이 들어와야 하는지 직접 지정해주는 것
     
     = '함수 참조' 방식에서 이벤트 객체를 사용하려면 참조 함수에 타입을 명시해야 한다

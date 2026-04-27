@@ -13,18 +13,15 @@
 //     }
 // }
 
-import React from 'react'
-
-export default function counterReducer(state : number, action : {type : string}){
-    switch(action.type){
-        case "INCREMENT" :
+export default function counterReducer(state: number, action: { type: string }) {
+    switch (action.type) {
+        case "INCREMENT":
             return state + 1;
-        case "DECREMENT" :
+        case "DECREMENT":
             return state - 1;
-        case "RESET" : 
+        case "RESET":
             return 0;
-        default : 
-            throw new Error(`Unhandled action type : ${action.type}`);
+        default:
+            throw new Error(`Unhandled action type: ${action.type}`);
     }
-    
 }

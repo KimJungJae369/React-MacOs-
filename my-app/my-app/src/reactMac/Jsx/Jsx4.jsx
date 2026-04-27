@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Jsx4 = () => {
-    const name = 'Hello React'
-    const number = 3 + 5;
+    const name = '홍길동'
+    const num = 10 * 3 + 1
     return (
         <>
             {/* 
@@ -25,10 +25,7 @@ const Jsx4 = () => {
                 2. 중괄호 안에 주석 작성
                 = 프로그래밍에서는 코드에 설명을 추가하거나 특정 부분을 임시로 비활성화할 때 '주석'을 사용
             */}
-            <h1 
-                style={{color : 'red'}}
-            >{name}</h1>
-            <h2 style={{fontWeight : 900}}>3 + 5 = {number}</h2>
+            <h1 style={{color : 'white'}}>{`안녕하세요 ${name}입니다 나이는 ${num}세 입니다`}</h1>
         </>
     )
 }

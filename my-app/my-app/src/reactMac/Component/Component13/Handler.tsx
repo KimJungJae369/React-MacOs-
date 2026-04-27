@@ -9,9 +9,11 @@
 
 // export default function Handler() {
 //   return (
-//     <button onClick={() => alert('inline-hadler')}>Handler</button>
+//     <button onClick={() => {alert('Handler clicked')}}>Handler</button>
 //   )
 // }
+
+
 
 
 
@@ -92,6 +94,10 @@
 
 
 
+
+
+
+
 // 3. 이벤트 핸들러 매개변수
 // export default function Handler() {
 //     const clickHandler = (msg : string) => {
@@ -107,13 +113,16 @@
 import React from 'react'
 
 export default function Handler() {
-    const clickHandler = (title : string) => {
-        alert(title)
+    const clickHandler = (msg : string) => {
+        alert(msg);
     }
   return (
     <button onClick={() => clickHandler('Handler clicked')}>Handler</button>
   )
 }
+
+
+
 
 
 

@@ -1,6 +1,23 @@
+// import {useState} from 'react'
+// import CountDisplay from './CountDisplay'
+// import ConutButton from './ConutButton'
+
+// export default function UseReducerHook() {
+//     const [count, setCount] = useState(0);
+//     const incerement = () => setCount(count + 1);
+//     const decrement = () => setCount(count - 1);
+//     const reset = () => setCount(0);
+//   return (
+//     <>
+//         <CountDisplay count={count} />
+//         <ConutButton incerement={incerement} decrement={decrement} reset={reset} />
+//     </>
+//   )
+// }
+
 import {useState} from 'react'
-import CountDisplay from './CountDisplay'
-import ConutButton from './ConutButton'
+import CountDisplay from './CountDisplay';
+import ConutButton from './ConutButton';
 
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
@@ -8,12 +25,15 @@ export default function UseReducerHook() {
     const decrement = () => setCount(count - 1);
     const reset = () => setCount(0);
   return (
-    <>
+    <div>
         <CountDisplay count={count} />
         <ConutButton incerement={incerement} decrement={decrement} reset={reset} />
-    </>
+    </div>
   )
 }
+
+
+
 
 /*
     상태 끌어올리기

@@ -8,11 +8,11 @@ import React from 'react'
 import User from './User'
 
 export default function Component7() {
-  return (
-    <>
-        <User name="홍길동" age={30} body="180cm"/>
-    </>
-  )
+    return (
+        <>
+            <User name="홍길동" age={30} body="180cm"/>
+        </>
+    )
 }
 
 
@@ -61,6 +61,7 @@ export default function Component7() {
             }
             - 데이터는 개별 값이 아닌 하나의 객체로 묶여 props로 전달된다
             - props는 객체이기 때문에 '자식 컴포넌트'에서는 객체 형식으로 접근해야 한다
+                ex) 'props.name', 'props.age'처럼 점 표기법을 사용해 접근
             - '자바스크립트'에서는 props에 타입을 지정하지 않아도 실행에 문제가 없다
             - 하지만 '타입스크립트'에서는 props 객체의 '구조와 타입을 명확히 지정'해주는 것이 가장 좋다
             - 타입을 지정하지 않으면 코드 에디터의 자동완성 기능이나 오류 검사가 제대로 동작하지 않을 수 있다
@@ -71,7 +72,8 @@ export default function Component7() {
                 1, export default function User(props) {
                 - props의 타입을 명시
                 - 이 객체는 name(문자열)과 age(숫자) 속성을 가져야 한다
-                - 잘못된 타입을 전달하면 타입스크립트가 컴파일(프로그래밍 언어(C,Jave 등) 컴퓨터가 이해하는 언어로 변경 시점에 오류를 알려준다
+                - 잘못된 타입을 전달하면 타입스크립트가 컴파일(프로그래밍 언어(C,Jave 등) 컴퓨터가 이해하는 언어로 변경 시점에 오류를 알려준다) 검사에서 오류를 발생시켜
+                개발자가 문제를 인식할 수 있도록 도와준다
 
                     return (
                         <>

@@ -15,14 +15,13 @@
 //     )
 // }
 
+import React from 'react'
 type UserPorps = {
   name : string,
   age : number,
   body : string,
-  Handler : () => void;
+  Handler : () => void,
 }
-
-import React from 'react'
 
 export default function User(props : UserPorps) {
   const {name, age, body, Handler} = props;
@@ -31,10 +30,13 @@ export default function User(props : UserPorps) {
       <h1>name : {name}</h1>
       <h2>age : {age}</h2>
       <h3>body : {body}</h3>
-      <button onClick={Handler}>click</button>
+      <button onClick={Handler}>클릭하세요</button>
     </>
   )
 }
+
+
+
 
 
 
