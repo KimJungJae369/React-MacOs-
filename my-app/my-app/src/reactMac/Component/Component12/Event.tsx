@@ -1,28 +1,19 @@
 import React from 'react'
-import Cart from './Cart'
-import ActionButton from './ActionButton'
+import { Card } from './Card'
 
 export default function Event() {
+    return (
+        <>
+            <Card title="프로필" onAction={() => alert('프로필 클릭!')}>
+                <p>프로필 내용</p>
+            </Card>
 
-    function handleClick(item: string){
-        console.log(`${item}이 선택되었습니다.`)
-        alert(`${item}이 선택되었습니다.`)
-    }
-  return (
-    <>
-        <Cart title="과일 선택">
-            <ActionButton label="사과" onAction={() => handleClick("사과")} />
-            <ActionButton label="바나나" onAction={() => handleClick("바나나")} />
-        </Cart>
-
-        <Cart title="동물 선택">
-            <ActionButton label="강아지" onAction={() => handleClick("강아지")} />
-            <ActionButton label="고양이" onAction={() => handleClick("고양이")} />
-        </Cart>
-    </>
-  )
+            <Card title="상태" onAction={() => alert('상태 클릭!')}>
+                <p>온라인</p>
+            </Card>
+        </>
+    )
 }
-
 
 
 

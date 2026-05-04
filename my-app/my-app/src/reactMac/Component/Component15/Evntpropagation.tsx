@@ -25,13 +25,16 @@
 //     const handlerCapture = () => {
 //         console.log('부모');
 //     }
+
 //     const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClickCapture={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <button onClickCapture={handlerCapture} onClick={handlerBubble}>Evntpropagation</button>
 //   )
 // }
+
+
 
 
 
@@ -96,11 +99,12 @@
 //     const handlerCapture = () => {
 //         console.log('부모');
 //     }
+
 //     const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClick={handlerCapture}><button onClick={handlerBubble}>Evntpropagation</button></div>
 //   )
 // }
 
@@ -179,12 +183,13 @@
 //     const handlerCapture = () => {
 //         console.log('부모');
 //     }
+
 //     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         e.stopPropagation();
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//     <div onClick={handlerCapture}><button onClick={handlerBubble}>Evntpropagation</button></div>
 //   )
 // }
 
@@ -274,6 +279,11 @@ export default function Evntpropagation() {
     </>
   )
 }
+
+
+
+
+
 
 
 

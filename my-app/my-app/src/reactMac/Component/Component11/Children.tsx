@@ -1,60 +1,22 @@
+
 import React from 'react'
 import User from './User'
 
 export default function Children() {
   return (
     <>
-        <User>
-            <h2>공지사항</h2>
-            <p>오늘은 리액트 공부하는 날!</p>
+        <User title="프로필">
+            <p>이름 : 김정재</p>
+            <p>나이 : 28</p>
+            <p>사는 곳 : 서울</p>
         </User>
 
-        <User>
-            <h2>유저 정보</h2>
-            <p>이름 : 민수</p>
+        <User title="상태">
+            <p>오프라인입니다</p>
         </User>
     </>
   )
 }
-
-
-
-// 한파일에 작성
-// import React from 'react'
-
-// interface UserProps {
-//   children: React.ReactNode
-// }
-
-// function User({ children }: UserProps) {
-//   return (
-//     <div style={{ border: '2px solid black', padding: '20px', margin: '20px' }}>
-//       {children}
-//     </div>
-//   )
-// }
-
-// export default function Children() {
-//   return (
-//     <>
-//       <User>
-//         <h2>공지사항</h2>
-//         <p>오늘은 리액트 공부하는 날!</p>
-//       </User>
-
-//       <User>
-//         <h2>유저 정보</h2>
-//         <p>이름 : 민수</p>
-//       </User>
-//     </>
-//   )
-// }
-
-
-
-
-
-
 
 
 

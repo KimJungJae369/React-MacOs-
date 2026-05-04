@@ -1,14 +1,14 @@
 import React from 'react'
 interface UserProps {
-    children: React.ReactNode
+    title : string,
+    children : React.ReactNode
 }
 
-export default function User({ children }: UserProps) {
+export default function User({ title, children }: UserProps) {
   return (
     <>
-        <div style={{border : '2px solid black', padding : '20px', margin : '20px'}}>
-            {children}
-        </div>
+      <h1 style={{border : '1px solid #333', padding: '12px', marginBottom : '10px'}}>{title}</h1>
+      {children}
     </>
   )
 }

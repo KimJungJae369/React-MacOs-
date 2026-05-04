@@ -25,10 +25,10 @@ export default function UseReducerHook() {
     const decrement = () => setCount(count - 1);
     const reset = () => setCount(0);
   return (
-    <div>
+    <>
         <CountDisplay count={count} />
         <ConutButton incerement={incerement} decrement={decrement} reset={reset} />
-    </div>
+    </>
   )
 }
 
@@ -38,7 +38,7 @@ export default function UseReducerHook() {
 /*
     상태 끌어올리기
     = 여러 컴포넌트에서 공유해야 하는 상태를 가장 가까운 공통 부모 컴포넌트로 이동시키는 과정
-    = 이렇게 상태를 끌어올리면 부모 컴포넌트가 상태를 중앙에서 관리하고 자식 컴포넌트들은 props를 통해 상태 값을 전달받기 때문에 상태를 일괸되게 관리할 수 있다
+    = 이렇게 상태를 끌어올리면 부모 컴포넌트가 상태를 중앙에서 관리하고 자식 컴포넌트들은 props를 통해 상태 값을 전달받기 때문에 상태를 일관되게 관리할 수 있다
 
     <1. 컴포넌트 구조>
     - App 컴포넌트(부모)

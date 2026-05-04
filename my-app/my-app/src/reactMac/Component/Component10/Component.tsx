@@ -32,7 +32,7 @@ const UerObj = {
     }
     return (
         <>
-            <User {...UerObj} Handler={clickHandler}/>
+            <User  {...UerObj} clickHandler={clickHandler} />
         </>
     )
 }

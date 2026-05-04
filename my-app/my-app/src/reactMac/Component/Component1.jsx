@@ -55,30 +55,30 @@ function Header(){
   return(
     <header>
       <h1>My Website</h1>
-      <Nav />
     </header>
-  )
-}
-
-function Nav(){
-  return(
-    <nav>
-      <h2>Home | About | Services | Contact</h2>
-    </nav>
   )
 }
 
 function Article(){
   return(
     <article>
-      <h3>Main Article</h3>
+      <h2>Main Article</h2>
     </article>
+  )
+}
+
+function Nav(){
+  return(
+    <nav>
+      <h3>Home | About | Services | Contact</h3>
+    </nav>
   )
 }
 
 function Section(){
   return(
     <section>
+      <Nav />
       <h4>More Detail</h4>
     </section>
   )
@@ -95,7 +95,7 @@ function Aside(){
 function Footer(){
   return(
     <footer>
-      <h6>&copy; 2025 My Website All rights reserved.</h6>
+      <p>&copy; 2025 My Website All rights reserved.</p>
     </footer>
   )
 }

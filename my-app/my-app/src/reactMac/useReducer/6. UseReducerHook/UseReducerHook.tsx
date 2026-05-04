@@ -1,7 +1,18 @@
 import {useState} from 'react'
 import Count from './Count'
 
-export default function UseReduceHook() {
+// export default function UseReduceHook() {
+//   const [count, setCount] = useState(0)
+//   const increment = () => setCount((count) => count + 1)
+//   return (
+//     <>
+//       <Count count={count} increment={increment} />
+//     </>
+//   )
+// }
+
+
+export default function UseReducerHook() {
   const [count, setCount] = useState(0)
   const increment = () => setCount((count) => count + 1)
   return (
@@ -10,6 +21,7 @@ export default function UseReduceHook() {
     </>
   )
 }
+
 
 /*
   개발자 도구로 상태 값 확인하기

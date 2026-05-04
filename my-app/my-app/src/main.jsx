@@ -60,7 +60,8 @@ import './index.css'
 // import UseReducerHook from './reactMac/useReducer/3. UseReduceHook/UseReducerHook'
 // import UseReducerHook from './reactMac/useReducer/4. UseReduceHook/UseReducerHook'
 // import UseReducerHook from './reactMac/useReducer/5. UseReduceHook/UseReducerHook'
-import UseReduceHook from './reactMac/useReducer/6. UseReduceHook/UseReduceHook'
+// import UseReducerHook from './reactMac/useReducer/6. UseReducerHook/UseReducerHook'
+import Text from './reactMac/useReducer/7. Text/Text'
 // useReducer Hook
 
 createRoot(document.getElementById('root')).render(
@@ -111,7 +112,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Text /> */}
     {/* state, state 변수, useState, useState Hook */}
 
-    <UseReduceHook />
+    {/* <UseReducerHook /> */}
+    <Text />
     {/* useReducer Hook 핵심 */}
   </StrictMode>
 )

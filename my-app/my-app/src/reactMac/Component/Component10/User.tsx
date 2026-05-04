@@ -14,26 +14,27 @@
 //         </>
 //     )
 // }
-
-import React from 'react'
-type UserPorps = {
+type UserProps = {
   name : string,
   age : number,
   body : string,
-  Handler : () => void,
+  clickHandler : () => void,
 }
 
-export default function User(props : UserPorps) {
-  const {name, age, body, Handler} = props;
+import React from 'react'
+
+export default function User(props : UserProps) {
+  const{name, age, body, clickHandler} = props;
   return (
     <>
       <h1>name : {name}</h1>
       <h2>age : {age}</h2>
       <h3>body : {body}</h3>
-      <button onClick={Handler}>클릭하세요</button>
+      <button onClick={clickHandler}>click</button>
     </>
   )
 }
+
 
 
 

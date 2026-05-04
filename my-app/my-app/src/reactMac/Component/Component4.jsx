@@ -25,12 +25,12 @@
 //     )
 // }
 
-// const Compnent4 = function(){
+// const Component4 =function(){
 //     return(
 //         <h1>함수 표현식</h1>
 //     )
 // }
-// export default Compnent4;
+// export default Component4;
 
 // 3. 화살표 함수
 // const Component4 = () => {
@@ -44,7 +44,9 @@
 
 const Component4 = () => {
     return(
-        <h1>Hello, Function Component</h1>
+        <h1>
+            화살표 함수
+        </h1>
     )
 }
 export default Component4;

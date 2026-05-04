@@ -45,10 +45,12 @@ export default function UseReduceHook(state : number, action : {type : string}) 
     }
   return (
     <div>
-
+         <h1>UseReduceHook</h1>
     </div>
   )
 }
+
+
 
 
 

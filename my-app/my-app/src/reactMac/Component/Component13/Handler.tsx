@@ -9,9 +9,10 @@
 
 // export default function Handler() {
 //   return (
-//     <button onClick={() => {alert('Handler clicked')}}>Handler</button>
+//     <button onClick = {() => alert('Handler clicked')}>Handler</button>
 //   )
 // }
+
 
 
 
@@ -53,7 +54,7 @@
 
 // export default function Handler() {
 //     const clickHandler = () => {
-//         alert('Function reference handler')
+//         console.log('Handler clicked');
 //     }
 //   return (
 //     <button onClick={clickHandler}>Handler</button>
@@ -113,13 +114,18 @@
 import React from 'react'
 
 export default function Handler() {
-    const clickHandler = (msg : string) => {
-        alert(msg);
+    const clickHandler = (title : string) => {
+        console.log(title);
     }
   return (
-    <button onClick={() => clickHandler('Handler clicked')}>Handler</button>
+    <button onClick = {() => clickHandler('Handler clicked')}>Handler</button>
   )
 }
+
+
+
+
+
 
 
 

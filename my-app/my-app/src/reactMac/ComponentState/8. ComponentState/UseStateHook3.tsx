@@ -36,19 +36,21 @@ import {use, useState} from 'react'
 //     const [gender, setGender] = useState<string | null>(null);
 
 //     const clickHandler = () => {
-//         setName('Maike');
-//         setAge(30);
-//         setGender('Male');
+//         setName('Maike'), // 타입 오류
+//         setAge(30), // 타입 오류    
+//         setGender('Male')   // 타입 오류
 //     }
 //   return (
-//     <>
+//     <div>
 //         <p>이름 : {name}</p>
 //         <p>나이 : {age}</p>
 //         <p>성별 : {gender}</p>
 //         <button onClick={clickHandler}>변경</button>
-//     </>
+//     </div>
 //   )
 // }
+
+
 
 
 
@@ -108,15 +110,15 @@ import {use, useState} from 'react'
 //         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
-//         setCount(count + 1);
 //     }
 //   return (
 //     <div>
-//       <h1>Count : {count}</h1>
-//       <button onClick={clickHandler}>click</button>
+//         <h1>Count : {count}</h1>
+//         <button onClick={clickHandler}>click</button>
 //     </div>
 //   )
 // }
+
 
 
 
@@ -166,18 +168,20 @@ export default function UseStateHook3() {
     const [count, setCount] = useState(0);
 
     const clickHandler = () => {
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
+        setCount((count) => count + 1);
+        setCount((count) => count + 1);
+        setCount((count) => count + 1);
     }
   return (
     <div>
-      <h1>Count : {count}</h1>
-      <button onClick={clickHandler}>click</button>
+        <h1>Count : {count}</h1>
+        <button onClick={clickHandler}>click</button>
     </div>
   )
 }
+
+
+
 
 
 
