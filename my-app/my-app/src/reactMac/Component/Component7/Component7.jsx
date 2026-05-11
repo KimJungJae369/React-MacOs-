@@ -9,16 +9,17 @@ import User from './User'
 
 export default function Component7() {
     return (
-        <>
-            <User name="홍길동" age={30} body="180cm"/>
-        </>
+        <div>
+            <User name={'철수'} age={30} body={'체중: 70kg'} />
+        </div>
     )
 }
 
 
 
+
 /*
-    컴포넌트와 props 객체 
+    컴포넌트와 props 객체
     = 리액트에서 '부모 컴포넌트'가 '자식 컴포넌트'에 데이터를 전달할 수 있다    
 
     <props 객체란>

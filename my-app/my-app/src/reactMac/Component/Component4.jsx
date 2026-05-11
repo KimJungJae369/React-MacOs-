@@ -25,7 +25,7 @@
 //     )
 // }
 
-// const Component4 =function(){
+// const Component4 = function(){
 //     return(
 //         <h1>함수 표현식</h1>
 //     )
@@ -42,14 +42,17 @@
 // }
 // export default Component4;
 
+import React from 'react'
+
 const Component4 = () => {
-    return(
-        <h1>
-            화살표 함수
-        </h1>
-    )
+  return (
+    <div>Component4</div>
+  )
 }
-export default Component4;
+
+export default Component4
+
+
 
 /*
     컴포넌트 기초

@@ -1,24 +1,43 @@
+// import React from 'react'
+// import User from './User'
+
+// export default function Children() {
+//   return (
+//     <>
+//         <User title="프로필">
+//             <p>이름 : 김정재</p>
+//             <p>나이 : 28</p>
+//             <p>사는 곳 : 서울</p>
+//         </User>
+
+//         <User title="설정">
+//             <p>이메일 : kim@example.com</p>
+//             <p>전화번호 : 010-1234-5678</p>
+//         </User>
+//     </>
+//   )
+// }
+
 
 import React from 'react'
 import User from './User'
 
 export default function Children() {
   return (
-    <>
-        <User title="프로필">
+    <div>
+        <User title='프로필'>
             <p>이름 : 김정재</p>
             <p>나이 : 28</p>
             <p>사는 곳 : 서울</p>
         </User>
 
-        <User title="상태">
-            <p>오프라인입니다</p>
+        <User title='설정'>
+            <p>이메일 : kim@example.com</p>
+            <p>전화번호 : 010-1234-5678</p>
         </User>
-    </>
+    </div>
   )
 }
-
-
 
 
 /*

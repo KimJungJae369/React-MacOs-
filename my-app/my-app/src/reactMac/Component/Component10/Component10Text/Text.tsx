@@ -1,23 +1,39 @@
+// import React from 'react'
+// import UserCard from './UserCard'
+
+
+// export default function Text() {
+//   const user = [
+//     {name : '홍길동', age : 20, isObject : true},
+//     {name : '김철수', age : 30, isObject : false},
+//     {name : '이영희', age : 40, isObject : true},
+//   ]
+//   return (
+//     <>
+//       {user.map((item,index) => (
+//         <UserCard key={index} 
+//           {...item}
+//         />
+//       ))}
+//     </>
+//   )
+// }
+
+
 import React from 'react'
-import { UserCard } from './UserCard'
+import UserCard from './UserCard'
 
-interface User {
-  name: string
-  age: number
-  isOnline: boolean
-}
-
-export default function App() {
-  const users: User[] = [
-    { name: '홍길동', age: 31, isOnline: true },
-    { name: '김철수', age: 25, isOnline: false }
+export default function Text() {
+  const user = [
+    {name : '홍길동', age : 20, isObject : true},
+    {name : '김철수', age : 30, isObject : false},
+    {name : '이영희', age : 40, isObject : true},
   ]
-
   return (
-    <>
-      {users.map((user) => (
-        <UserCard key={user.name} {...user} />
+    <div>
+      {user.map((item, index) => (
+        <UserCard key={index} {...item}/>
       ))}
-    </>
+    </div>
   )
 }

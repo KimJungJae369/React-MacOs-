@@ -1,62 +1,123 @@
-/*
-  FormEvent<HTMLFormElement> : 폼 요소에서 발생하는 이벤트를 나타내는 타입입니다.
-  HTMLFormElement : HTML의 <form> 요소를 나타내는 타입입니다. 
-  폼 요소에서 발생하는 이벤트 객체의 타입을 지정할 때 사용됩니다.
+// /*
+//   FormEvent<HTMLFormElement> : 폼 요소에서 발생하는 이벤트를 나타내는 타입입니다.
+//   HTMLFormElement : HTML의 <form> 요소를 나타내는 타입입니다. 
+//   폼 요소에서 발생하는 이벤트 객체의 타입을 지정할 때 사용됩니다.
 
-  HTMLAnchorElement : HTML의 <a> 요소를 나타내는 타입입니다.
-  앵커 요소에서 발생하는 이벤트 객체의 타입을 지정할 때 사용됩니다.
-*/
+//   HTMLAnchorElement : HTML의 <a> 요소를 나타내는 타입입니다.
+//   앵커 요소에서 발생하는 이벤트 객체의 타입을 지정할 때 사용됩니다.
+// */
+
+// import React from 'react'
+
+// export default function Text() {
+//   const handlerAppClick = () => {
+//     console.log('App Clicked')
+//   }
+
+//   const handlerCardClick = () => {
+//     console.log('Card Clicked')
+//   }
+
+//   const handlerBtnClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//     console.log('Btn Clicked');
+//     e.stopPropagation();
+//     e.preventDefault();
+//   }
+
+//   const handlerAppClickCapture = () => {
+//     console.log('App CapClicked')
+//   }
+
+//   const handlerCardClickCapture = () => {
+//     console.log('Card CapClicked')
+//   }
+//   return (
+//     <div 
+//       onClick={handlerAppClick}
+//       onClickCapture={handlerAppClickCapture}
+//       style={{
+//         border : '1px solid #fff',
+//         marginTop : 10,
+//         padding : 10,
+//         textAlign : 'center'
+//       }}
+//     >
+//     App
+//     <div
+//       onClick={handlerCardClick}
+//       onClickCapture={handlerCardClickCapture}
+//       style={{
+//         border : '1px solid #fff',
+//         marginTop : 10,
+//         padding : 10,
+//         textAlign : 'center'
+//       }}
+//     >
+//       Card
+//     </div>
+//     <button onClick={handlerBtnClick} style={{border : '1px solid #fff', marginTop : 10, padding : 10, textAlign : 'center'}}>Button</button>
+//     </div>
+//   )
+// }
+
 
 import React from 'react'
 
 export default function Text() {
-  const handleAppClick = () => {
-    console.log('App (버블링)')
+  const handlerAppClick = () => {
+    console.log('App Clicked')
+  }
+  
+  const handlerButtonClick = () => {
+    console.log('Button Clicked')
   }
 
-  const handleCardClick = () => {
-    console.log('Card (버블링)')
+
+  const handlerCardClick = (e : React.MouseEvent<HTMLDivElement>) => {
+    console.log('Card Clicked')
+    e.stopPropagation();
+    e.preventDefault();
   }
 
-  const handleButtonClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    console.log('Button 클릭')
-
-    // ❗ 이벤트 전파 막기
-    e.stopPropagation()
-
-    // ❗ 기본 동작 막기 (페이지 이동 방지)
-    e.preventDefault()
+  const handlerAppClickCapture = () => {
+    console.log('App CapClicked')
   }
 
-  // 캡처링 단계
-  const handleAppCapture = () => {
-    console.log('App (캡처링)')
+  const handlerCardClickCapture = () => {
+    console.log('Card CapClicked')
   }
-
-  const handleCardCapture = () => {
-    console.log('Card (캡처링)')
-  }
-
   return (
-    <div
-      onClick={handleAppClick}
-      onClickCapture={handleAppCapture}
-      style={{ padding: '20px', border: '2px solid red' }}
-    >
-      App
+    <div style={{
+      border : '1px solid #fff',
+      marginTop : 10,
+      padding : 10,
+      textAlign : 'center'
+    }}>
+      <button onClick={handlerButtonClick}>Button</button>
       <div
-        onClick={handleCardClick}
-        onClickCapture={handleCardCapture}
-        style={{ padding: '20px', border: '2px solid blue' }}
+        onClick={handlerCardClick}
+        onClickCapture={handlerCardClickCapture}
+        style={{
+          border : '1px solid #fff',
+          marginTop : 10,
+          padding : 10,
+          textAlign : 'center'
+        }}
       >
         Card
-        <a
-          href="https://example.com"
-          onClick={handleButtonClick}
-          style={{ display: 'block', marginTop: '10px' }}
-        >
-          버튼 (a 태그)
-        </a>
+      </div>
+
+      <div
+        onClick={handlerAppClick}
+        onClickCapture={handlerAppClickCapture}
+        style={{
+          border : '1px solid #fff',
+          marginTop : 10,
+          padding : 10,
+          textAlign : 'center'
+        }}
+      >
+        App
       </div>
     </div>
   )

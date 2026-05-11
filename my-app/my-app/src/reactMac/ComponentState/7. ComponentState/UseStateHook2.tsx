@@ -26,7 +26,7 @@ export default function UseStateHook2() {
 
     const [formState, setFormState] = useState({
         name : '홍길동',
-        age : 31,
+        age: 31,
         gender : '남자'
     })
 /*

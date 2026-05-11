@@ -15,6 +15,8 @@
 //   )
 // }
 
+
+
 import {useState} from 'react'
 import CountDisplay from './CountDisplay';
 import ConutButton from './ConutButton';
@@ -25,12 +27,13 @@ export default function UseReducerHook() {
     const decrement = () => setCount(count - 1);
     const reset = () => setCount(0);
   return (
-    <>
+    <div>
         <CountDisplay count={count} />
         <ConutButton incerement={incerement} decrement={decrement} reset={reset} />
-    </>
+    </div>
   )
 }
+
 
 
 

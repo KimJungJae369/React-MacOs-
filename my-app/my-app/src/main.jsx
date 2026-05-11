@@ -52,7 +52,7 @@ import './index.css'
 // import ComponentState from './reactMac/ComponentState/6. ComponentState/UseStateHook'
 // import ComponentState from './reactMac/ComponentState/7. ComponentState/UseStateHook2'
 // import ComponentState from './reactMac/ComponentState/8. ComponentState/UseStateHook3'
-// import Text from './reactMac/ComponentState/text.jsx'
+// import Text from './reactMac/ComponentState/9. Text/Text.jsx'
 // state, state 변수, useState, useState Hook
 
 // import UseReduceHook from './reactMac/useReducer/1. UseReduceHook/UseReduceHook'
@@ -61,8 +61,11 @@ import './index.css'
 // import UseReducerHook from './reactMac/useReducer/4. UseReduceHook/UseReducerHook'
 // import UseReducerHook from './reactMac/useReducer/5. UseReduceHook/UseReducerHook'
 // import UseReducerHook from './reactMac/useReducer/6. UseReducerHook/UseReducerHook'
-import Text from './reactMac/useReducer/7. Text/Text'
+// import Text from './reactMac/useReducer/7. Text/Text'
 // useReducer Hook
+
+import LilineStyle from './reactMac/ComponentStyle/LilineStyle'
+// 컴포넌트 스타일
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -113,7 +116,11 @@ createRoot(document.getElementById('root')).render(
     {/* state, state 변수, useState, useState Hook */}
 
     {/* <UseReducerHook /> */}
-    <Text />
+    {/* <Text /> */}
     {/* useReducer Hook 핵심 */}
+
+
+    <LilineStyle />
+    {/* 컴포넌트 스타일 */}
   </StrictMode>
 )

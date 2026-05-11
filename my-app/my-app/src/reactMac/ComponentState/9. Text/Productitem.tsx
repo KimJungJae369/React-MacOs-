@@ -37,4 +37,3 @@ export default function Productitem({ id, name, onDelete }: Props) {
     </div>
   )
 }
-

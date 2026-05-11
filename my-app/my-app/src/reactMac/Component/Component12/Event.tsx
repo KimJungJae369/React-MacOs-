@@ -1,19 +1,38 @@
+// import React from 'react'
+// import Card from './Card'
+
+// export default function Event() {
+//   return (
+//     <>
+//         <Card title="프로필" onAction={() => {alert('프로필 클릭')}}>
+//             <p>프로필 내용</p>
+//         </Card>
+
+//          <Card title="상태" onAction={() => {alert('상태 클릭')}}>
+//             <p>상태 내용</p>
+//         </Card>
+//     </>
+//   )
+// }
+
+
 import React from 'react'
-import { Card } from './Card'
+import Card from './Card'
 
 export default function Event() {
-    return (
-        <>
-            <Card title="프로필" onAction={() => alert('프로필 클릭!')}>
-                <p>프로필 내용</p>
-            </Card>
+  return (
+    <div>
+        <Card title="프로필" onAction={() => alert('프로필 클릭')}>
+            <p>프로필 내용</p>
+        </Card>
 
-            <Card title="상태" onAction={() => alert('상태 클릭!')}>
-                <p>온라인</p>
-            </Card>
-        </>
-    )
+        <Card title="상태" onAction={() => alert('상태 클릭')}>
+            <p>상태 내용</p>
+        </Card>
+    </div>
+  )
 }
+
 
 
 

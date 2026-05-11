@@ -9,8 +9,8 @@
 interface UserProps {
   Obj : {
     name : string,
-    age : number, 
+    age : number,
     body : string
-  },
+  }
   Handler : () => void;
 }

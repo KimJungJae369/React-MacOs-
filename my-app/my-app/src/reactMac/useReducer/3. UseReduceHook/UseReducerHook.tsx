@@ -35,29 +35,30 @@ import counterReducer from './counterReducer.ts'
 import userReducer, { initialUser } from './useReducers.ts'
 import cartReducer, { CartItem } from './cartReducer .ts'
 
-import React from 'react'
-
 export default function UseReducerHook() {
-    const [count, countDispatch] = useReducer(counterReducer, 0)
-    const [user, userDispatch] = useReducer(userReducer, initialUser)
-    const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[])
+    const [count, countDispatch] = useReducer(counterReducer, 0);
+    const [user, userDispatch] = useReducer(userReducer, initialUser);
+    const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[]);
   return (
-    <>
+    <div>
         <h1>Count : {count}</h1>
-        <button onClick={() => countDispatch({type : 'INCREMENT'})}>Increment</button>
-        <button onClick={() => countDispatch({type : 'DECREMENT'})}>Decrement</button>
-        <button onClick={() => countDispatch({type : 'RESET'})}>Reset</button>
-        <br />
-        
-        <h2>User : {user.name}</h2>
-        <button onClick={() => userDispatch({type : 'SET_USER', payload : {name : 'Alice'}})}>Set User</button>
+        <button onClick={() => countDispatch({type : "INCREMENT"})}>Increment</button>
+        <button onClick={() => countDispatch({type : "DECREMENT"})}>Decrement</button>
+        <button onClick={() => countDispatch({type : "RESET"})}>Reset</button>
+
         <br />
 
-        <h3>Cart Items : {cart.length}</h3>
+        <h1>User : {user.name}</h1>
+        <button onClick={() => userDispatch({type : 'SET_USER', payload : {name : 'Alice'}})}>Set User</button>
+        
+        <br />
+
+        <h1>Cart Items : {cart.length}</h1>
         <button onClick={() => cartDispatch({type : 'ADD_ITEM', payload : {id : 1, name : 'Item 1'}})}>Add Item</button>
-    </>
+    </div>
   )
 }
+
 
 
 

@@ -13,9 +13,10 @@
 
 // export default function Eventobject() {
 //   return (
-//     <button onClick={(e) => {console.log(e)}}>Eventobject</button>
+//     <button onClick={(e) => console.log(e)}>Eventobject</button>
 //   )
 // }
+
 
 
 
@@ -47,12 +48,13 @@
 
 // export default function Eventobject() {
 //     const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-//         console.log(e);
-//     }
+//         alert(e);
+//     } 
 //   return (
 //     <button onClick={clickHandler}>Eventobject</button>
 //   )
 // }
+
 
 
 
@@ -124,15 +126,16 @@
 //     )
 // }
 
+
 import React from 'react'
 
 export default function Eventobject() {
-    const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, mes : string) => {
-        console.log(e);
-        alert(mes);
-    }
+    const clickHandler = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, title :string) => {
+        alert(e);
+        console.log(title);
+    } 
   return (
-    <button onClick = {(e) => clickHandler(e, 'Hello!')}>Eventobject</button>
+    <button onClick={(e) => clickHandler(e, 'Hello!')}>Eventobject</button>
   )
 }
 

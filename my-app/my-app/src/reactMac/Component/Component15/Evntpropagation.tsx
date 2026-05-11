@@ -26,13 +26,14 @@
 //         console.log('부모');
 //     }
 
-//     const handlerBubble = () => {
+//      const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <button onClickCapture={handlerCapture} onClick={handlerBubble}>Evntpropagation</button>
+//     <div onClickCapture={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
 
 
 
@@ -100,13 +101,14 @@
 //         console.log('부모');
 //     }
 
-//     const handlerBubble = () => {
+//      const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCapture}><button onClick={handlerBubble}>Evntpropagation</button></div>
+//     <div onClick={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
 
 
 
@@ -177,6 +179,7 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
@@ -184,12 +187,12 @@
 //         console.log('부모');
 //     }
 
-//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//      const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         e.stopPropagation();
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCapture}><button onClick={handlerBubble}>Evntpropagation</button></div>
+//     <div onClick={handlerCapture}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
 
@@ -274,11 +277,13 @@ export default function Evntpropagation() {
         <form onSubmit={(e) => e.preventDefault()}>
             <input type="text" />
             <input type="password" />
-            <button type="submit">전송</button>
+            <button type='button'>전송</button>
         </form>
     </>
   )
 }
+
+
 
 
 
