@@ -69,76 +69,64 @@
 
 
 
-
-
-
 // find : 배열에서 조건에 맞는 첫 번째 요소를 반환하는 메서드
 // includes : 배열이 특정 요소를 포함하는지 여부를 확인하는 메서드
 // filter : 배열에서 조건에 맞는 모든 요소를 새로운 배열로 반환하는 메서드
 
 import {useReducer} from 'react'
-const availableItems = ['사과', '바나나', '오렌지'] as const
+
+const avaiableItems = ['사과', '바나나', '오렌지'] as const;
 
 type State = {
-    item : string[]
+    items : string[];
 }
 
-type ReducerAction =
+type ReducerAction = 
     | {type : 'ADD_ITEM'}
     | {type : 'REMOVE_ITEM'; index : number}
 
-function reducer(state : State, action : ReducerAction) : State{
+function reducer(state : State, action : ReducerAction) : State {
     switch(action.type){
-        case 'ADD_ITEM' : {
-            const newItem = availableItems.find((item) => !state.item.includes(item))
+        case 'ADD_ITEM' : 
+            const newItem = avaiableItems.find((item) => !state.items.includes(item));
 
-            if(newItem){
-                return{
-                    ...state,
-                    item : [...state.item, newItem]
-                }
+            if(!newItem){
+                return state;
             }
 
+            return{...state, items: [...state.items, newItem]}
+
+        case 'REMOVE_ITEM' : 
+            return{...state, items: state.items.filter((_, index) => index !== action.index)}
+
+        default : 
             return state
-        }
-        
-        case 'REMOVE_ITEM' : {
-            return{
-                ...state,
-                item : state.item.filter((_, i) => i !== action.index)
-            }
-        }
     }
 }
 
 export default function Text() {
-    const [state, dispatch] = useReducer(reducer, {item : []});
+    const [state, dispatch] = useReducer(reducer,{items : []});
   return (
     <div>
         <button
             type='button'
-            onClick = {() => dispatch({type : 'ADD_ITEM'})}
-            disabled = {state.item.length >= availableItems.length}
-        >
-            아이템 추가
-        </button>
+            onClick={() => dispatch({type : 'ADD_ITEM'})}
+            disabled={state.items.length >= avaiableItems.length}
+        >아이템 추가</button>
 
         <ul>
-            {state.item.map((item, index) => (
-                <li key={`${item} - ${index}`}>
+            {state.items.map((item,index) => (
+                <li key={`${index} - ${item}`}>
                     {item}
-                    <button
-                        type='button'
-                        onClick={() => dispatch({type : 'REMOVE_ITEM', index})}
-                    >
-                        삭제
-                    </button>
+                    <button onClick={() => dispatch({type : 'REMOVE_ITEM', index})}>삭제</button>
                 </li>
+            
             ))}
         </ul>
     </div>
   )
 }
+
 
 
 

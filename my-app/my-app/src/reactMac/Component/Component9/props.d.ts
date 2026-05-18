@@ -6,11 +6,11 @@
 //   clickHandler: () => void;
 // }
 
-interface UserProps {
+interface UserPorps{
   Obj : {
     name : string,
     age : number,
-    body : string
+    body : string,
   }
   Handler : () => void;
 }

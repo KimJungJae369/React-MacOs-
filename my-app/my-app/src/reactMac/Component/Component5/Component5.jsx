@@ -23,8 +23,8 @@ export default function Component5() {
   return (
     <>
         <Header />
-        <Main/>
-        <Footer/>
+        <Main />
+        <Footer />
     </>
   )
 }

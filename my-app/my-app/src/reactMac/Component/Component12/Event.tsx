@@ -1,41 +1,68 @@
 // import React from 'react'
-// import Card from './Card'
 
 // export default function Event() {
-//   return (
-//     <>
-//         <Card title="프로필" onAction={() => {alert('프로필 클릭')}}>
-//             <p>프로필 내용</p>
-//         </Card>
+//     const handlerEnter = () => {
+//         const box = document.querySelector('#hover') as HTMLElement;
+//         if (box) {
+//             box.textContent = '안녕';
+//         }
+//     }
 
-//          <Card title="상태" onAction={() => {alert('상태 클릭')}}>
-//             <p>상태 내용</p>
-//         </Card>
-//     </>
+//     const handlerLeave = () => {
+//         const box = document.querySelector('#hover') as HTMLElement;
+//         if (box) {
+//             box.textContent = '잘가';
+//         }
+//     }
+//   return (
+//     <div
+//         style={{
+//             padding : '2rem',
+//             border : '1px solid #fff',
+//             width : 300,
+//             textAlign : 'center'
+//         }}
+//         id='hover'
+//         onMouseEnter={handlerEnter}
+//         onMouseLeave={handlerLeave}
+//     >
+//         box
+//     </div>
 //   )
 // }
 
 
+
 import React from 'react'
-import Card from './Card'
 
 export default function Event() {
-  return (
-    <div>
-        <Card title="프로필" onAction={() => alert('프로필 클릭')}>
-            <p>프로필 내용</p>
-        </Card>
+    const hadnelrEnter = () => {
+        const box = document.querySelector('#hover') as HTMLElement;
+        if(box){
+            box.textContent = '안녕'
+        }
+    }
 
-        <Card title="상태" onAction={() => alert('상태 클릭')}>
-            <p>상태 내용</p>
-        </Card>
-    </div>
+    const hadnelrLeave = () => {
+        const box = document.querySelector('#hover') as HTMLElement;
+        if(box){
+            box.textContent = '잘가'
+        }
+    }
+  return (
+    <div
+        style={{
+            padding : '2rem',
+            border : '1px solid #fff',
+            width : 300,
+            textAlign : 'center'
+        }}
+        id='hover'
+        onMouseEnter={hadnelrEnter}
+        onMouseLeave={hadnelrLeave}
+    >Event</div>
   )
 }
-
-
-
-
 
 
 /*
@@ -109,4 +136,9 @@ export default function Event() {
                 }
                 - 컴포넌트는 사용자 정의 속성을 props로 받아 DOM 요소의 표준 이벤트 속성(onClick 등)에 연결하는 구조로 이벤트를 유연하게 관리할 수 있다
 
+    as HTMLElement
+    = 깐깐한 타입스크립트에게 '이건 무조건 HTML 태그니까 토 달지 말고 통과시켜'라고 개발자가 직접 보증을 서는 치트키
+    = 이건 "강제로 믿게 만드는 것"이지, 실제로 타입을 바꾸는건 아니다
+    
+    as = "컴퓨터의 추측보다 개발자의 확신을 우선시하겠다"는 선언문
 */

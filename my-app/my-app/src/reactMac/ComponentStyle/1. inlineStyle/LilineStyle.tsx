@@ -21,19 +21,19 @@
 import React from 'react'
 
 export default function LilineStyle() {
+    const style = {
+        backgroundColor : 'red',
+        color : 'blue',
+        fontSize : 16,
+        padding : 10,
+    }
   return (
-    <>
-        <h1
-            style={{
-                backgroundColor : 'blue',
-                color : 'white',
-                fontSize : '16px',
-                padding : 10,
-            }}
-        >Inline Style</h1>
-    </>
+    <div style={style}>
+        <div style={{textAlign : "center"}}>Hellow</div>
+    </div>
   )
 }
+
 
 
 /*

@@ -54,23 +54,32 @@
 function Header(){
   return(
     <header>
-      <h1>My Website</h1>
+      <h1>Header</h1>
+      <Nav />
     </header>
+  )
+}
+
+function Nav(){
+  return(
+    <nav>
+      <h2>Nav</h2>
+    </nav>
   )
 }
 
 function Article(){
   return(
     <article>
-      <h2>Main Article</h2>
+      <h3>Artice</h3>
     </article>
   )
-}
+} 
 
 function Section(){
   return(
     <section>
-      <h3>More Detail</h3>
+      <h4>Section</h4>
     </section>
   )
 }
@@ -78,24 +87,15 @@ function Section(){
 function Aside(){
   return(
     <aside>
-      <h4>Related links</h4>
+      <h5>Aside</h5>
     </aside>
-  )
-}
-
-function Nav(){
-  return(
-    <nav>
-      <h5>Home | About | Services | Content</h5>
-    </nav>
   )
 }
 
 function Footer(){
   return(
     <footer>
-      <Nav />
-      <h6>&copy; 2025 My Website. All rights reserved.</h6>
+      <h6>Footer</h6>
     </footer>
   )
 }

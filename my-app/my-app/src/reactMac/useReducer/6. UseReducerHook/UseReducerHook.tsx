@@ -11,17 +11,16 @@ import Count from './Count'
 //   )
 // }
 
-import React from 'react'
-
 export default function UseReducerHook() {
   const [count, setCount] = useState(0);
-  const increment = () => setCount(prev => prev + 1);`` 
+  const increment = () => setCount((count) => count + 1);
   return (
     <div>
-        <Count count={count} increment={increment} />
+      <Count count={count} increment={increment} />
     </div>
   )
 }
+
 
 
 /*

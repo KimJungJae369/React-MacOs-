@@ -21,12 +21,12 @@ export default function UseStateHook2() {
         // setFormState(prev => ({ ...prev, name: '김길동' }));
 }
     const [name, setName] = useState(null);
-    const [age, setAge] = useState(null);
+    const [age, setAge] = useState();
     const [gender, setGender] = useState(null);
 
     const [formState, setFormState] = useState({
         name : '홍길동',
-        age: 31,
+        age : 31,
         gender : '남자'
     })
 /*

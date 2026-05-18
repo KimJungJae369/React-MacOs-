@@ -1,47 +1,18 @@
-// import React from 'react'
-// import User from './User'
-
-// export default function Children() {
-//   return (
-//     <>
-//         <User title="프로필">
-//             <p>이름 : 김정재</p>
-//             <p>나이 : 28</p>
-//             <p>사는 곳 : 서울</p>
-//         </User>
-
-//         <User title="설정">
-//             <p>이메일 : kim@example.com</p>
-//             <p>전화번호 : 010-1234-5678</p>
-//         </User>
-//     </>
-//   )
-// }
-
-
 import React from 'react'
 import User from './User'
 
 export default function Children() {
   return (
-    <div>
-        <User title='프로필'>
-            <p>이름 : 김정재</p>
-            <p>나이 : 28</p>
-            <p>사는 곳 : 서울</p>
-        </User>
-
-        <User title='설정'>
-            <p>이메일 : kim@example.com</p>
-            <p>전화번호 : 010-1234-5678</p>
-        </User>
-    </div>
+    <User>
+        <h1>React</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis et consequatur est laboriosam, doloribus similique veritatis molestiae quibusdam reprehenderit obcaecati, minus sapiente. Ipsam, fuga reiciendis! Explicabo omnis quis a?</p>
+        <h2>END</h2>
+    </User>
   )
 }
 
-
 /*
-    Children
+  Children
     = 부모 컴포넌트의 JSX 태그 사이에 포함된 모든 요소나 내용을 의미
     = 리액트에서 컴포넌트는 기본적으로 빈 태그 형태 '<컴포넌트 />'로 사용
     = 그런데 컴포넌트를 '시작 태그'와 '종료 태그'를 함께 사용하는 형태 '<컴포넌트>내용</컴포넌트>'로도 사용할 수 있다
@@ -106,4 +77,9 @@ export default function Children() {
         key
         = 리스트를 랜더링할 때 가상DOM에서 항목을 효율적으로 식별하고 업데이트하기 위해 사용
         = 자식 컴포넌트에서 고유 값으로 사용하고 싶다면 'id'와 같은 별도의 속성으로 전달
+
+    React.Children.count(children);
+    = children 안에 들어있는 요소가 몇 개인지 세어준다
+    = children은 배열이 아니기 때문에 'React.Children.count(children)'을 사용하면 좀더 안전하다
+    = 배열을 사용할때는 'length'사용
 */

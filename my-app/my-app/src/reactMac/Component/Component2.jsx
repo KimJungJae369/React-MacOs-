@@ -6,6 +6,7 @@
 //     }
 // }
 
+
 import React, { Component } from 'react'
 
 export default class Component2 extends Component {
@@ -15,8 +16,6 @@ export default class Component2 extends Component {
     )
   }
 }
-
-
 
 
 /*

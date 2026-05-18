@@ -64,7 +64,9 @@ import './index.css'
 // import Text from './reactMac/useReducer/7. Text/Text'
 // useReducer Hook
 
-import LilineStyle from './reactMac/ComponentStyle/LilineStyle'
+// import LilineStyle from './reactMac/ComponentStyle/1. inlineStyle/LilineStyle'
+import GlobalStyle from './reactMac/ComponentStyle/2. globalStyle/GlobalStyle'
+
 // 컴포넌트 스타일
 
 createRoot(document.getElementById('root')).render(
@@ -119,8 +121,9 @@ createRoot(document.getElementById('root')).render(
     {/* <Text /> */}
     {/* useReducer Hook 핵심 */}
 
-
-    <LilineStyle />
+{/*  */}
+    {/* <LilineStyle /> */}
+    <GlobalStyle />
     {/* 컴포넌트 스타일 */}
   </StrictMode>
 )
