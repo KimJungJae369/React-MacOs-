@@ -22,17 +22,18 @@
 // import React from 'react'
 
 // export default function Evntpropagation() {
-// const handlerCaptrue = () => {
+//     const handlerCaptrue = () => {
 //         console.log('부모');
 //     }
 
 //     const handlerBubble = () => {
 //         console.log('자식');
-//     }  
-//     return (
+//     }
+//   return (
 //     <div onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
 
 
 
@@ -98,16 +99,16 @@
 // import React from 'react'
 
 // export default function Evntpropagation() {
-// const handlerCaptrue = () => {
+//     const handlerCaptrue = () => {
 //         console.log('부모');
 //     }
 
 //     const handlerBubble = () => {
 //         console.log('자식');
-//     }  
-//         return (
-//         <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
-//     )
+//     }
+//   return (
+//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//   )
 // }
 
 
@@ -184,18 +185,19 @@
 // import React from 'react'
 
 // export default function Evntpropagation() {
-// const handlerCaptrue = () => {
+//     const handlerCaptrue = () => {
 //         console.log('부모');
 //     }
 
 //     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         e.stopPropagation();
 //         console.log('자식');
-//     }  
-//         return (
-//         <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
-//     )
+//     }
+//   return (
+//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
+//   )
 // }
+
 
 
 
@@ -274,15 +276,16 @@ import React from 'react'
 
 export default function Evntpropagation() {
   return (
-    <>
-        <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" />
-            <input type="password" />
-            <button type='submit'>전송</button>
-        </form>
-    </>
+    <form onSubmit={(e) => e.preventDefault()}>
+        <input type="text" />
+        <input type="password" />
+        <button type='button'>전송</button>
+    </form>
   )
 }
+
+
+
 
 
 

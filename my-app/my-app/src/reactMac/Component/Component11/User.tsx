@@ -1,31 +1,23 @@
-// import React from 'react'
-// type userProps = {
-//   children : React.ReactNode
-// }
-// export default function User({children} : userProps) {
-//     const count = React.Children.count(children);
-//   return (
-//     <div className='box'>
-//       {children}
-//       <span>{count}개</span>
-//     </div>
-//   )
-// }
-
-
 import React from 'react'
+
 type userProps = {
-  children : React.ReactNode
+  children : React.ReactNode,
+  title : string,
+  footer : string
 }
 
-export default function User({children} : userProps) {
-  const count = React.Children.count(children);
+export default function User({children, title, footer} : userProps) {
   return (
-    <div>
-      <div className='box'>
-        {children}
-        <span>{count} 개</span>
+    <>
+      <div className='card'>
+        <h2>{title}</h2>
+
+        <div className='content'>
+          {children}
+        </div>
+
+        <footer>{footer}</footer>
       </div>
-    </div>
+    </>
   )
 }

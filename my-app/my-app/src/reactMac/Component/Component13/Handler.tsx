@@ -9,7 +9,7 @@
 
 // export default function Handler() {
 //   return (
-//     <button onClick={() => alert('inline handler')}>Handler</button>
+//     <button onClick={() => alert('inline-handler')}>Handler</button>
 //   )
 // }
 
@@ -55,12 +55,13 @@
 
 // export default function Handler() {
 //     const handlerClick = () => {
-//         console.log('unction reference handler');
+//         console.log('Function reference handler');
 //     }
 //   return (
 //     <button onClick={handlerClick}>Handler</button>
 //   )
 // }
+
 
 
 
@@ -120,7 +121,7 @@ export default function Handler() {
         console.log(title);
     }
   return (
-    <button onClick={() => {handlerClick('Hello')}}>Handler</button>
+    <button onClick={() => console.log('Hello~')}>Handler</button>
   )
 }
 

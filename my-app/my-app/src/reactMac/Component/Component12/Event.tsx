@@ -1,66 +1,19 @@
-// import React from 'react'
-
-// export default function Event() {
-//     const handlerEnter = () => {
-//         const box = document.querySelector('#hover') as HTMLElement;
-//         if (box) {
-//             box.textContent = '안녕';
-//         }
-//     }
-
-//     const handlerLeave = () => {
-//         const box = document.querySelector('#hover') as HTMLElement;
-//         if (box) {
-//             box.textContent = '잘가';
-//         }
-//     }
-//   return (
-//     <div
-//         style={{
-//             padding : '2rem',
-//             border : '1px solid #fff',
-//             width : 300,
-//             textAlign : 'center'
-//         }}
-//         id='hover'
-//         onMouseEnter={handlerEnter}
-//         onMouseLeave={handlerLeave}
-//     >
-//         box
-//     </div>
-//   )
-// }
-
-
-
 import React from 'react'
+import Modal from './Modal'
 
 export default function Event() {
-    const hadnelrEnter = () => {
-        const box = document.querySelector('#hover') as HTMLElement;
-        if(box){
-            box.textContent = '안녕'
-        }
-    }
-
-    const hadnelrLeave = () => {
-        const box = document.querySelector('#hover') as HTMLElement;
-        if(box){
-            box.textContent = '잘가'
-        }
+    const handleClose = () => {
+        console.log('onClose');
     }
   return (
-    <div
-        style={{
-            padding : '2rem',
-            border : '1px solid #fff',
-            width : 300,
-            textAlign : 'center'
-        }}
-        id='hover'
-        onMouseEnter={hadnelrEnter}
-        onMouseLeave={hadnelrLeave}
-    >Event</div>
+    <>
+        <Modal
+            title="회원 삭제"
+            onClose={handleClose}
+            >
+            <p>정말 삭제하시겠습니까?</p>
+        </Modal>
+    </>
   )
 }
 

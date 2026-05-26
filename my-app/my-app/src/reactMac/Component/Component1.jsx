@@ -55,26 +55,26 @@ function Header(){
   return(
     <header>
       <h1>Header</h1>
-      <Nav />
     </header>
-  )
-}
-
-function Nav(){
-  return(
-    <nav>
-      <h2>Nav</h2>
-    </nav>
   )
 }
 
 function Article(){
   return(
     <article>
-      <h3>Artice</h3>
+      <h2>Article</h2>
+      <Nav />
     </article>
   )
-} 
+}
+
+function Nav(){
+  return(
+    <nav>
+      <h3>Nav</h3>
+    </nav>
+  )
+}
 
 function Section(){
   return(

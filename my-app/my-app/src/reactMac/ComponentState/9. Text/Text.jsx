@@ -1,72 +1,17 @@
-// import {useState} from 'react'
-
-// export default function Text() {
-//   const [user, setUser] = useState(null); // 로그아웃 상태
-//   const [name, setName] = useState(''); // 입력값 초기화 
-
-//   const login = () => {
-//     if(name.trim() === '') return;
-//     // 공백일 경우 로그인 하지 않음
-
-//     setUser({name}); // 사용자 상태 업데이트
-//     setName(''); // 로그인 후 입력값 초기화
-//   }
-
-//   const logout = () => setUser(null);
-//   // 사용자 상태 초기화 : 다시 로그아웃 상태
-//   return (
-//     <div>
-//       {user ? ( // 삼항 연산자 사용 
-//         <div>
-//           <p>{user.name}님 환영합니다</p>
-//           <button onClick={logout}>logout</button>
-//         </div>
-//       ) : (
-//         <div>
-//           <input 
-//             type="text" 
-//             value={name}
-//             onChange={(e) => setName(e.target.value)}
-//             placeholder='이름 입력'
-//             />
-//             <button onClick={login}>login</button>
-//         </div>
-//       )}
-//     </div>
-//   )
-// }
-
-
-
 import {useState} from 'react'
 
 export default function Text() {
-  const [user, setUser] = useState(null);
-  const [name, setName] = useState('');
-
-  const login = () => {
-    if(name.trim() === '') return;
-    setUser({name});
-    setName('');
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount((prev) => prev + 1);
   }
-
-  const logout = () => setUser(null);
   return (
-    <div>
-      {user ? (
-          <div>
-            <p>{user.name}님 환영합니다</p>
-            <button onClick={logout}>logout</button>
-          </div>
-      ) : (
-          <div>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='이름입력'/>
-            <button onClick={login}>login</button>
-          </div>
-      )}
-    </div>
+    <>
+      <button onClick={handleClick}>{` 좋아요 : ${count}`}</button>
+    </>
   )
 }
+
 
 
 /*

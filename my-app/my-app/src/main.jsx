@@ -65,7 +65,8 @@ import './index.css'
 // useReducer Hook
 
 // import LilineStyle from './reactMac/ComponentStyle/1. inlineStyle/LilineStyle'
-import GlobalStyle from './reactMac/ComponentStyle/2. globalStyle/GlobalStyle'
+// import GlobalStyle from './reactMac/ComponentStyle/2. globalStyle/GlobalStyle'
+import CSSmodule from './reactMac/ComponentStyle/3. CSSmodule/CSSmodule'
 
 // 컴포넌트 스타일
 
@@ -123,7 +124,8 @@ createRoot(document.getElementById('root')).render(
 
 {/*  */}
     {/* <LilineStyle /> */}
-    <GlobalStyle />
+    {/* <GlobalStyle /> */}
+    <CSSmodule />
     {/* 컴포넌트 스타일 */}
   </StrictMode>
 )

@@ -1,14 +1,14 @@
-import React from 'react'
 import User from './User'
+import React from 'react'
 
 export default function Children() {
-  return (
-    <User>
-        <h1>React</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis et consequatur est laboriosam, doloribus similique veritatis molestiae quibusdam reprehenderit obcaecati, minus sapiente. Ipsam, fuga reiciendis! Explicabo omnis quis a?</p>
-        <h2>END</h2>
-    </User>
-  )
+    return (
+        <>
+            <User title='공지사항' footer='더보기'>
+                <p>리액트 스터디 일정이 변경되었습니다.</p>
+            </User>
+        </>
+    )
 }
 
 /*

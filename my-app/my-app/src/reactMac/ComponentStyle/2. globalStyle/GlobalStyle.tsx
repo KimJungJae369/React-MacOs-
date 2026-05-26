@@ -1,4 +1,3 @@
-import './Style.css'
 import Children from './Children'
 
 export default function GlobalStyle() {

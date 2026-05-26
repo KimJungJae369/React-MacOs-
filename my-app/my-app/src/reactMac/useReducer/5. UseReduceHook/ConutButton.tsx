@@ -12,11 +12,10 @@ import {useState} from 'react'
 
 export default function ConutButton({incerement, decrement, reset} : {incerement : () => void, decrement : () => void, reset : () => void}) {
   return (
-    <>
+    <div>
       <button onClick={incerement}>incerement</button>
       <button onClick={decrement}>decrement</button>
       <button onClick={reset}>reset</button>
-    </>
+    </div>
   )
 }
-

@@ -46,7 +46,7 @@ export default function LilineStyle() {
     1. 인라인 스타일
     = 리액트 컴포넌트에 스타일을 적용하는 가장 전통적인 방법은 '인라인 스타일'이다
     = 'JSX' 요소의 style 속성에 직접 스타일 객체를 지정하는 방식
-    = HTM에서는 style 속성에 문자열로 CSS 속성을 작성
+    = HTML에서는 style 속성에 문자열로 CSS 속성을 작성
         ex) HTML
             <h1 style='coloe : red; font-size : 20px>h1</h1>
     

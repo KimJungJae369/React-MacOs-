@@ -1,43 +1,48 @@
-type userheader = {
-  title : string;
+import React from 'react';
+
+type headerProps = {
+  title : string,
 }
 
-function Header(props : userheader){
-  return(
-    <h4>{props.title}</h4>
+function Header(props : headerProps){
+  return (
+    <>
+      {props.title}
+    </>
   )
 }
 
-type listType = {
+type listsProps = {
   id : number,
   name : string,
   age : number
 }
 
-type userSection = {
-  lists : listType[];
+type listProps = {
+  lists : listsProps[];
 }
 
-function Section(props : userSection){
-  return(
-    <>
-      {props.lists.map((item : listType, index : number) => (
-        <ul key={index}>
-          <li>{item.name} : {item.age}</li>
-        </ul>
+function Section({ lists }: listProps){
+  return (
+    <ul>
+      {lists.map((item) => (
+        <li key={item.id}>
+          {item.name} : {item.age}
+        </li>
       ))}
-    </>
+    </ul>
   )
 }
 
-type userFooter = {
-  title2 : string;
+type footerProps = {
+  title2 : string
 }
 
-
-function Footer(props : userFooter){
+function Footer(props : footerProps){
   return(
-    <footer>{props.title2}</footer>
+    <>
+      {props.title2}
+    </>
   )
 }
 
@@ -51,7 +56,7 @@ export default function Text() {
     <div style={{border : '1px solid #fff'}}>
       <Header title ='Hello Header'/>
       <Section lists={list}/>
-      <Footer title2 ='By Footer'/>
+     <Footer title2 ='By Footer'/>
     </div>
   )
 }

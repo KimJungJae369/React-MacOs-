@@ -28,7 +28,7 @@ export default function Component9() {
     }
 
     const clickHandler = () => {
-        console.log('클릭')
+        console.log('클릭');
     }
     return (
         <>
