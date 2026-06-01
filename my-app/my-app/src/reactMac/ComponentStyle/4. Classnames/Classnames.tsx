@@ -73,7 +73,7 @@ export default function Classnames() {
     2. CSS 모듈에서 사용하기
     = CSS 모듈에서 'Classnames' 라이브러리를 사용할 때는 'Classnames/bind' 패키지를 활용
     = 해당 패키지가 제공하는 'bind()' 함수를 사용해 CSS 모듈 객체를 Classnames 함수에 전달한다
-      bind() : 'this'가 동적 값이라 그 값을 고정 시킨다
+      bind() 함수 : CSS 모듈 객체와 Classnames 함수를 연결하는 역할을 한다
     = 여기서 'CSS 모듈 객체'란 'module.css' 확장자를 가진 CSS 파일을 컴포넌트에서 import할 때 생성되는 객체
     = 'bind(객체명)'과 같이 사용하면 객체 접근 없이 문자열 키만으로 클래스 이름을 동적으로 조합할 수 있다
       ex)
@@ -94,7 +94,7 @@ export default function Classnames() {
             <div>
               <button className={cx({btn : true, 'is-active': isActive })}>
               - 'btn'이 true이므로 btn 클래스는 항상 적용 되고 'is-active' 클래스는 'isActive'가 ture일 때만 함께 추가된다
-              
+
                 App Button
               </button>
               <Children />
