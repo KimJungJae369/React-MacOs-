@@ -63,23 +63,14 @@ function Article(){
   return(
     <article>
       <h2>Article</h2>
-      <Nav />
     </article>
-  )
-}
-
-function Nav(){
-  return(
-    <nav>
-      <h3>Nav</h3>
-    </nav>
   )
 }
 
 function Section(){
   return(
     <section>
-      <h4>Section</h4>
+      <h3>Section</h3>
     </section>
   )
 }
@@ -87,7 +78,7 @@ function Section(){
 function Aside(){
   return(
     <aside>
-      <h5>Aside</h5>
+      <h4>Aside</h4>
     </aside>
   )
 }
@@ -95,8 +86,17 @@ function Aside(){
 function Footer(){
   return(
     <footer>
-      <h6>Footer</h6>
+      <h5>Footer</h5>
+      <Nav />
     </footer>
+  )
+}
+
+function Nav(){
+  return(
+    <nav>
+      <h6>Nav</h6>
+    </nav>
   )
 }
 

@@ -28,25 +28,28 @@ import {use, useState} from 'react'
 //     )
 // }
 
+// import React from 'react'
+
 // export default function UseStateHook3() {
 //     const [name, setName] = useState<string | null>(null);
 //     const [age, setAge] = useState<number | null>(null);
-//     const [gender, setGender] = useState<string | null>(null);
+//     const [body, setBody] = useState<string | null>(null);
 
 //     const handlerClick = () => {
-//         setName('Maike')
-//         setAge(30)
-//         setGender('여자')
+//         setName('Maike'),
+//         setAge(30),
+//         setBody('Male')
 //     }
 //   return (
 //     <div>
 //         <p>이름 : {name}</p>
 //         <p>나이 : {age}</p>
-//         <p>성별 : {gender}</p>
+//         <p>성별 : {body}</p>
 //         <button onClick={handlerClick}>변경</button>
 //     </div>
 //   )
 // }
+
 
 
 
@@ -110,17 +113,17 @@ import {use, useState} from 'react'
 // export default function UseStateHook3() {
 //     const [count, setCount] = useState(0);
 
-//     const handlerClick = () => {
-//         setCount(count + 1);
-//         setCount(count + 1);
-//         setCount(count + 1);
-//         setCount(count + 1);
+//     const handlerClikc = () => {
+//         setCount(count + 1)
+//         setCount(count + 1)
+//         setCount(count + 1)
+//         setCount(count + 1)
 //     }
 //   return (
-//     <>
+//     <div>
 //         <h1>Count : {count}</h1>
-//         <button onClick={handlerClick}>증가</button>
-//     </>
+//         <button onClick={handlerClikc}>click</button>
+//     </div>
 //   )
 // }
 
@@ -174,19 +177,22 @@ import React from 'react'
 export default function UseStateHook3() {
     const [count, setCount] = useState(0);
 
-    const handlerClick = () => {
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
+    const handlerClikc = () => {
+        setCount(count => count + 1)
+        setCount(count => count + 1)
+        setCount(count => count + 1)
+        setCount(count => count + 1)
     }
   return (
-    <>
+    <div>
         <h1>Count : {count}</h1>
-        <button onClick={handlerClick}>증가</button>
-    </>
+        <button onClick={handlerClikc}>click</button>
+    </div>
   )
 }
+
+
+
 
 
 

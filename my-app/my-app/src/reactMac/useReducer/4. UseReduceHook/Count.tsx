@@ -14,10 +14,11 @@ import React, { Dispatch, SetStateAction } from 'react'
 //   return (
 //     <div>
 //       <h1>Count : {count}</h1>
-//       <button onClick={() => setCount(prev => prev + 1)}>증가</button>
+//       <button onClick={() => setCount((count) => count + 1)}>증가</button>
 //     </div>
 //   )
 // }
+
 
 
 
@@ -35,14 +36,17 @@ import React, { Dispatch, SetStateAction } from 'react'
 //   )
 // }
 
-export default function Count({count,increment} : {count : number, increment : () => void}) {
+export default function Count({count, increment} : {count : number, increment : () => void}) {
   return (
     <div>
-      <h1>count : {count}</h1>
+      <h1>Count : {count}</h1>
       <button onClick={increment}>증가</button>
     </div>
   )
 }
+
+
+
 
 
 

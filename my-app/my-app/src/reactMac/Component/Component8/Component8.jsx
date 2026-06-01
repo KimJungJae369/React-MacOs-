@@ -25,6 +25,7 @@ export default function Component8() {
         age : 30,
         body : '180cm'
     }
+
     const clickHandler = () => {
         console.log('click');
     }

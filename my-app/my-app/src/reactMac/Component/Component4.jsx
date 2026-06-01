@@ -25,12 +25,12 @@
 //     )
 // }
 
-// const name = function(){
-//         return(
-//             <h1>함수 표현식</h1>
-//         )
+// const Component4 = function(){
+//     return(
+//         <h1>함수 표현식</h1>
+//     )
 // }
-// export default name
+// export default Component4;
 
 // 3. 화살표 함수
 // const Component4 = () => {
@@ -46,7 +46,7 @@ import React from 'react'
 
 const Component4 = () => {
   return (
-    <h2>콜백함수</h2>
+    <div>Component4</div>
   )
 }
 

@@ -12,11 +12,11 @@ import Count from './Count'
 // }
 
 // export default function UseReducerHook() {
-//     const [count, setCount] = useState(0);
+//     const [count, setCount ] = useState(0);
 //   return (
-//     <>
-//         <Count count={count} setCount={setCount}/>
-//     </>
+//     <div>
+//         <Count count={count} setCount={setCount} />
+//     </div>
 //   )
 // }
 
@@ -41,13 +41,17 @@ import Count from './Count'
 
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
-    const handleClick = () => setCount(prev => prev + 1);
+
+    const increment = () => setCount(prev => prev + 1);
   return (
-    <>
-        <Count count={count} increment={handleClick}/>
-    </>
+    <div>
+        <Count count={count} increment={increment} />
+    </div>
   )
 }
+
+
+
 
 
 

@@ -24,10 +24,10 @@ export default function UseStateHook2() {
     const [age, setAge] = useState(null);
     const [gender, setGender] = useState(null);
 
-    const [form, setFrom] = useState({
+    const [formState, setFormState] = useState({
         name : '홍길동',
         age : 30,
-        gender : '남자'
+        gender : "남자" 
     });
 /*
     useState 훅 여러 번 사용하기
