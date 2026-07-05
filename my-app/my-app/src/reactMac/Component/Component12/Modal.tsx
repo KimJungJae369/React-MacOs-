@@ -1,21 +1,23 @@
-import React from 'react'
-
-type modalProps = {
-    children : React.ReactNode
+type modalType = {
     title : string,
-    onClose : () => void;
+    backgroundColor : string,
+    buttonText : string,
+    onButtonClick : () => void,
+    children : React.ReactNode
 }
 
-export default function Modal({onClose, title, children} : modalProps) {
+export default function Modal({
+    title,
+    backgroundColor,
+    buttonText,
+    onButtonClick,
+    children
+} : modalType) {
   return (
-        <div className='modal'>
-            <h2>{title}</h2>
-
-            <div className='content'>
-                {children}
-            </div>
-
-            <button onClick={onClose}>닫기</button>
-        </div>
+    <div style={{backgroundColor, padding : '20px', marginBottom : '20px'}}>
+        <h2>{title}</h2>
+        {children}
+        <button onClick={onButtonClick}>{buttonText}</button>
+    </div>
   )
 }

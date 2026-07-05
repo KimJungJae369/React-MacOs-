@@ -15,7 +15,7 @@
 //     )
 // }
 
-type UserPorps = {
+type propsUser = {
   name : string,
   age : number,
   body : string,
@@ -24,15 +24,14 @@ type UserPorps = {
 
 import React from 'react'
 
-export default function User(props : UserPorps) {
-  const {name, age, body, Handler} = props
+export default function User({name, age, body, Handler} : propsUser) {
   return (
-    <div>
-        <h1>name : {name}</h1>
-        <h2>age : {age}</h2>
-        <h3>body : {body}</h3>
-        <button onClick={Handler}>click</button>
-    </div>
+    <>
+      <h1>name : {name}</h1>
+      <h2>age : {age}</h2>
+      <h3>body : {body}</h3>
+      <button onClick={Handler}>click</button>
+    </>
   )
 }
 

@@ -2,18 +2,34 @@ import React from 'react'
 import Modal from './Modal'
 
 export default function Event() {
-    const handleClose = () => {
-        console.log('onClose');
+    const handleUser = () => {
+        console.log('회원 정보를 확인했습니다.');
+    }
+
+    const handleNotice = () => {
+        console.log('공지사항을 닫았습니다.');
     }
   return (
-    <>
-        <Modal
-            title="회원 삭제"
-            onClose={handleClose}
+    <div>
+            <Modal
+                title="회원 정보"
+                backgroundColor="skyblue"
+                buttonText="확인"
+                onButtonClick={handleUser}
             >
-            <p>정말 삭제하시겠습니까?</p>
-        </Modal>
-    </>
+                <p>이름 : 홍길동</p>
+                <p>나이 : 20</p>
+            </Modal>
+
+            <Modal
+                title="공지사항"
+                backgroundColor="gold"
+                buttonText="닫기"
+                onButtonClick={handleNotice}
+            >
+                <p>오늘은 React 수업입니다.</p>
+            </Modal>
+    </div>
   )
 }
 

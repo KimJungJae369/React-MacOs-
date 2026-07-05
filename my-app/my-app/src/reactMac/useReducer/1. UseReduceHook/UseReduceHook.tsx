@@ -23,28 +23,22 @@ import { useReducer, useState } from "react"
 //   )
 // }
 
-
-import React from 'react'
-
 export default function UseReduceHook(state : number, action : {type : string}) {
     switch(action.type){
-        case "INCREMENT" : {
+        case 'INCREMENT' : 
             return state + 1
-        }
 
-            case "DECREMENT" : {
-                return state - 1
-            }
+        case 'DECREMENT' : 
+            return state - 1
 
-            case "RESET" : {
-                return 0
-            }
+        case 'RESET' : 
+            return 0
 
-            default : {
-                return state
-            }
+        default : 
+            return state
     }
 }
+
 
 
 

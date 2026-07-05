@@ -28,27 +28,27 @@ import {use, useState} from 'react'
 //     )
 // }
 
-// import React from 'react'
-
 // export default function UseStateHook3() {
 //     const [name, setName] = useState<string | null>(null);
 //     const [age, setAge] = useState<number | null>(null);
-//     const [body, setBody] = useState<string | null>(null);
+//     const [gender, setGender] = useState<string | null>(null);
 
 //     const handlerClick = () => {
-//         setName('Maike'),
-//         setAge(30),
-//         setBody('Male')
+//         setName('홍길동'),
+//         setAge(31),
+//         setGender('남자')
 //     }
 //   return (
 //     <div>
-//         <p>이름 : {name}</p>
-//         <p>나이 : {age}</p>
-//         <p>성별 : {body}</p>
-//         <button onClick={handlerClick}>변경</button>
+//         <h1>name : {name}</h1>
+//         <h2>age : {age}</h2>
+//         <h3>gender : {gender}</h3>
+//         <button onClick={handlerClick}>click</button>
 //     </div>
 //   )
 // }
+
+
 
 
 
@@ -106,26 +106,27 @@ import {use, useState} from 'react'
 //             <button onClick={clickHandler}>click</button>
 //         </>
 //     )
-// }
-
-// import React from 'react'
+// }'
 
 // export default function UseStateHook3() {
 //     const [count, setCount] = useState(0);
 
-//     const handlerClikc = () => {
-//         setCount(count + 1)
-//         setCount(count + 1)
-//         setCount(count + 1)
-//         setCount(count + 1)
+//     const clickHandler = () => {
+//         setCount(count + 1);
+//         setCount(count + 1);
+//         setCount(count + 1);
+//         setCount(count + 1);
+//         setCount(count + 1);
 //     }
 //   return (
 //     <div>
 //         <h1>Count : {count}</h1>
-//         <button onClick={handlerClikc}>click</button>
+//         <button onClick={clickHandler}>click</button>
 //     </div>
 //   )
 // }
+
+
 
 
 
@@ -172,24 +173,28 @@ import {use, useState} from 'react'
 //     )
 // }
 
-import React from 'react'
-
 export default function UseStateHook3() {
     const [count, setCount] = useState(0);
 
-    const handlerClikc = () => {
-        setCount(count => count + 1)
-        setCount(count => count + 1)
-        setCount(count => count + 1)
-        setCount(count => count + 1)
+    const clickHandler = () => {
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
     }
   return (
     <div>
         <h1>Count : {count}</h1>
-        <button onClick={handlerClikc}>click</button>
+        <button onClick={clickHandler}>click</button>
     </div>
   )
 }
+
+
+
+
+
 
 
 

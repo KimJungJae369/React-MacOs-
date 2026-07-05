@@ -22,17 +22,18 @@ import CountDisplay from './CountDisplay';
 import ConutButton from './ConutButton';
 
 export default function UseReducerHook() {
-    const [count, setCounst] = useState(0);
-    const incerement = () => setCounst(count => count + 1);
-    const decrement = () => setCounst(count => count - 1);
-    const reset = () => setCounst(0);
+    const [count, setCount] = useState(0);
+    const incerement = () => setCount(count + 1);
+    const decrement = () => setCount(count - 1);
+    const reset = () => setCount(0);
   return (
     <div>
-        <ConutButton incerement={incerement} decrement={decrement} reset={reset}/>
         <CountDisplay count={count}/>
+        <ConutButton incerement={incerement} decrement={decrement} reset={reset}/>
     </div>
   )
 }
+
 
 
 
@@ -91,7 +92,7 @@ export default function UseReducerHook() {
     }
     = 위 코드를 실행하고 버튼을 클릭해도 화면에 표시된 Count 값이 전혀 바뀌지 않는다 
     = 이유는 CountDisplay 컴포넌트와 CountButton 컴포넌트가 각각 독립적으로 count 상태를 관리하기 때문이다
-    = 즉 버튼을 클릭하면 CountButton 안에 잇는 count 값만 바뀌고 CountDisplay는 여전히 자신만의 useSate(0)에서 선언한 초깃값을 보여줘서 화면에는 변화가 없다
+    = 즉 버튼을 클릭하면 CountButton 안에 있는 count 값만 바뀌고 CountDisplay는 여전히 자신만의 useSate(0)에서 선언한 초깃값을 보여줘서 화면에는 변화가 없다
     = 이러한 컴포넌트에서 동일한 상태를 공유해야 할 경우에는 공통 부모 컴포넌트로 상태를 끌어올려야 한다
     = 리액트에서는 데이터가 항상 '부모 -> 자식' 방향으로만 전달 되므로 자식 컴포넌트끼리 상태를 공유하려면 공통 부모에 상태를 정의하고 그 상태를 props를 통해 자식에게 전달해야 한다
     = 따라서 부모 컴포넌트에서 count 상태를 관리하고 CountDisplay와 CountButton 컴포넌트는 각각 props를 통해 상태 값을 전달받아 사용하도록 구성

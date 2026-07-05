@@ -21,13 +21,14 @@ import Footer from './Footer'
 
 export default function Component5() {
   return (
-    <div>
+    <>
         <Header />
         <Main />
         <Footer />
-    </div>
+    </>
   )
 }
+
 
 
 

@@ -1,23 +1,14 @@
-import React from 'react'
-
-type userProps = {
-  children : React.ReactNode,
+type userType = {
   title : string,
-  footer : string
+  children : React.ReactNode,
+  border : string
 }
 
-export default function User({children, title, footer} : userProps) {
+export default function User({title, children, border} : userType) {
   return (
     <>
-      <div className='card'>
-        <h2>{title}</h2>
-
-        <div className='content'>
-          {children}
-        </div>
-
-        <footer>{footer}</footer>
-      </div>
+      <h1 style={{border}}>{title}</h1>
+      <p>{children}</p>
     </>
   )
 }

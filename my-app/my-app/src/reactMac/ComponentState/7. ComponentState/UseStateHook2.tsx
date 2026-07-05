@@ -22,12 +22,12 @@ export default function UseStateHook2() {
 }
     const [name, setName] = useState(null);
     const [age, setAge] = useState(null);
-    const [gender, setGender] = useState(null);
+    const [grnder, setGender] = useState(null);
 
     const [formState, setFormState] = useState({
         name : '홍길동',
-        age : 30,
-        gender : "남자" 
+        age : 31,
+        body : '180cm'
     });
 /*
     useState 훅 여러 번 사용하기

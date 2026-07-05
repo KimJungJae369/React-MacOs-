@@ -1,15 +1,28 @@
-import User from './User'
 import React from 'react'
+import User from './User'
 
 export default function Children() {
     return (
-        <>
-            <User title='공지사항' footer='더보기'>
-                <p>리액트 스터디 일정이 변경되었습니다.</p>
-            </User>
-        </>
+    <div>
+    <User
+        title="회원 정보"
+        border="1px solid skyblue"
+        >
+            <p>이름 : 홍길동</p>
+            <p>나이 : 20</p>
+    </User>
+
+    <User
+        title="공지사항"
+        border="1px solid skyblue"
+        >
+        <p>오늘은 React 수업입니다.</p>
+    </User>
+    </div>        
     )
 }
+
+
 
 /*
   Children

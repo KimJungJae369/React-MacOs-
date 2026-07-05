@@ -26,13 +26,15 @@
 //         console.log('부모');
 //     }
 
-//     const hadnlerBubble = () => {
+//     const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={hadnlerBubble}>click</button></div>
+//     <button onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></button>
 //   )
 // }
+
+
 
 
 
@@ -97,6 +99,7 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
@@ -104,11 +107,11 @@
 //         console.log('부모');
 //     }
 
-//     const hadnlerBubble = () => {
+//     const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={hadnlerBubble}>click</button></div>
+//     <button onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></button>
 //   )
 // }
 
@@ -183,6 +186,7 @@
 // }
 
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
@@ -190,12 +194,12 @@
 //         console.log('부모');
 //     }
 
-//     const hadnlerBubble = (e : React.MouseEvent<HTMLButtonElement>) => {
+//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
 //         e.stopPropagation();
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={hadnlerBubble}>click</button></div>
+//     <button onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></button>
 //   )
 // }
 
@@ -278,15 +282,17 @@ import React from 'react'
 
 export default function Evntpropagation() {
   return (
-    <div>
-        <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" />
-            <input type="password" />
-            <button type='submit'>click</button>
-        </form>
-    </div>
+    <form onSubmit={(e) => e.preventDefault()}>
+        <input type="text" />
+        <input type="password" />
+        <button type='submit'>click</button>
+    </form>
   )
 }
+
+
+
+
 
 
 

@@ -1,41 +1,51 @@
-import React from 'react'
-type UserProps = {
-    children : React.ReactNode
-    username : string,
-    onDelete : (id : number) => void,
-    id : number
+type commentcartType = {
+    children : React.ReactNode,
+    title : string,
+    backgroundColor : string,
+    buttonText : string,
+    productName : string,
+    onBuy : (name : string) => void,
+    onCardClick : () => void,
+    onCardCapturn : () => void
 }
 
-export default function CommentCard({children, username, onDelete, id} : UserProps) {
-    const handlerCardClick = () => {
-        console.log('카드 클릭');
-    }
-
-    const handlerDeleteClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+export default function CommentCard({
+    children,
+    title,
+    backgroundColor,
+    buttonText,
+    productName,
+    onBuy,
+    onCardClick,
+    onCardCapturn
+} : commentcartType) {
+    const handlerButtonClick = (e : React.MouseEvent<HTMLButtonElement>) =>{
         e.stopPropagation();
-        onDelete(id);
+        console.log(e.currentTarget.tagName);
+        onBuy(productName);
     }
 
     const handlerLinkClick = (e : React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        console.log('이동 막기');
+        e.stopPropagation();
+        console.log('상세 페이지는 준비 중입니다');
     }
   return (
-    <div className='card' onClick={handlerCardClick}>
-        <h3>{username}</h3>
+    <div
+        style={{
+            backgroundColor,
+            padding : "20px",
+            marginBottom : "20px"
+        }}
+        onClick={onCardClick}
+        onClickCapture={onCardCapturn}
+    >
+        <h2>{title}</h2>
+        {children}
+        <button onClick={handlerButtonClick}>{buttonText}</button>
 
-        <div className='content'>{children}</div>
-
-        <button onClick={(e) => handlerDeleteClick(e)}>삭제</button>
-
-        <a href="https://goole.com" onClick={(e) => handlerLinkClick(e)}>프로필 보기</a>
-        {/* <a href="https://goole.com" >프로필 보기</a> */}
+        <br /><br />
+        <a href="https://naver.com" onClick={handlerLinkClick}>자세히 보기</a>
     </div>
   )
 }
-
-
-/*
-    HTMLAnchorElement
-    = <a> 태그(링크)를 가리키는 정식 이름
-*/

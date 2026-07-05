@@ -1,16 +1,36 @@
-import {useState} from 'react'
+import Productitem from "./Productitem";
 
-export default function Text() {
-  const [count, setCount] = useState(0);
-  const handleClick = () => {
-    setCount((prev) => prev + 1);
-  }
+export default function App() {
+  const handleBuy = () => {
+    console.log(`${name} 구매`);
+  };
+
   return (
-    <>
-      <button onClick={handleClick}>{` 좋아요 : ${count}`}</button>
-    </>
-  )
+    <div>
+      <Productitem
+        title="상품 정보"
+        productName="맥북 프로"
+        backgroundColor="pink"
+        buttonText="구매하기"
+        onBuy={handleBuy}
+      >
+        <p>M4 Pro 24GB</p>
+      </Productitem>
+
+      <Productitem
+        title="상품 정보"
+        productName="아이폰 17"
+        backgroundColor="skyblue"
+        buttonText="구매하기"
+        onBuy={handleBuy}
+      >
+        <p>256GB</p>
+      </Productitem>
+    </div>
+  );
 }
+
+
 
 
 

@@ -8,8 +8,14 @@ import {useState} from 'react'
 //   )
 // }
 
-export default function CountDisplay({count} : {count : number}) {
+type countDispatchType = {
+  count : number
+}
+
+export default function CountDisplay({count} : countDispatchType) {
   return (
-    <div><h1>Count : {count}</h1></div>
+    <div>
+      <h1>Count : {count}</h1>
+    </div>
   )
 }
