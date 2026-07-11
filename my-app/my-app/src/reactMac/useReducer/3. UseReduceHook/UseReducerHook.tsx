@@ -31,14 +31,14 @@
 // }
 
 import React, { useReducer } from 'react'
-import counterReducer from './counterReducer'
-import { useReducers as userReducer, initialUser } from './useReducers'
+import { counterReducer } from './counterReducer'
+import { userReducer, initialUser } from './useReducers'
 import { cartReducer, CartItem } from './cartReducer .ts'
 
 export default function UseReducerHook() {
     const [count, countDispatch] = useReducer(counterReducer, 0);
+    const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[]);
     const [user, userDispatch] = useReducer(userReducer, initialUser);
-    const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[])
   return (
     <div>
         <h1>Count : {count}</h1>

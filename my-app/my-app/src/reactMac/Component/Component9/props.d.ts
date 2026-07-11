@@ -11,6 +11,6 @@ interface UserProps{
     name : string,
     age : number,
     body : string
-  },
+  }
   Handler : () => void;
 }

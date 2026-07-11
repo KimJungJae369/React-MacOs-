@@ -1,31 +1,54 @@
-import React from 'react'
 import User from './User'
 
+// export default function Children() {
+//     return (
+//     <div>
+//     <User
+//         title="회원 정보"
+//         border="1px solid skyblue"
+//         >
+//             <p>이름 : 홍길동</p>
+//             <p>나이 : 20</p>
+//     </User>
+
+//     <User
+//         title="공지사항"
+//         border="1px solid skyblue"
+//         >
+//         <p>오늘은 React 수업입니다.</p>
+//     </User>
+//     </div>        
+//     )
+// }
+
+import React from 'react'
+
 export default function Children() {
-    return (
-    <div>
-    <User
-        title="회원 정보"
-        border="1px solid skyblue"
+  return (
+    <>
+        <User
+            title='회원정보'
+            border="1px solid skyblue"
         >
             <p>이름 : 홍길동</p>
-            <p>나이 : 20</p>
-    </User>
+            <p>나이 : 31</p>
+        </User>
 
-    <User
-        title="공지사항"
-        border="1px solid skyblue"
+        <User
+            title='공지사항'
+            border="1px solid skyblue"
         >
-        <p>오늘은 React 수업입니다.</p>
-    </User>
-    </div>        
-    )
+            <p>오늘은 React 수업입니다.</p>
+        </User>
+    </>
+  )
 }
 
 
 
+
 /*
-  Children
+    Children
     = 부모 컴포넌트의 JSX 태그 사이에 포함된 모든 요소나 내용을 의미
     = 리액트에서 컴포넌트는 기본적으로 빈 태그 형태 '<컴포넌트 />'로 사용
     = 그런데 컴포넌트를 '시작 태그'와 '종료 태그'를 함께 사용하는 형태 '<컴포넌트>내용</컴포넌트>'로도 사용할 수 있다

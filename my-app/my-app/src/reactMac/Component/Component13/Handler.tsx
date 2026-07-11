@@ -9,9 +9,12 @@
 
 // export default function Handler() {
 //   return (
-//     <button onClick={() => alert('inline handler')}>Handler</button>
+//     <div>
+//         <button onClick={() => console.log('inline handler')}>inline handler</button>
+//     </div>
 //   )
 // }
+
 
 
 
@@ -55,12 +58,15 @@
 
 // export default function Handler() {
 //     const handlerClick = () => {
-//         console.log('Function reference handler');
+//         alert('Function reference handler');
 //     }
 //   return (
-//     <button onClick={handlerClick}>Handler</button>
+//     <div>
+//         <button onClick={handlerClick}>Function reference handler</button>
+//     </div>
 //   )
 // }
+
 
 
 
@@ -118,12 +124,16 @@ import React from 'react'
 
 export default function Handler() {
     const handlerClick = (title : string) => {
-        console.log(title);
+        alert(title);
     }
   return (
-    <button onClick={() => handlerClick('Hello~')}>Handler</button>
+    <div>
+        <button onClick={() => console.log('Hello~!')}>Function reference handler</button>
+    </div>
   )
 }
+
+
 
 
 

@@ -20,18 +20,18 @@ import React from 'react'
 import User from './User.jsx'
 
 export default function Component8() {
-    const UserObj = {
+    const userName = {
         name : '홍길동',
         age : 31,
         body : '180cm'
     }
-    
+
     const handlerClick = () => {
         console.log('click');
     }
     return (
         <>
-            <User Obj={UserObj} Handler={handlerClick}/>
+            <User user={userName} Handler={handlerClick}/>
         </>
     )
 }

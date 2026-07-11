@@ -10,19 +10,15 @@ import React, { Dispatch, SetStateAction } from 'react'
 //   )
 // }
 
-// type CountProps = {
-//   count : number,
-//   setCount : Dispatch<SetStateAction<number>>
-// }
- 
-// export default function Count({count, setCount} : CountProps) {
+// export default function Count({count, setCount} : {count : number, setCount : Dispatch<SetStateAction<number>>}) {
 //   return (
 //     <div>
-//         <h1>Count :  {count}</h1>
-//         <button onClick={() => setCount(count => count + 1)}>click</button>
+//       <h1>Count : {count}</h1>
+//       <button onClick={() => setCount(prev => prev + 1)}>증가</button>
 //     </div>
 //   )
 // }
+
 
 
 
@@ -42,19 +38,15 @@ import React, { Dispatch, SetStateAction } from 'react'
 //   )
 // }
 
-type countProps = {
-  count : number,
-  increment : () => void;
-}
-
-export default function Count({count, increment} : countProps) {
+export default function Count({count, increment} : {count : number, increment : () => void}) {
   return (
     <div>
       <h1>Count : {count}</h1>
-      <button onClick={increment}>click</button>
+      <button onClick={increment}>증가</button>
     </div>
   )
 }
+
 
 
 

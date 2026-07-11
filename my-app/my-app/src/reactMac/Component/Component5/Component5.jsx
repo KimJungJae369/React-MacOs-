@@ -15,9 +15,9 @@
 
 
 import React from 'react'
-import Header from './Header'
+import Header from './HEader'
 import Main from './Main'
-import Footer from './Footer'
+import Footer from '../Component6/Footer'
 
 export default function Component5() {
   return (
@@ -28,6 +28,7 @@ export default function Component5() {
     </>
   )
 }
+
 
 
 

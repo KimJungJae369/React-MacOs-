@@ -10,18 +10,14 @@ import {useState} from 'react'
 //   )
 // }
 
-type countButtonProps = {
-incerement : () => void;
-decrement : () => void;
-reset : () => void;
-}
+import React from 'react'
 
-export default function ConutButton({incerement, decrement, reset} : countButtonProps) {
+export default function ConutButton({incerement, decrement, reset} : {incerement : () => void, decrement : () => void, reset : () => void}) {
   return (
     <div>
-      <button onClick={incerement}>incerement</button>
-      <button onClick={decrement}>decrement</button>
-      <button onClick={reset}>reset</button>
+      <button onClick={incerement}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
     </div>
   )
 }

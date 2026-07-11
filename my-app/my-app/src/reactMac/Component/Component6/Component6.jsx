@@ -28,7 +28,7 @@ export default function Component6() {
       <Main />
       <Footer />
     </>
-  ) 
+  )
 }
 
 

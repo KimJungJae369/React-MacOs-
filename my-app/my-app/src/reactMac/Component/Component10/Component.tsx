@@ -21,7 +21,7 @@ import React from 'react'
 import User from './User'
 
 export default function Component() {
-const UerObj = {
+const UserObj = {
         name : '홍길동',
         age : 31,
         body : '안녕하세요',
@@ -32,7 +32,7 @@ const UerObj = {
     }
     return (
         <>
-            <User {...UerObj} Handler={clickHandler}/>
+            <User {...UserObj} Handler={clickHandler}/>
         </>
     )
 }

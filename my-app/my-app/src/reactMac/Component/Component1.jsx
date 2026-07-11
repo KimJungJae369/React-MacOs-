@@ -62,23 +62,24 @@ function Header(){
 function Article(){
   return(
     <article>
-      <h2>Articlke</h2>
+      <h2>Article</h2>
     </article>
   )
 }
 
-function Nac(){
+function Nav(){
   return(
-    <Nav>
+    <nav>
       <h3>Nav</h3>
-    </Nav>
+    </nav>
   )
 }
 
 function Section(){
   return(
     <section>
-      <h4>Section</h4>
+      <Nav />
+      <h3>Section</h3>
     </section>
   )
 }

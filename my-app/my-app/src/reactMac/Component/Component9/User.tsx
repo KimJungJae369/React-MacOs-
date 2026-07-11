@@ -22,14 +22,15 @@ export default function User(props : UserProps) {
     Obj : {name, age, body},
     Handler
   } = props;
-  return ( 
-    <>
+  return (
+    <div>
       <h1>name : {name}</h1>
       <h2>age : {age}</h2>
       <h3>body : {body}</h3>
       <button onClick={Handler}>click</button>
-    </>
+    </div>
   )
 }
+
 
 

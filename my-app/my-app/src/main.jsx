@@ -70,7 +70,8 @@ import './index.css'
 // import Classnames from './reactMac/ComponentStyle/4. Classnames/Classnames'
 // 컴포넌트 스타일_01 : 전통적인 방법으로 스타일링
 
-import CssInJSStyle from './reactMac/ComponentStyle2/1. CssInJSStyle'
+// import CssInJSStyle from './reactMac/ComponentStyle2/1. CssInJSStyle'
+import StyledComponent from './reactMac/ComponentStyle2/2. StyledComponent'
 // 컴포넌트 스타일_02 : CSS-in-JS로 스타일링
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -130,7 +131,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Classnames /> */}
     {/* 컴포넌트 스타일_01 : 전통적인 방법으로 스타일링 */}
 
-    <CssInJSStyle/>
+    {/* <CssInJigSStyle/> */}
+    <StyledComponent />
     {/* 컴포넌트 스타일_02 : CSS-in-JS로 스타일링 */}
   </StrictMode>
 )
