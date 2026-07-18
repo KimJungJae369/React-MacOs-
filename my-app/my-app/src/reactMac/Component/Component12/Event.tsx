@@ -1,66 +1,47 @@
 import Modal from './Modal'
 
-// export default function Event() {
-//     const handleUser = () => {
-//         console.log('회원 정보를 확인했습니다.');
-//     }
-
-//     const handleNotice = () => {
-//         console.log('공지사항을 닫았습니다.');
-//     }
-//   return (
-//     <div>
-//             <Modal
-//                 title="회원 정보"
-//                 backgroundColor="skyblue"
-//                 buttonText="확인"
-//                 onButtonClick={handleUser}
-//             >
-//                 <p>이름 : 홍길동</p>
-//                 <p>나이 : 20</p>
-//             </Modal>
-
-//             <Modal
-//                 title="공지사항"
-//                 backgroundColor="gold"
-//                 buttonText="닫기"
-//                 onButtonClick={handleNotice}
-//             >
-//                 <p>오늘은 React 수업입니다.</p>
-//             </Modal>
-//     </div>
-//   )
-// }
-
-import React from 'react'
-
 export default function Event() {
-    const handleUser = () => {
-        console.log('회원 정보를 확인했습니다.');
+    const handleMacbook = () => {
+        console.log('맥북 구매');
     }
 
-    const handleNotice = () => {
-        console.log('공지사항을 닫았습니다.');
+    const handleIphone = () => {
+        console.log('아이폰 구매');
+    }
+
+    const handleAirpods = () => {
+        console.log('에어팟 프로 구매');
     }
   return (
     <div>
         <Modal
-            title="회원 정보"
-            backgroundColor="skyblue"
-            buttonText="확인"
-            onButtonClick={handleUser}
+            title="맥북 프로"
+            price={2890000}
+            backgroundColor="lightblue"
+            buttonText="구매하기"
+            onBuy={handleMacbook}
         >
-            <p>이름 : 홍길동</p>
-            <p>나이 : 20</p>
+            <p>M4 Pro / 24GB / 512GB SSD</p>
         </Modal>
 
         <Modal
-            title="공지사항"
-            backgroundColor="gold"
-            buttonText="닫기"
-            onButtonClick={handleNotice}
+            title="아이폰 17"
+            price={1590000}
+            backgroundColor="lightpink"
+            buttonText="구매하기"
+            onBuy={handleIphone}
         >
-            <p>오늘은 React 수업입니다.</p>
+            <p>256GB / 블랙</p>
+        </Modal>
+
+        <Modal
+            title="에어팟 프로"
+            price={349000}
+            backgroundColor="lightgreen"
+            buttonText="구매하기"
+            onBuy={handleAirpods}
+        >
+            <p>노이즈 캔슬링 지원</p>
         </Modal>
     </div>
   )

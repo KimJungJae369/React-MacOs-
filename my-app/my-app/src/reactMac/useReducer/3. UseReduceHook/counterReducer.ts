@@ -11,7 +11,7 @@
 //     }
 // }
 
-export function counterReducer(state : number, action : {type : string}) {
+export function counterReducer(state : number, action : {type : string}){
     switch(action.type){
         case "INCREMENT":
             return state + 1;

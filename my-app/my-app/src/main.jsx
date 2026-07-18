@@ -68,10 +68,12 @@ import './index.css'
 // import GlobalStyle from './reactMac/ComponentStyle/2. globalStyle/GlobalStyle'
 // import CSSmodule from './reactMac/ComponentStyle/3. CSSmodule/CSSmodule'
 // import Classnames from './reactMac/ComponentStyle/4. Classnames/Classnames'
+// import Text from './reactMac/ComponentStyle/5. Text/Text'
 // 컴포넌트 스타일_01 : 전통적인 방법으로 스타일링
 
 // import CssInJSStyle from './reactMac/ComponentStyle2/1. CssInJSStyle'
-import StyledComponent from './reactMac/ComponentStyle2/2. StyledComponent'
+// import StyledComponent from './reactMac/ComponentStyle2/2. StyledComponent'
+import StyledComponent2 from './reactMac/ComponentStyle2/3. StyledComponent2'
 // 컴포넌트 스타일_02 : CSS-in-JS로 스타일링
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -129,10 +131,12 @@ createRoot(document.getElementById('root')).render(
     {/* <GlobalStyle /> */}
     {/* <CSSmodule /> */}
     {/* <Classnames /> */}
+    {/* <Text/> */}
     {/* 컴포넌트 스타일_01 : 전통적인 방법으로 스타일링 */}
 
     {/* <CssInJigSStyle/> */}
-    <StyledComponent />
+    {/* <StyledComponent /> */}
+    <StyledComponent2 />
     {/* 컴포넌트 스타일_02 : CSS-in-JS로 스타일링 */}
   </StrictMode>
 )

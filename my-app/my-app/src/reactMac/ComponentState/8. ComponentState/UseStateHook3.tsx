@@ -38,17 +38,18 @@ import {use, useState} from 'react'
 //     const handlerClick = () => {
 //         setName('홍길동');
 //         setAge(31);
-//         setGender ('남자');
+//         setGender('남자');
 //     }
 //   return (
 //     <div>
-//         <h2>name : {name}</h2>
-//         <h2>age : {age}</h2>
-//         <h2>gender : {gender}</h2>
+//         <p>Name : {name}</p>
+//         <p>Age : {age}</p>
+//         <p>Gender : {gender}</p>
 //         <button onClick={handlerClick}>click</button>
 //     </div>
 //   )
 // }
+
 
 
 
@@ -114,9 +115,11 @@ import {use, useState} from 'react'
 // import React from 'react'
 
 // export default function UseStateHook3() {
-//     const [count ,setCount] = useState(0);
+//     const [count, setCount] = useState(0);
 
 //     const handlerClick = () => {
+//         setCount(count + 1);
+//         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
@@ -128,6 +131,7 @@ import {use, useState} from 'react'
 //     </div>
 //   )
 // }
+
 
 
 
@@ -177,15 +181,18 @@ import {use, useState} from 'react'
 //     )
 // }
 
+
 import React from 'react'
 
 export default function UseStateHook3() {
-    const [count ,setCount] = useState(0);
+    const [count, setCount] = useState(0);
 
     const handlerClick = () => {
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
     }
   return (
     <div>
@@ -194,6 +201,7 @@ export default function UseStateHook3() {
     </div>
   )
 }
+
 
 
 

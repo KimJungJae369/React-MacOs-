@@ -1,93 +1,36 @@
-// type commentcartType = {
-//     children : React.ReactNode,
-//     title : string,
-//     backgroundColor : string,
-//     buttonText : string,
-//     productName : string,
-//     onBuy : (name : string) => void,
-//     onCardClick : () => void,
-//     onCardCapturn : () => void
-// }
-
-// export default function CommentCard({
-//     children,
-//     title,
-//     backgroundColor,
-//     buttonText,
-//     productName,
-//     onBuy,
-//     onCardClick,
-//     onCardCapturn
-// } : commentcartType) {
-//     const handlerButtonClick = (e : React.MouseEvent<HTMLButtonElement>) =>{
-//         e.stopPropagation();
-//         console.log(e.currentTarget.tagName);
-//         onBuy(productName);
-//     }
-
-//     const handlerLinkClick = (e : React.MouseEvent<HTMLAnchorElement>) => {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         console.log('상세 페이지는 준비 중입니다');
-//     }
-//   return (
-//     <div
-//         style={{
-//             backgroundColor,
-//             padding : "20px",
-//             marginBottom : "20px"
-//         }}
-//         onClick={onCardClick}
-//         onClickCapture={onCardCapturn}
-//     >
-//         <h2>{title}</h2>
-//         {children}
-//         <button onClick={handlerButtonClick}>{buttonText}</button>
-
-//         <br /><br />
-//         <a href="https://naver.com" onClick={handlerLinkClick}>자세히 보기</a>
-//     </div>
-//   )
-// }
-
-type comType = {
-    children : React.ReactNode,
+type CommentCardType = {
     title : string,
+    price : number,
     backgroundColor : string,
-    buttonText : string, 
-    productName : string,
-    onBuy : (name : string) => void;
-    onCardClick : () => void;
-    onCardCapturn : () => void;
+    buttonText : string,
+    onMove : () => void,
+    onBuy : () => void,
+    children : React.ReactNode
 }
 
-import React from 'react'
-
-export default function CommentCard({children, title, backgroundColor, buttonText, productName, onBuy, onCardClick, onCardCapturn} : comType) {
-    const handlerButtonClick = (e : React.MouseEvent<HTMLButtonElement>) => {
-        onBuy(productName);
-    } 
+export default function CommentCard({title, price, backgroundColor, buttonText, onMove, onBuy, children} : CommentCardType) {
+    const handlerBuyClick = (e : React.MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation();
+        onBuy();
+    }
 
     const handlerLinkClick = (e : React.MouseEvent<HTMLAnchorElement>) => {
-        e.stopPropagation();
         e.preventDefault();
-        console.log('상세 페이지는 준비 중입니다');
+        console.log('링크 이동 막기');
     } 
-  return (
-    <div
-        style={{
-            backgroundColor,
-            padding : "20px",
-            marginBottom : "20px"
-        }}
-        onClick={onCardClick}
-        onClickCapture={onCardCapturn}
-    >
-        <h2>{title}</h2>
-        {children}
-        <button onClick={handlerButtonClick}>{buttonText}</button>
-        <br /><br />
-        <a href="https://google.com" onClick={handlerLinkClick}>자세히 보기</a>
-    </div>
-  )
+    return (
+        <div style={{backgroundColor, padding : 20, width: 300,cursor: "pointer",}}>
+            <h1>{title}</h1>
+            <p>가격 : {price.toLocaleString()}원</p>
+
+            {children}
+
+
+            <a href="https://google.com" onClick={handlerLinkClick}>
+                상품 설명 더보기
+            </a>
+
+            <button onClick={handlerBuyClick}>{buttonText}</button>
+        </div>
+    )
 }

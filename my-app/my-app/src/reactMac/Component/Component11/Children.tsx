@@ -1,49 +1,35 @@
-import User from './User'
-
-// export default function Children() {
-//     return (
-//     <div>
-//     <User
-//         title="회원 정보"
-//         border="1px solid skyblue"
-//         >
-//             <p>이름 : 홍길동</p>
-//             <p>나이 : 20</p>
-//     </User>
-
-//     <User
-//         title="공지사항"
-//         border="1px solid skyblue"
-//         >
-//         <p>오늘은 React 수업입니다.</p>
-//     </User>
-//     </div>        
-//     )
-// }
-
 import React from 'react'
+import User from './User'
 
 export default function Children() {
   return (
-    <>
+    <div>
         <User
-            title='회원정보'
-            border="1px solid skyblue"
-        >
-            <p>이름 : 홍길동</p>
-            <p>나이 : 31</p>
-        </User>
+            title="맥북 프로"
+            price={2890000}
+            backgroundColor="lightblue"
+            >
+            <p>M4 Pro / 24GB / 512GB SSD</p>
+            </User>
 
-        <User
-            title='공지사항'
-            border="1px solid skyblue"
-        >
-            <p>오늘은 React 수업입니다.</p>
+            <User
+            title="아이폰 17"
+            price={1590000}
+            backgroundColor="lightpink"
+            >
+            <p>256GB / 블랙</p>
+            </User>
+
+            <User
+            title="에어팟 프로"
+            price={349000}
+            backgroundColor="lightgreen"
+            >
+            <p>노이즈 캔슬링 지원</p>
         </User>
-    </>
+    </div>
   )
 }
-
 
 
 
@@ -118,4 +104,7 @@ export default function Children() {
     = children 안에 들어있는 요소가 몇 개인지 세어준다
     = children은 배열이 아니기 때문에 'React.Children.count(children)'을 사용하면 좀더 안전하다
     = 배열을 사용할때는 'length'사용
+
+    toLocaleString : 숫자를 읽기 쉽게 만들어 준다
+    ex) 1289000 -> 1,289,000
 */

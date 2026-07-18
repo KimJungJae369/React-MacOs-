@@ -1,46 +1,19 @@
-// type modalType = {
-//     title : string,
-//     backgroundColor : string,
-//     buttonText : string,
-//     onButtonClick : () => void,
-//     children : React.ReactNode
-// }
-
-// export default function Modal({
-//     title,
-//     backgroundColor,
-//     buttonText,
-//     onButtonClick,
-//     children
-// } : modalType) {
-//   return (
-//     <div style={{backgroundColor, padding : '20px', marginBottom : '20px'}}>
-//         <h2>{title}</h2>
-//         {children}
-//         <button onClick={onButtonClick}>{buttonText}</button>
-//     </div>
-//   )
-// }
-
-
-import React from 'react'
-
-type modalProps = {
-  children : React.ReactNode,
+type ModalType = {
   title : string,
+  price : number,
   backgroundColor : string,
   buttonText : string,
-  onButtonClick : () => void
+  onBuy : () => void
+  children : React.ReactNode
 }
 
-export default function Modal({children, title, backgroundColor, buttonText, onButtonClick} : modalProps) {
+export default function Modal({title, price, backgroundColor, buttonText, onBuy, children} : ModalType) {
   return (
-  <div>
-    <div style={{backgroundColor, 'padding' : '20px', 'marginBottom' : '20px'}}>
-      <h2>{title}</h2>
-      {children}
-      <button onClick={onButtonClick}>{buttonText}</button>
+    <div style={{backgroundColor, padding : 20}}>
+        <h1>{title}</h1>
+        <p>가격 : {price.toLocaleString()}원</p>
+        {children}
+        <button onClick={onBuy}>{buttonText}</button>
     </div>
-  </div>
   )
 }

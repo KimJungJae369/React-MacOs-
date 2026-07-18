@@ -1,66 +1,30 @@
 import Productitem from "./Productitem";
 
-// export default function App() {
-//   const handleBuy = () => {
-//     console.log(`${name} 구매`);
-//   };
-
-//   return (
-//     <div>
-//       <Productitem
-//         title="상품 정보"
-//         productName="맥북 프로"
-//         backgroundColor="pink"
-//         buttonText="구매하기"
-//         onBuy={handleBuy}
-//       >
-//         <p>M4 Pro 24GB</p>
-//       </Productitem>
-
-//       <Productitem
-//         title="상품 정보"
-//         productName="아이폰 17"
-//         backgroundColor="skyblue"
-//         buttonText="구매하기"
-//         onBuy={handleBuy}
-//       >
-//         <p>256GB</p>
-//       </Productitem>
-//     </div>
-//   );
-// }
-
 import React from 'react'
 
 export default function Text() {
-  const handleBuy = () => {
-    console.log(`${name} 구매`);
+  const handleMove =() => {
+    console.log('상품 상세 페이지 이동');
+  }
+
+  const handleBuy =() => {
+    console.log('상품 구매');
   }
   return (
-        <div>
+    <div>
       <Productitem
-        title="상품 정보"
-        productName="맥북 프로"
-        backgroundColor="pink"
-        buttonText="구매하기"
-        onBuy={handleBuy}
+          title="맥북 프로"
+          price={2890000}
+          backgroundColor="lightblue"
+          buttonText="구매하기"
+          onMove={handleMove}
+          onBuy={handleBuy}
       >
-        <p>M4 Pro 24GB</p>
-      </Productitem>
-
-      <Productitem
-        title="상품 정보"
-        productName="아이폰 17"
-        backgroundColor="skyblue"
-        buttonText="구매하기"
-        onBuy={handleBuy}
-      >
-        <p>256GB</p>
+          <p>M4 Pro / 24GB / 512GB SSD</p>
       </Productitem>
     </div>
   )
 }
-
 
 
 

@@ -25,7 +25,7 @@ export default function StyledComponent() {
 
     2. 기본 사용법 : import styled from 'styled-components'
     - 'styled-component'를 사용하려면 먼저 라이브러리에서 styled 객체를 불러와야 한다
-    - styled 객페는 HTML 태그 이름에 해당하는 함수를 제공해 이 함수를 사용하면 스타일 컴포넌트를 만들 수 있다
+    - styled 객체는 HTML 태그 이름에 해당하는 함수를 제공해 이 함수를 사용하면 스타일 컴포넌트를 만들 수 있다
         ex) 태그드 템플릿 리터럴
             const Button = styled.button`
                                 background: transparent;

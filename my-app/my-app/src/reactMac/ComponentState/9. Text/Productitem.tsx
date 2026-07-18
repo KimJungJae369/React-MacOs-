@@ -1,176 +1,100 @@
 import React, { useState } from "react";
 
-// type ProductCardProps = {
-//   title: string;
-//   productName: string;
-//   backgroundColor: string;
-//   buttonText: string;
-//   children: React.ReactNode;
-//   onBuy: (name: string) => void;
-// };
-
-// export default function Productitem({
-//   title,
-//   productName,
-//   backgroundColor,
-//   buttonText,
-//   children,
-//   onBuy,
-// }: ProductCardProps) {
-//   // 좋아요 상태
-//   const [like, setLike] = useState(0);
-
-//   // 구매 여부 상태
-//   const [isBought, setIsBought] = useState(false);
-
-//   // 좋아요 버튼
-//   const handleLike = (
-//     e: React.MouseEvent<HTMLButtonElement>
-//   ) => {
-//     e.stopPropagation();
-//     setLike((prev) => prev + 1);
-//   };
-
-//   // 구매 버튼
-//   const handleBuyClick = (
-//     e: React.MouseEvent<HTMLButtonElement>
-//   ) => {
-//     e.stopPropagation();
-
-//     console.log(e.currentTarget.tagName);
-
-//     onBuy(productName);
-
-//     setIsBought(true);
-//   };
-
-//   // 링크 클릭
-//   const handleLinkClick = (
-//     e: React.MouseEvent<HTMLAnchorElement>
-//   ) => {
-//     e.preventDefault();
-//     e.stopPropagation();
-
-//     console.log("상세 페이지 준비중");
-//   };
-
-//   // 카드 클릭
-//   const handleCardClick = () => {
-//     console.log("카드 선택");
-//   };
-
-//   return (
-//     <div
-//       onClick={handleCardClick}
-//       style={{
-//         backgroundColor,
-//         padding: "20px",
-//         marginBottom: "20px",
-//         border: "1px solid gray",
-//       }}
-//     >
-//       <h2>{title}</h2>
-
-//       <h3>{productName}</h3>
-
-//       {children}
-
-//       <p>좋아요 : {like}</p>
-
-//       {like >= 10 && <p>🔥 인기 상품</p>}
-
-//       <button onClick={handleLike}>
-//         ❤ 좋아요({like})
-//       </button>
-
-//       <br />
-//       <br />
-
-//       <button onClick={handleBuyClick}>
-//         {isBought ? "구매 완료" : buttonText}
-//       </button>
-
-//       <br />
-//       <br />
-
-//       <a
-//         href="https://google.com"
-//         onClick={handleLinkClick}
-//       >
-//         자세히 보기
-//       </a>
-//     </div>
-//   );
-// }
-
-type propsType = {
-  title: string,
-  productName: string,
-  backgroundColor: string,
-  buttonText: string,
-  onBuy: (name: string) => void,
-  children: React.ReactNode,
+type ProductItemProps = {
+  title: string;
+  price: number;
+  backgroundColor: string;
+  buttonText: string;
+  onMove: () => void;
+  onBuy: () => void;
+  children: React.ReactNode;
 };
 
-export default function Productitem({
+export default function ProductItem({
   title,
-  productName,
+  price,
   backgroundColor,
   buttonText,
+  onMove,
   onBuy,
   children,
-}: propsType) {
-  const [like, setLike] = useState(0);
-  const [isBought, setIsBought] = useState(false);
+}: ProductItemProps) {
+  const [count, setCount] = useState(0);
 
-  const handleLike = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
-    setLike((prev) => prev + 1);
+  // 좋아요 버튼
+  const handleLikeClick = (
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.stopPropagation(); // 부모 클릭 막기
+    setCount((prev) => prev + 1);
   };
 
-  const handleBuyClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
-    console.log(e.currentTarget.tagName);
-    onBuy(productName);
-    setIsBought(true);
+  // 구매 버튼
+  const handleBuyClick = (
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.stopPropagation(); // 부모 클릭 막기
+    onBuy();
   };
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-    console.log('상품 준비중'); 
-  }
-
-  const handleCardClick = () => {
-    console.log("카드선택");
+  // 링크
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    e.preventDefault(); // 기본 이동 막기
+    e.stopPropagation(); // 카드 클릭도 막기
+    console.log("링크 이동 막기");
   };
 
   return (
     <div
-      onClick={handleCardClick}
+      onClick={onMove}
       style={{
         backgroundColor,
-        padding: "20px",
-        marginBottom: "20px",
-        border: "1px solid gray",
+        padding: 20,
+        textAlign: "center",
+        cursor: "pointer",
+        borderRadius: 10,
       }}
     >
       <h2>{title}</h2>
-      <h3>{productName}</h3>
+
+      <p>가격 : {price.toLocaleString()}원</p>
+
       {children}
-      <p>좋아요 : {like}</p>
-      {like >= 10 && <p>🔥 인기 상품</p>}
-      <button onClick={handleLike}>❤ 좋아요({like})</button>
+
       <br />
-      <br />
-      <button onClick={handleBuyClick}>
-        {isBought ? "구매 완료" : buttonText}
+
+      <p>❤️ {count}</p>
+
+      <button onClick={handleLikeClick}>
+        ❤️ 좋아요
       </button>
+
       <br />
       <br />
-      <a href="https://google.com" onClick={handleLinkClick}>
-        자세히 보기
+
+      <button onClick={handleBuyClick}>
+        {buttonText}
+      </button>
+
+      <br />
+      <br />
+
+      <a
+        href="https://google.com"
+        onClick={handleLinkClick}
+      >
+        상품 설명 더보기
       </a>
+
+      {count >= 10 && (
+        <>
+          <br />
+          <br />
+          <h3>🔥 인기 상품</h3>
+        </>
+      )}
     </div>
   );
 }

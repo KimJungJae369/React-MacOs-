@@ -46,34 +46,31 @@
 //   )
 // }
 
-
-type headerProps = {
-  title : string
+type headerType = {
+  title : string,
 }
 
-function Header({title} : headerProps){
-  return (
-    <>
-      {title}
-    </>
-  )
+function Header({title} : headerType){
+  return <><h1>{title}</h1></>
 }
 
-type subSection = {
+type subType = {
   id : number,
   name : string,
   age : number
 }
 
-type sectionProps = {
-  lists : subSection[];
+type sectionType = {
+  lists : subType[];
 }
 
-function Section({lists} : sectionProps){
+function Section({lists} : sectionType){
   return(
     <ul>
       {lists.map((item) => (
-        <li key={item.id}>{item.name} : {item.age}</li>
+        <li key={item.id}>
+          {item.name} : {item.age}
+        </li>
       ))}
     </ul>
   )
@@ -84,11 +81,7 @@ type footerType = {
 }
 
 function Footer({footers} : footerType){
-  return (
-    <>
-      {footers}
-    </>
-  )
+  return <><h2>{footers}</h2></>
 }
 
 export default function Text() {

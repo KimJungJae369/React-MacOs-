@@ -23,16 +23,21 @@
 
 // export default function Evntpropagation() {
 //     const handlerCaptrue = () => {
-//         console.log('부모')
+//         console.log('부모');
 //     }
 
 //     const handlerBubble = () => {
-//         console.log('자식')
+//         console.log('자식');
 //     }
 //   return (
-//     <button onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>handlerBubble</button></button>
+//     <div onClickCapture={handlerCaptrue}>
+//         Evntpropagation
+
+//         <button onClick={handlerBubble}>handlerBubble</button>
+//     </div>
 //   )
 // }
+
 
 
 
@@ -104,14 +109,18 @@
 
 // export default function Evntpropagation() {
 //     const handlerCaptrue = () => {
-//         console.log('부모')
+//         console.log('부모');
 //     }
 
 //     const handlerBubble = () => {
-//         console.log('자식')
+//         console.log('자식');
 //     }
 //   return (
-//     <button onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>handlerBubble</button></button>
+//     <div onClick={handlerCaptrue}>
+//         Evntpropagation
+
+//         <button onClick={handlerBubble}>handlerBubble</button>
+//     </div>
 //   )
 // }
 
@@ -191,17 +200,22 @@
 
 // export default function Evntpropagation() {
 //     const handlerCaptrue = () => {
-//         console.log('부모')
+//         console.log('부모');
 //     }
 
-//     const handlerBubble = (e : React.MouseEvent<HTMLBRElement, MouseEvent>) => {
+//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement>) => {
 //         e.stopPropagation();
-//         console.log('자식')
+//         console.log('자식');
 //     }
 //   return (
-//     <button onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>handlerBubble</button></button>
+//     <div onClick={handlerCaptrue}>
+//         Evntpropagation
+
+//         <button onClick={handlerBubble}>handlerBubble</button>
+//     </div>
 //   )
 // }
+
 
 
 
@@ -283,12 +297,13 @@ import React from 'react'
 export default function Evntpropagation() {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-        <input type="text"/>
-        <input type="password"/>
+        <input type="text" />
+        <input type="password" />
         <button type='submit'>click</button>
     </form>
   )
 }
+
 
 
 

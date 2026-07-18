@@ -20,7 +20,7 @@ import React from 'react'
 import User from './User.jsx'
 
 export default function Component8() {
-    const userName = {
+    const UserObj = {
         name : '홍길동',
         age : 31,
         body : '180cm'
@@ -31,7 +31,7 @@ export default function Component8() {
     }
     return (
         <>
-            <User user={userName} Handler={handlerClick}/>
+            <User Obj={UserObj} ckicked={handlerClick}/>
         </>
     )
 }

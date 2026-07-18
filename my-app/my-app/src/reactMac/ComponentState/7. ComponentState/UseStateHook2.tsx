@@ -20,15 +20,15 @@ export default function UseStateHook2() {
         // 상태 업데이트 예시
         // setFormState(prev => ({ ...prev, name: '김길동' }));
 
-        const [name, setName] = useState(null);
-        const [age, setAge] = useState(null);
-        const [gender, setGender] = useState(null);
+    const [name, setName] = useState(null);
+    const [age, setAge] = useState(null);
+    const [gender, setGender] = useState(null);
 
-        const [formState, setFromState] = useState({
-            name : '홍깅동',
-            age : 31,
-            gender : '남자'
-        });
+    const [form, setForm] = useState({
+        name : '홍길동',
+        age : 31,
+        gender : '남자',
+    });
 }
 /*
     useState 훅 여러 번 사용하기
