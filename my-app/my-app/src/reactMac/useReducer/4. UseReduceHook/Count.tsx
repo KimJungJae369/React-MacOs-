@@ -12,20 +12,17 @@ import React, { Dispatch, SetStateAction } from 'react'
 
 // type CountType = {
 //   count : number,
-//   setCount : Dispatch<SetStateAction <number>>
+//   setCount : Dispatch<SetStateAction<number>>
 // }
 
-// export default function Count({count, setCount} : CountType) {
+// export default function Count({count,setCount} : CountType) {
 //   return (
 //     <div>
 //       <h1>Count : {count}</h1>
-//       <button onClick={() => setCount(prev => prev + 1)}>UP</button>
-//     </div>
+//       <button onClick={() => setCount((count) => count + 1)}>증가</button>
+//     </div> 
 //   )
 // }
-
-
-
 
 
 
@@ -53,10 +50,11 @@ export default function Count({count, increment} : CountType) {
   return (
     <div>
       <h1>Count : {count}</h1>
-      <button onClick={increment}>UP</button>
+      <button onClick={increment}>증가</button>
     </div>
   )
 }
+
 
 
 

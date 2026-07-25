@@ -30,7 +30,6 @@
 
 
 
-
 // 2. 이벤트 객체와 함수 참조
 // import React from 'react'
 
@@ -48,14 +47,13 @@
 // import React from 'react'
 
 // export default function Eventobject() {
-//     const handlerEvent = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//     const handlerClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 //         console.log(e);
-//     } 
+//     }
 //   return (
-//     <button onClick={handlerEvent}>Eventobject</button>
+//     <button onClick={handlerClick}>Eventobject</button>
 //   )
 // }
-
 
 
 
@@ -132,17 +130,19 @@
 //     )
 // }
 
+
 import React from 'react'
 
 export default function Eventobject() {
-    const handlerEvent = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, title : string) => {
+    const handlerClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, title : string) => {
         console.log(e);
         alert(title);
-    } 
+    }
   return (
-    <button onClick={(e) => handlerEvent(e,'Hello~')}>Eventobject</button>
+    <button onClick={(e) => handlerClick(e, 'Hello~!')}>Eventobject</button>
   )
 }
+
 
 
 

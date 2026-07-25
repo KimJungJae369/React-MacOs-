@@ -73,8 +73,10 @@ import './index.css'
 
 // import CssInJSStyle from './reactMac/ComponentStyle2/1. CssInJSStyle'
 // import StyledComponent from './reactMac/ComponentStyle2/2. StyledComponent'
-import StyledComponent2 from './reactMac/ComponentStyle2/3. StyledComponent2'
+// import StyledComponent2 from './reactMac/ComponentStyle2/3. StyledComponent2'
+import Emotion from './reactMac/ComponentStyle2/4. Emotion'
 // 컴포넌트 스타일_02 : CSS-in-JS로 스타일링
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
@@ -136,7 +138,8 @@ createRoot(document.getElementById('root')).render(
 
     {/* <CssInJigSStyle/> */}
     {/* <StyledComponent /> */}
-    <StyledComponent2 />
+    {/* <StyledComponent2 /> */}
+    <Emotion />
     {/* 컴포넌트 스타일_02 : CSS-in-JS로 스타일링 */}
   </StrictMode>
 )

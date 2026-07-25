@@ -8,11 +8,7 @@ import {useState} from 'react'
 //   )
 // }
 
-type CountDisplayType = {
-  count : number,
-}
-
-export default function CountDisplay({count} : CountDisplayType) {
+export default function CountDisplay({count} : {count : number}) {
   return (
     <div>
       <h1>Count : {count}</h1>

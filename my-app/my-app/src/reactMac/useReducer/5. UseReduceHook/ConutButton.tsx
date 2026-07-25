@@ -10,18 +10,18 @@ import {useState} from 'react'
 //   )
 // }
 
-type ConutButtonType = {
+type countType = {
   incerement : () => void,
   decrement : () => void,
-  reset : () => void,
+  reset : () => void
 }
 
-export default function ConutButton({incerement, decrement, reset} : ConutButtonType) {
+export default function ConutButton({incerement, decrement, reset} : countType) {
   return (
     <div>
-      <button onClick={incerement}>incerement</button>
-      <button onClick={decrement}>decrement</button>
-      <button onClick={reset}>reset</button>
+      <button onClick={incerement}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
     </div>
   )
 }

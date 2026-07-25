@@ -21,10 +21,11 @@ import {useState} from 'react'
 import CountDisplay from './CountDisplay';
 import ConutButton from './ConutButton';
 
+
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
-    const incerement = () => setCount(count + 1);
-    const decrement = () => setCount(count - 1);
+    const incerement = () => setCount((prev) => prev + 1);
+    const decrement = () => setCount((prev) => prev - 1);
     const reset = () => setCount(0);
   return (
     <div>
@@ -33,7 +34,6 @@ export default function UseReducerHook() {
     </div>
   )
 }
-
 
 
 

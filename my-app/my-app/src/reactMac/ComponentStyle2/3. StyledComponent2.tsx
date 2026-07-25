@@ -71,6 +71,6 @@ export default function StyledComponent2() {
     = 'styled-components'는 자바스크립트와 스타일을 유기적으로 결합해 동적인 스타일링을 매우 간편하게 구현할 수 있게 도와준다
 
         Tip)
-            - 2025년 3월 'styled-components' 공식 팀은 새로운 기능 개발을 중단하고 버스 수정 및 보안 패치와 같은 유지보수에만 집중하겠다고 발표
+            - 2025년 3월 'styled-components' 공식 팀은 새로운 기능 개발을 중단하고 버그 수정 및 보안 패치와 같은 유지보수에만 집중하겠다고 발표
             - 따라서 현재 시점에서는 새로운 프로젝트에 'styled-components'를 사용하는 것은 권장하지 않는다 
 */
