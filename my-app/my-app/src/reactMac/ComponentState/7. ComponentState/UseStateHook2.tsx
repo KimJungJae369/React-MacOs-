@@ -24,9 +24,9 @@ export default function UseStateHook2() {
     const [age, setAge] = useState(null);
     const [gender, setGender] = useState(null);
 
-    const [form, setform] = useState({
+    const [form, setForm] = useState({
         name : '홍길동',
-        age : 30,
+        age : 31,
         gender : '남자'
     });
 }

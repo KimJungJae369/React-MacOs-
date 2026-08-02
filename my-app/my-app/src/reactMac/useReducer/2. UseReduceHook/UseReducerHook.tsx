@@ -18,9 +18,9 @@ export default function UseReducerHook() {
   return (
     <div>
         <h1>Count : {count}</h1>
-        <button onClick={() => countDispatch({type: "INCREMENT"})}>Increment</button>
-        <button onClick={() => countDispatch({type: "RESET"})}>Reset</button>
-        <button onClick={() => countDispatch({type: "DECREMENT"})}>Decrement</button>
+        <button onClick={() => countDispatch({type : 'INCREMENT'})}>INCREMENT</button>
+        <button onClick={() => countDispatch({type : 'RESET'})}>RESET</button>
+        <button onClick={() => countDispatch({type : 'DECREMENT'})}>DECREMENT</button>
     </div>
   )
 }

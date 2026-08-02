@@ -22,17 +22,17 @@ import User from './User'
 
 export default function Component9() {
     const UserObj = {
-        name : '홀길동',
-        age : 30,
-        body : '건강',
+        name : '홍길동',
+        age : 31,
+        body : '180cm'
     }
 
-    const clickHandler = () => {
-        console.log('클릭');
+    const handlerClick = () => {
+        console.log('click');
     }
     return (
         <>
-            <User Obj={UserObj} Handler={clickHandler}/>
+            <User Obj={UserObj} Handler={handlerClick}/>
         </>
     )
 }

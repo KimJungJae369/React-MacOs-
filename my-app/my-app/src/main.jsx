@@ -45,7 +45,7 @@ import './index.css'
 // 캡처링, 버블링, 이벤트 전파 막기, 이벤트 기본 동작 막기
 
 // import ComponentState from './reactMac//ComponentState/1. ComponentState/ComponentState'
-// import ComponentState from './reactMac/ComponentState/2. ComponentState/userState'
+// import ComponentState from './reactMac/ComponentState/2. ComponentState/UserState'
 // import ComponentState from './reactMac/ComponentState/3. ComponentState/GenericType'
 // import ComponentState from './reactMac/ComponentState/4. ComponentState/StateVariable'
 // import ComponentState from './reactMac/ComponentState/5. ComponentState/useState'
@@ -74,7 +74,8 @@ import './index.css'
 // import CssInJSStyle from './reactMac/ComponentStyle2/1. CssInJSStyle'
 // import StyledComponent from './reactMac/ComponentStyle2/2. StyledComponent'
 // import StyledComponent2 from './reactMac/ComponentStyle2/3. StyledComponent2'
-import Emotion from './reactMac/ComponentStyle2/4. Emotion'
+// import Emotion from './reactMac/ComponentStyle2/4. Emotion'
+import VanillaExtract from './reactMac/ComponentStyle2/5. VanillaExtract'
 // 컴포넌트 스타일_02 : CSS-in-JS로 스타일링
 
 createRoot(document.getElementById('root')).render(
@@ -139,7 +140,8 @@ createRoot(document.getElementById('root')).render(
     {/* <CssInJigSStyle/> */}
     {/* <StyledComponent /> */}
     {/* <StyledComponent2 /> */}
-    <Emotion />
+    {/* <Emotion /> */}
+    <VanillaExtract />
     {/* 컴포넌트 스타일_02 : CSS-in-JS로 스타일링 */}
   </StrictMode>
 )

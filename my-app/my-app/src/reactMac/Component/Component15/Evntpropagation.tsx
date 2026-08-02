@@ -19,6 +19,8 @@
 //     )
 // }
 
+// import React from 'react'
+
 // export default function Evntpropagation() {
 //     const handlerCaptrue = () => {
 //         console.log('부모');
@@ -28,9 +30,12 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClickCapture={handlerCaptrue}> <button onClick={handlerBubble}></button>Evntpropagation</div>
+//     <div onClickCapture={handlerCaptrue}>
+//         <button onClick={handlerBubble}>click</button>
+//     </div>
 //   )
 // }
+
 
 
 
@@ -99,6 +104,8 @@
 //     )
 // }
 
+// import React from 'react'
+
 // export default function Evntpropagation() {
 //     const handlerCaptrue = () => {
 //         console.log('부모');
@@ -108,7 +115,9 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}> <button onClick={handlerBubble}>handlerBubble</button>Evntpropagation</div>
+//     <div onClick={handlerCaptrue}>
+//         <button onClick={handlerBubble}>click</button>
+//     </div>
 //   )
 // }
 
@@ -186,18 +195,21 @@
 //     )
 // }
 
+// import React from 'react'
 
 // export default function Evntpropagation() {
 //     const handlerCaptrue = () => {
 //         console.log('부모');
 //     }
 
-//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement>) => {
+//     const handlerBubble = (e : React.MouseEvent<HTMLElement>) => {
 //         e.stopPropagation();
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}> <button onClick={handlerBubble}>handlerBubble</button>Evntpropagation</div>
+//     <div onClick={handlerCaptrue}>
+//         <button onClick={handlerBubble}>click</button>
+//     </div>
 //   )
 // }
 
@@ -287,6 +299,7 @@ export default function Evntpropagation() {
     </form>
   )
 }
+
 
 
 

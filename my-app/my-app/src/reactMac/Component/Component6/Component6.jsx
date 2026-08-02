@@ -34,6 +34,7 @@ export default function Component6() {
 
 
 
+
 /*
     <컴포넌트 트리>
     = 리액트 애플리케이션은 App 컴포넌트에 여러 하위 컴포넌트를 포함하면서 전체 UI를 구성

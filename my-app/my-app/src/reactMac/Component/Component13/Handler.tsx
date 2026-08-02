@@ -42,6 +42,7 @@
 
 
 
+
 // 2. 함수 참조 방식
 // export default function Handler() {
 //     const clickHeandler = () => {
@@ -54,16 +55,16 @@
 //     )
 // }
 
-    // import React from 'react'
+// import React from 'react'
 
-    // export default function Handler() {
-    //     const handlerClick = () => {
-    //         console.log('Function reference handler');
-    //     }
-    // return (
-    //     <button onClick={handlerClick}>Handler</button>
-    // )
-    // }
+// export default function Handler() {
+//     const handlerClick = () => {
+//         console.log('Hello~');
+//     }
+//   return (
+//     <button onClick={handlerClick}>Handler</button>
+//   )
+// }
 
 
 
@@ -119,16 +120,19 @@
 //     )
 // }
 
-// import React from 'react'
+import React from 'react'
 
-// export default function Handler() {
-//     const handlerClick = (title : string) => {
-//         console.log(title)
-//     }
-//   return (
-//     <button onClick={() => alert('Hello~!')}>Handler</button>
-//   )
-// }
+export default function Handler() {
+    const handlerClick = (title : string) => {
+        console.log(title);
+    }
+  return (
+    <button onClick={() => handlerClick('Hello~!')}>Handler</button>
+  )
+}
+
+
+
 
 
 

@@ -28,6 +28,8 @@ import {use, useState} from 'react'
 //     )
 // }
 
+// import React from 'react'
+
 // export default function UseStateHook3() {
 //     const [name, setName] = useState<string | null>(null);
 //     const [age, setAge] = useState<number | null>(null);
@@ -35,8 +37,8 @@ import {use, useState} from 'react'
 
 //     const handlerClick = () => {
 //         setName('홍길동');
-//         setAge(30);
-//         setGender('남자');
+//         setAge(31);
+//         setGender('남자')
 //     }
 //   return (
 //     <div>
@@ -47,6 +49,8 @@ import {use, useState} from 'react'
 //     </div>
 //   )
 // }
+
+
 
 
 
@@ -109,6 +113,8 @@ import {use, useState} from 'react'
 //     )
 // }'
 
+// import React from 'react'
+
 // export default function UseStateHook3() {
 //     const [count, setCount] = useState(0);
 
@@ -117,15 +123,15 @@ import {use, useState} from 'react'
 //         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
-//         setCount(count + 1);
 //     }
 //   return (
 //     <div>
 //         <h1>Count : {count}</h1>
-//         <button onClick={handlerClick}>click</button>
+//         <button onClick={handlerClick}>up</button>
 //     </div>
 //   )
 // }
+
 
 
 
@@ -177,24 +183,24 @@ import {use, useState} from 'react'
 // }
 
 
+import React from 'react'
+
 export default function UseStateHook3() {
     const [count, setCount] = useState(0);
 
     const handlerClick = () => {
-        setCount(count=>count + 1);
-        setCount(count=>count + 1);
-        setCount(count=>count + 1);
-        setCount(count=>count + 1);
-        setCount(count=>count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
+        setCount(count => count + 1);
     }
   return (
     <div>
         <h1>Count : {count}</h1>
-        <button onClick={handlerClick}>click</button>
+        <button onClick={handlerClick}>up</button>
     </div>
   )
 }
-
 
 
 
@@ -249,7 +255,7 @@ export default function UseStateHook3() {
                 </>
             )
 
-    = 일반적으로 'useState' 훅의 초깃값만으로 타입을 명확히 추론할수 있을 경우 제네릭을 생략해도 무방
+    = 일반적으로 'useState' 훅의 초깃값만으로 타입을 명확히 추론할 수 있을 경우 제네릭을 생략해도 무방
     = 하지만 초깃값이 'null, undefined, []'등 불분명한 타입일 경우 '제네릭 타입'을 명시하는 것이 좋다
     = 'useState' 훅에 <string | null>, <number | null>과 같이 '유니언 타입'을 '제네릭'으로 명시하면 초깃값이 null이더라도 이후에 문자열이나 숫자를 문제없이 상태에 저장할 수 있다
 

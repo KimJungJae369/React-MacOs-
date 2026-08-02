@@ -1,31 +1,20 @@
 import Productitem from "./Productitem";
 
-import React from 'react'
-
 export default function Text() {
-  const handleMove =() => {
-    console.log('상품 상세 페이지 이동');
-  }
-
-  const handleBuy =() => {
-    console.log('상품 구매');
-  }
   return (
     <div>
       <Productitem
-          title="맥북 프로"
-          price={2890000}
-          backgroundColor="lightblue"
-          buttonText="구매하기"
-          onMove={handleMove}
-          onBuy={handleBuy}
+        title="맥북 프로"
+        price={2790000}
+        backgroundColor="lightblue"
+        buttonText="장바구니 담기"
       >
-          <p>M4 Pro / 24GB / 512GB SSD</p>
+        <p>M4 Pro</p>
+        <p>24GB RAM</p>
       </Productitem>
     </div>
   )
 }
-
 
 
 

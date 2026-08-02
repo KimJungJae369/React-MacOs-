@@ -15,7 +15,7 @@
 //     )
 // }
 
-type propsType = {
+type userProps = {
   name : string,
   age : number,
   body : string,
@@ -24,7 +24,7 @@ type propsType = {
 
 import React from 'react'
 
-export default function User({name, age, body, Handler} : propsType) {
+export default function User({name, age, body, Handler} : userProps) {
   return (
     <div>
         <h1>name : {name}</h1>

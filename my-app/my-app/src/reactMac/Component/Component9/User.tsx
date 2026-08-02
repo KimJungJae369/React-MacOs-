@@ -17,12 +17,12 @@
 
 import React from 'react'
 
-export default function User(props : propsType) {
+export default function User(props : UserProps) {
   const {
     Obj : {name, age, body},
     Handler
-  } = props;
-  return (
+  } = props
+  return (    
     <div>
       <h1>name : {name}</h1>
       <h2>age : {age}</h2>

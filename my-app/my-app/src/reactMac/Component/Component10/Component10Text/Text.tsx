@@ -1,70 +1,22 @@
-// import React from 'react';
-
-// type headerProps = {
-//   title : string,
-// }
-
-// function Header(props : headerProps){
-//   return (
-//     <>
-//       {props.title}
-//     </>
-//   )
-// }
-
-// type listsProps = {
-//   id : number,
-//   name : string,
-//   age : number
-// }
-
-// type listProps = {
-//   lists : listsProps[];
-// }
-
-// function Section({ lists }: listProps){
-//   return (
-//     <ul>
-//       {lists.map((item) => (
-//         <li key={item.id}>
-//           {item.name} : {item.age}
-//         </li>
-//       ))}
-//     </ul>
-//   )
-// }
-
-// type footerProps = {
-//   title2 : string
-// }
-
-// function Footer(props : footerProps){
-//   return(
-//     <>
-//       {props.title2}
-//     </>
-//   )
-// }
-
-type headerType = {
+type HeaderType = {
   title : string,
 }
 
-function Header({title} : headerType){
-  return <><h1>{title}</h1></>
+function Header({title} : HeaderType){
+  return <>{title}</>
 }
 
-type subType = {
+type subMenu = {
   id : number,
   name : string,
   age : number
 }
 
-type sectionType = {
-  lists : subType[];
+type SectionType = {
+  lists : subMenu[];
 }
 
-function Section({lists} : sectionType){
+function Section({lists} : SectionType){
   return(
     <ul>
       {lists.map((item) => (
@@ -76,12 +28,12 @@ function Section({lists} : sectionType){
   )
 }
 
-type footerType = {
-  footers : string,
+type FooterType = {
+  footers : string
 }
 
-function Footer({footers} : footerType){
-  return <><h2>{footers}</h2></>
+function Footer({footers} : FooterType){
+  return <>{footers}</>
 }
 
 export default function Text() {
@@ -99,3 +51,10 @@ export default function Text() {
     </div>
   )
 }
+
+/*
+  화살표 함수에서 ()와 {}의 의미 차이
+  () 👉 "계산 끝! 결과값 여기 있어!" (단답형 / 바로 반환)
+  {} 👉 "잠깐만, 해야 할 일이 좀 더 있어!" (장문형 / 변수 선언, if문 처리, console.log 출력 등 작업 후 마지막에 return
+  - '{}'에서 retur이 마지막에 꼭 있어야 한다 '내 작업은 여기까지고, 최종 결과물은 이거야'라는 느낌
+*/

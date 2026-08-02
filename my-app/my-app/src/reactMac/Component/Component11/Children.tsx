@@ -1,35 +1,31 @@
-import React from 'react'
 import User from './User'
+import React from 'react'
 
 export default function Children() {
   return (
     <div>
         <User
-            title="맥북 프로"
-            price={2890000}
-            backgroundColor="lightblue"
-            >
-            <p>M4 Pro / 24GB / 512GB SSD</p>
-            </User>
+            title = '맥북프로'
+            price={2790000}
+            backgroundColor = 'lightBlue'
+        >
+            <p>M4 Pro</p>
+            <p>24GB RAM</p>
+        </User>
 
-            <User
-            title="아이폰 17"
+        <User
+            title = '아이폰 17'
             price={1590000}
-            backgroundColor="lightpink"
-            >
-            <p>256GB / 블랙</p>
-            </User>
-
-            <User
-            title="에어팟 프로"
-            price={349000}
-            backgroundColor="lightgreen"
-            >
-            <p>노이즈 캔슬링 지원</p>
+            backgroundColor = 'pink'
+        >
+            <p>256GB</p>
+            <p>블랙</p>
+            <p>Apple Care 가능</p>
         </User>
     </div>
   )
 }
+
 
 
 
@@ -101,6 +97,7 @@ export default function Children() {
         = 자식 컴포넌트에서 고유 값으로 사용하고 싶다면 'id'와 같은 별도의 속성으로 전달
 
     React.Children.count(children);
+    = import React from 'react'로 임포트를 해줘야 한다
     = children 안에 들어있는 요소가 몇 개인지 세어준다
     = children은 배열이 아니기 때문에 'React.Children.count(children)'을 사용하면 좀더 안전하다
     = 배열을 사용할때는 'length'사용

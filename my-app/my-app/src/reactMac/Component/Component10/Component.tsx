@@ -21,7 +21,7 @@ import React from 'react'
 import User from './User'
 
 export default function Component() {
-const UserObj = {
+    const UserObj = {
         name : '홍길동',
         age : 31,
         body : '안녕하세요',

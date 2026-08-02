@@ -2,50 +2,40 @@ import Modal from './Modal'
 
 export default function Event() {
     const handleMacbook = () => {
-        console.log('맥북 구매');
+        console.log("맥북 구매했습니다");
     }
 
     const handleIphone = () => {
-        console.log('아이폰 구매');
-    }
-
-    const handleAirpods = () => {
-        console.log('에어팟 프로 구매');
+        console.log("아이폰을 장바구니에 담았습니다.");
     }
   return (
     <div>
         <Modal
             title="맥북 프로"
-            price={2890000}
+            price={2790000}
             backgroundColor="lightblue"
             buttonText="구매하기"
             onBuy={handleMacbook}
-        >
-            <p>M4 Pro / 24GB / 512GB SSD</p>
+            >
+            <p>M4 Pro</p>
+            <p>24GB RAM</p>
         </Modal>
 
         <Modal
             title="아이폰 17"
             price={1590000}
-            backgroundColor="lightpink"
-            buttonText="구매하기"
+            backgroundColor="pink"
+            buttonText="장바구니"
             onBuy={handleIphone}
-        >
-            <p>256GB / 블랙</p>
-        </Modal>
-
-        <Modal
-            title="에어팟 프로"
-            price={349000}
-            backgroundColor="lightgreen"
-            buttonText="구매하기"
-            onBuy={handleAirpods}
-        >
-            <p>노이즈 캔슬링 지원</p>
+            >
+            <p>256GB</p>
+            <p>블랙</p>
+            <p>Apple Care 가능</p>
         </Modal>
     </div>
   )
 }
+
 
 
 
