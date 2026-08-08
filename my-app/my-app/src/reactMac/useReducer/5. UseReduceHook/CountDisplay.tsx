@@ -11,7 +11,7 @@ import {useState} from 'react'
 export default function CountDisplay({count} : {count : number}) {
   return (
     <div>
-      count : {count}
+      <h1>count : {count}</h1>
     </div>
   )
 }

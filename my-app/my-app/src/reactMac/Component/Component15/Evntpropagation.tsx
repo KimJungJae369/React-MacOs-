@@ -30,11 +30,12 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClickCapture={handlerCaptrue}>
-//         <button onClick={handlerBubble}>click</button>
+//     <div onClickCapture={handlerCaptrue}>Evntpropagation
+//         <button onClick={handlerBubble}>handlerBubble</button>
 //     </div>
 //   )
 // }
+
 
 
 
@@ -115,8 +116,8 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>
-//         <button onClick={handlerBubble}>click</button>
+//     <div onClick={handlerCaptrue}>Evntpropagation
+//         <button onClick={handlerBubble}>handlerBubble</button>
 //     </div>
 //   )
 // }
@@ -202,13 +203,13 @@
 //         console.log('부모');
 //     }
 
-//     const handlerBubble = (e : React.MouseEvent<HTMLElement>) => {
-//         e.stopPropagation();
+//     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement>) => {
+//         e.stopPropagation()
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>
-//         <button onClick={handlerBubble}>click</button>
+//     <div onClick={handlerCaptrue}>Evntpropagation
+//         <button onClick={handlerBubble}>handlerBubble</button>
 //     </div>
 //   )
 // }
@@ -299,6 +300,7 @@ export default function Evntpropagation() {
     </form>
   )
 }
+
 
 
 

@@ -38,7 +38,7 @@ import {use, useState} from 'react'
 //     const handlerClick = () => {
 //         setName('홍길동');
 //         setAge(31);
-//         setGender('남자')
+//         setGender('남자');
 //     }
 //   return (
 //     <div>
@@ -49,6 +49,7 @@ import {use, useState} from 'react'
 //     </div>
 //   )
 // }
+
 
 
 
@@ -132,6 +133,26 @@ import {use, useState} from 'react'
 //   )
 // }
 
+// import React from 'react'
+
+// export default function UseStateHook3() {
+//     const [count, setcount] = useState(0);
+
+//     const handlerClick = () => {
+//         setcount(count + 1);
+//         setcount(count + 1);
+//         setcount(count + 1);
+//         setcount(count + 1);
+//     }
+//   return (
+//     <div>
+//         <h1>Count : {count}</h1>
+//         <button onClick={handlerClick}>click</button>
+//     </div>
+//   )
+// }
+
+
 
 
 
@@ -186,21 +207,22 @@ import {use, useState} from 'react'
 import React from 'react'
 
 export default function UseStateHook3() {
-    const [count, setCount] = useState(0);
+    const [count, setcount] = useState(0);
 
     const handlerClick = () => {
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
+        setcount(count => count + 1);
+        setcount(count => count + 1);
+        setcount(count => count + 1);
+        setcount(count => count + 1);
     }
   return (
     <div>
         <h1>Count : {count}</h1>
-        <button onClick={handlerClick}>up</button>
+        <button onClick={handlerClick}>click</button>
     </div>
   )
 }
+
 
 
 

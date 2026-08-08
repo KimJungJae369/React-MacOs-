@@ -10,7 +10,7 @@ import {useState} from 'react'
 //   )
 // }
 
-export default function ConutButton({incerement ,decrement ,reset} : {incerement :() => void, decrement : () => void, reset : () => void}) {
+export default function ConutButton({incerement, decrement, reset} : {incerement : () => void, decrement : () => void, reset : () => void}) {
   return (
     <div>
       <button onClick={incerement}>Increment</button>

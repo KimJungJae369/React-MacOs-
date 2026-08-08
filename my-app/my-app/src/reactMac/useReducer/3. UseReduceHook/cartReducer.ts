@@ -21,14 +21,12 @@
 
 export type CartItem = {id : number, name : string}
 
-export function cartReducer(state : CartItem[], action : {type : string; payload : any}) {
+export function cartReducer(state : CartItem[], action : {type : string; paylpad? : any}){
   switch(action.type){
-    case "ADD_ITEM" : 
-      return [...state, action.payload]
+    case 'ADD_ITEM':
+      return [...state, action.paylpad];
 
     default : 
-      return state
+      return state;
   }
 }
-
-export default cartReducer

@@ -21,7 +21,7 @@ import User from './User.jsx'
 
 export default function Component8() {
     const UserObj = {
-        name : '홍길동',
+        name : '홍길동', 
         age : 31,
         body : '180cm'
     }
@@ -31,7 +31,7 @@ export default function Component8() {
     }
     return (
         <>
-            <User Obj={UserObj} Handler={handlerClick}/>
+            <User Obj={UserObj} Hanlder={handlerClick}/>
         </>
     )
 }

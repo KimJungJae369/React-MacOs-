@@ -37,7 +37,7 @@ export default function UseReduceHook(state : number, action : {type : string}) 
         }
 
         case "RESET" : {
-            return 0;
+            return 0
         }
 
         default : {
@@ -45,6 +45,7 @@ export default function UseReduceHook(state : number, action : {type : string}) 
         }
     }
 }
+
 
 
 

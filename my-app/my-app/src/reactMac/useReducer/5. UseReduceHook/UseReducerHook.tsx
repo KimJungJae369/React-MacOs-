@@ -21,8 +21,6 @@ import {useState} from 'react'
 import CountDisplay from './CountDisplay';
 import ConutButton from './ConutButton';
 
-import React from 'react'
-
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
     const incerement = () => setCount(count + 1);

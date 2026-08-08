@@ -13,18 +13,19 @@ import counterReducer from './counterReducer'
 //     )
 // }
 
+import React from 'react'
+
 export default function UseReducerHook() {
     const [count, countDispatch] = useReducer(counterReducer, 0);
   return (
     <div>
-        <h1>Count : {count}</h1>
-        <button onClick={() => countDispatch({type : 'INCREMENT'})}>INCREMENT</button>
-        <button onClick={() => countDispatch({type : 'RESET'})}>RESET</button>
-        <button onClick={() => countDispatch({type : 'DECREMENT'})}>DECREMENT</button>
+        <h1>Count: {count}</h1>
+        <button onClick={() => countDispatch({type: "INCREMENT"})}>Increment</button>
+        <button onClick={() => countDispatch({type: "RESET"})}>Reset</button>
+        <button onClick={() => countDispatch({type: "DECREMENT"})}>Decrement</button>
     </div>
   )
 }
-
 
 
 
