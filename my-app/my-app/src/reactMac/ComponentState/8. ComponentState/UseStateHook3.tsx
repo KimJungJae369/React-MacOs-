@@ -28,8 +28,6 @@ import {use, useState} from 'react'
 //     )
 // }
 
-// import React from 'react'
-
 // export default function UseStateHook3() {
 //     const [name, setName] = useState<string | null>(null);
 //     const [age, setAge] = useState<number | null>(null);
@@ -45,7 +43,6 @@ import {use, useState} from 'react'
 //         <p>name : {name}</p>
 //         <p>age : {age}</p>
 //         <p>gender : {gender}</p>
-//         <button onClick={handlerClick}>click</button>
 //     </div>
 //   )
 // }
@@ -64,6 +61,25 @@ import {use, useState} from 'react'
 
 
 
+
+// import React from 'react'
+
+// export default function UseStateHook3() {
+//     const [count, setCount] = useState(0);
+//     const handlerClick = () => {
+//         setCount(count + 1);
+//         setCount(count + 1);
+//         setCount(count + 1);
+//         setCount(count + 1);
+//         setCount(count + 1);
+//     }
+//   return (
+//     <div>
+//         <h1>Count : {count}</h1>
+//         <button onClick={handlerClick}>click</button>
+//     </div>
+//   )
+// }
 
 
 
@@ -114,43 +130,24 @@ import {use, useState} from 'react'
 //     )
 // }'
 
-// import React from 'react'
+import React from 'react'
 
-// export default function UseStateHook3() {
-//     const [count, setCount] = useState(0);
-
-//     const handlerClick = () => {
-//         setCount(count + 1);
-//         setCount(count + 1);
-//         setCount(count + 1);
-//         setCount(count + 1);
-//     }
-//   return (
-//     <div>
-//         <h1>Count : {count}</h1>
-//         <button onClick={handlerClick}>up</button>
-//     </div>
-//   )
-// }
-
-// import React from 'react'
-
-// export default function UseStateHook3() {
-//     const [count, setcount] = useState(0);
-
-//     const handlerClick = () => {
-//         setcount(count + 1);
-//         setcount(count + 1);
-//         setcount(count + 1);
-//         setcount(count + 1);
-//     }
-//   return (
-//     <div>
-//         <h1>Count : {count}</h1>
-//         <button onClick={handlerClick}>click</button>
-//     </div>
-//   )
-// }
+export default function UseStateHook3() {
+    const [count, setCount] = useState(0);
+    const handlerClick = () => {
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+    }
+  return (
+    <div>
+        <h1>Count : {count}</h1>
+        <button onClick={handlerClick}>click</button>
+    </div>
+  )
+}
 
 
 
@@ -204,24 +201,7 @@ import {use, useState} from 'react'
 // }
 
 
-import React from 'react'
 
-export default function UseStateHook3() {
-    const [count, setcount] = useState(0);
-
-    const handlerClick = () => {
-        setcount(count => count + 1);
-        setcount(count => count + 1);
-        setcount(count => count + 1);
-        setcount(count => count + 1);
-    }
-  return (
-    <div>
-        <h1>Count : {count}</h1>
-        <button onClick={handlerClick}>click</button>
-    </div>
-  )
-}
 
 
 

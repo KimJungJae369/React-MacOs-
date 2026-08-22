@@ -19,10 +19,10 @@ export default function UseReducerHook() {
     const [count, countDispatch] = useReducer(counterReducer, 0);
   return (
     <div>
-        <h1>Count: {count}</h1>
-        <button onClick={() => countDispatch({type: "INCREMENT"})}>Increment</button>
-        <button onClick={() => countDispatch({type: "RESET"})}>Reset</button>
-        <button onClick={() => countDispatch({type: "DECREMENT"})}>Decrement</button>
+        <h1>Count : {count}</h1>
+        <button onClick={() => countDispatch({type : "INCREMENT"})}>INCREMENT</button>
+        <button onClick={() => countDispatch({type : "RESET"})}>RESET</button>
+        <button onClick={() => countDispatch({type : "DECREMENT"})}>DECREMENT</button>
     </div>
   )
 }
@@ -111,5 +111,4 @@ export default function UseReducerHook() {
     - 따라서 '.tsx'확장자를 쓸 이유가 없고 더 명확하게 목적에 맞게 '.ts' 확장자를 사용하는 것이 좋다
         .tsx : 'JSX'를 포함하는 리액트 컴포넌트 파일
         .ts : 'JSX'를 포함하지 않는 일반 TypeScript 파일
-
 */

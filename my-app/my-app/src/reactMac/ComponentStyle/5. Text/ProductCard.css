@@ -1,0 +1,15 @@
+.product-card {
+  border: 1px solid gray;
+  padding: 20px;
+  width: 300px;
+  margin: 50px auto;
+}
+
+.button {
+  padding: 10px;
+}
+
+.primary {
+  background-color: blue;
+  color: white;
+}

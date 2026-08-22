@@ -1,40 +1,26 @@
 import Modal from './Modal'
 
 export default function Event() {
-    const handleMacbook = () => {
-        console.log("맥북 구매했습니다");
-    }
-
-    const handleIphone = () => {
-        console.log("아이폰을 장바구니에 담았습니다.");
+    const onBuy = () => {
+        console.log('구매 완료');
     }
   return (
     <div>
         <Modal
-            title="맥북 프로"
-            price={2790000}
-            backgroundColor="lightblue"
-            buttonText="구매하기"
-            onBuy={handleMacbook}
-            >
-            <p>M4 Pro</p>
-            <p>24GB RAM</p>
-        </Modal>
-
-        <Modal
-            title="아이폰 17"
-            price={1590000}
-            backgroundColor="pink"
-            buttonText="장바구니"
-            onBuy={handleIphone}
-            >
-            <p>256GB</p>
-            <p>블랙</p>
-            <p>Apple Care 가능</p>
+            title = '맥북 프로'
+            price = {2790000}
+            onBuy = {onBuy}
+        >
+            <p>* M4 Pro</p>
+            <p>* 24GB RAM</p>
+            <p>* 512GB S</p>
         </Modal>
     </div>
   )
 }
+
+
+
 
 
 
@@ -115,4 +101,6 @@ export default function Event() {
     = 이건 "강제로 믿게 만드는 것"이지, 실제로 타입을 바꾸는건 아니다
     
     as = "컴퓨터의 추측보다 개발자의 확신을 우선시하겠다"는 선언문
+    
+    currentTarget = 지금 이벤트를 처리하고 있는 요소 / 어떤 요소에 이벤트를 처리하고 있는 중
 */

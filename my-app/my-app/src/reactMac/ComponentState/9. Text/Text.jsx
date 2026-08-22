@@ -1,20 +1,24 @@
 import Productitem from "./Productitem";
 
 export default function Text() {
+  const onBuy = () => {
+    console.log('구매 완료');
+  }
   return (
     <div>
       <Productitem
-        title="맥북 프로"
-        price={2790000}
-        backgroundColor="lightblue"
-        buttonText="장바구니 담기"
+        title = '맥북 프로'
+        price = {2790000}
+        onBuy = {onBuy}
       >
-        <p>M4 Pro</p>
-        <p>24GB RAM</p>
+        <p>* M4 Pro</p>
+        <p>* 24GB RAM</p>
+        <p>* 512GB SSD</p>
       </Productitem>
     </div>
   )
 }
+
 
 
 

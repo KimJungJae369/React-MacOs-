@@ -38,6 +38,7 @@ export default function UseReducerHook() {
 
 
 
+
 /*
     상태 끌어올리기
     = 여러 컴포넌트에서 공유해야 하는 상태를 가장 가까운 공통 부모 컴포넌트로 이동시키는 과정

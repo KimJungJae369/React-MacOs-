@@ -1,20 +1,30 @@
-import "./Text.css";
-import UserCard from "./UserCard";
+import styles from "./ProductCard.module.css";
+import classNames from "classnames";
+import "./ProductCard.css";
 
-export default function Text() {
+export default function ProductCard() {
   return (
-    <div className="container">
-      <UserCard
-        name="김철수"
-        job="프론트엔드 개발자"
-        isVip={true}
-      />
+    <div className="product-card">
+      <h1
+        style={{
+          fontSize: "24px",
+          textAlign: "center",
+        }}
+      >
+        맥북 프로
+      </h1>
 
-      <UserCard
-        name="이영희"
-        job="백엔드 개발자"
-        isVip={false}
-      />
+      <div>
+        <p>M4 Pro</p>
+        <p>24GB RAM</p>
+        <p>512GB SSD</p>
+      </div>
+
+      <p className={styles.price}>2,790,000원</p>
+
+      <button className={classNames("button", "primary")}>
+        장바구니
+      </button>
     </div>
   );
 }

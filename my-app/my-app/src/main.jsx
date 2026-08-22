@@ -76,8 +76,8 @@ import './index.css'
 // import StyledComponent2 from './reactMac/ComponentStyle2/3. StyledComponent2'
 // import Emotion from './reactMac/ComponentStyle2/4. Emotion'
 // import VanillaExtract from './reactMac/ComponentStyle2/5. VanillaExtract'
-import VanillaExtract from './reactMac/ComponentStyle2/6. VanillaExtract_2/App'
-
+// import VanillaExtract from './reactMac/ComponentStyle2/6. VanillaExtract_2/App'
+import VanillaExtract from './reactMac/ComponentStyle2/7. VanillaExtract_3/App'
 // 컴포넌트 스타일_02 : CSS-in-JS로 스타일링
 
 createRoot(document.getElementById('root')).render(

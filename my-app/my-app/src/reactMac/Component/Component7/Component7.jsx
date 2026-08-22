@@ -10,7 +10,7 @@ import User from './User'
 export default function Component7() {
     return (
         <div>
-            <User name="홍길동" age={31} body="180cm"/>
+            <User name = '홍길동' age = {31} body = '180cm'/>
         </div>
     )
 }

@@ -1,36 +1,53 @@
-import React, { useState, Children } from "react";
+import { useState } from "react";
 
 type ProductitemType = {
   title : string,
   price : number,
-  backgroundColor : string,
-  buttonText : string,
-  children : React.ReactNode
+  onBuy : () => void,
+  children : React.ReactNode,
 }
 
-export default function Productitem({title, price, backgroundColor, buttonText, children} : ProductitemType) {
-  const [like, setLike] = useState(0);
+export default function Productitem({title, price, onBuy, children} : ProductitemType) {
+  const [count, setCount] = useState(0);
   const handlerLike = () => {
-    setLike(prev => prev + 1);
+    setCount(prev => prev + 1);
   }
 
-  const [cart, setCart] = useState(0);
-  const handlerCart = () => {
-    setCart(prev => prev + 1);
-    console.log(`${title}`);
+  const clickBuy = (e : React.MouseEvent) => {
+    console.log('구매 버튼 클릭');
+    e.stopPropagation();
+    onBuy();
+  }
+
+  const handleCapture = () => {
+    console.log('DIV 캡처링');
+  }
+
+  const handleBubble = () => {
+    console.log('DIV 버블링');
+  }
+
+  const habndlerLink = (e : React.MouseEvent<HTMLAnchorElement>) => {
+    const trageLink = e.currentTarget as HTMLAnchorElement;
+    console.log(trageLink.href);
+    e.preventDefault();
   }
   return (
-    <div style={{backgroundColor, padding : 20, margin : 20}}>
+    <div onClickCapture={handleCapture} onClick={handleBubble} style={{border : '1px solid #fff', padding : 20,}}>
       <h1>{title}</h1>
-      <p>가격  : {price.toLocaleString()}원</p>
-      <p>옵션 개수 : {Children.count(children)}개</p>
+      <p>가격 : {price.toLocaleString()}원</p>
+
+      <br />
+
       {children}
+      <br />
 
-      <p>❤️ 좋아요 : {like}</p>
-      <button onClick={handlerLike}>❤️ 좋아요</button>
-
-      <p>🛒 장바구니 : {cart}</p>
-      <button onClick={handlerCart}>{buttonText}</button>
+      <button onClick={clickBuy}>구매하기</button>
+      <br />
+      <button onClick={handlerLike}>좋아요 : {count}</button>
+      <br />
+      <br />
+      <a href="https://www.naver.com" onClick={habndlerLink}>Link</a>
     </div>
   )
 }

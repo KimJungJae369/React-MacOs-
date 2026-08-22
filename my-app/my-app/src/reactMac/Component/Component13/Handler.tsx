@@ -5,14 +5,14 @@
 //     )
 // }
 
-    // import React from 'react'
-    
-    // export default function Handler() {
-    //   return (
-    //     <button onClick={() => alert('inline handler')}>Handler</button>
-    //   )
-    // }
-    
+// import React from 'react'
+
+// export default function Handler() {
+//   return (
+//     <button onClick={() => alert('inline handler')}>Handler</button>
+//   )
+// }
+
 
 
 
@@ -60,7 +60,7 @@
 
 // export default function Handler() {
 //     const handlerClick = () => {
-//         console.log('Function reference handler');
+//         console.log('Function handler');
 //     }
 //   return (
 //     <button onClick={handlerClick}>Handler</button>
@@ -122,6 +122,7 @@
 //     )
 // }
 
+
 import React from 'react'
 
 export default function Handler() {
@@ -129,9 +130,10 @@ export default function Handler() {
         console.log(title);
     }
   return (
-    <button onClick={() => handlerClick('Hello')}>Handler</button>
+    <button onClick={() => handlerClick('Hello~')}>Handler</button>
   )
 }
+
 
 
 
@@ -213,5 +215,4 @@ export default function Handler() {
                 - '함수 참조'로 매개변수 전달하면 함수가 즉시 실행되는 문제가 발생한다
                     ex) 잘못된 방식 : <button onClick={clickHandler('hello') << 잘못된 부분}>click</button>
                     - 이벤트 핸들러에 매개변수를 전달할 때 인라인 핸들러 방식을 사용해야 한다
-
 */

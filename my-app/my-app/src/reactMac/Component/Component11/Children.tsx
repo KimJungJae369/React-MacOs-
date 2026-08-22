@@ -4,27 +4,15 @@ import React from 'react'
 export default function Children() {
   return (
     <div>
-        <User
-            title = '맥북프로'
-            price={2790000}
-            backgroundColor = 'lightBlue'
-        >
-            <p>M4 Pro</p>
-            <p>24GB RAM</p>
-        </User>
-
-        <User
-            title = '아이폰 17'
-            price={1590000}
-            backgroundColor = 'pink'
-        >
-            <p>256GB</p>
-            <p>블랙</p>
-            <p>Apple Care 가능</p>
-        </User>
+      <User title='맥북 프로' price={2790000}>
+        <p>M4 Pro</p>
+        <p>24GB RAM</p>
+        <p>512GB SSD</p>
+      </User>
     </div>
   )
 }
+
 
 
 

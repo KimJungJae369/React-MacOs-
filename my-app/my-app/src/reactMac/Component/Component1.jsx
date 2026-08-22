@@ -79,7 +79,7 @@ function Nav(){
 function Section(){
   return(
     <section>
-      <h4>Section</h4>
+      <h4>Seciton</h4>
     </section>
   )
 }
@@ -94,7 +94,9 @@ function Aside(){
 
 function Footer(){
   return(
-    <h6>Footer</h6>
+    <footer>
+      <h6>Footer</h6>
+    </footer>
   )
 }
 
