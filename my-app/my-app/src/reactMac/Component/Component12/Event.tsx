@@ -1,20 +1,21 @@
 import Modal from './Modal'
 
 export default function Event() {
-    const onBuy = () => {
+    const handleBuy = () => {
         console.log('구매 완료');
     }
   return (
     <div>
         <Modal
-            title = '맥북 프로'
-            price = {2790000}
-            onBuy = {onBuy}
+            title="MacBook Pro 14"
+            price={2790000}
+            brand="Apple"
+            onBuy={handleBuy}
         >
-            <p>* M4 Pro</p>
-            <p>* 24GB RAM</p>
-            <p>* 512GB S</p>
-        </Modal>
+        <p>M4 Pro</p>
+        <p>24GB RAM</p>
+        <p>512GB SSD</p>
+    </Modal>
     </div>
   )
 }

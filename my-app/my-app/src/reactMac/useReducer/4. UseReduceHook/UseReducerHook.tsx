@@ -11,8 +11,6 @@ import Count from './Count'
 //   )
 // }
 
-// import React from 'react'
-
 // export default function UseReducerHook() {
 //     const [count, setCount] = useState(0);
 //   return (
@@ -21,6 +19,7 @@ import Count from './Count'
 //     </div>
 //   )
 // }
+
 
 
 
@@ -41,7 +40,7 @@ import Count from './Count'
 
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
-    const increment = () => setCount((prev) => prev + 1);
+    const increment = () => setCount(prev => prev + 1);
   return (
     <div>
         <Count count={count} increment={increment}/>
@@ -106,10 +105,10 @@ export default function UseReducerHook() {
             : {count : number, setCount : Dispatch<SetStateAction<number>>}) {
                 Dispatch : setCount() 함수가 number 타입의 상태를 변경하는 함수임을 명시
             - props 객체의 타입을 명확하게 지칭한다
-            - 타입을 명확하게 지정하면 부모 컴포넌트에서 정의한 상태(count)와 상태 변경 함수(setCount)를 를 자식 컴포넌트에서 props로 안전하게 전달받아 사용할 수 있다
+            - 타입을 명확하게 지정하면 부모 컴포넌트에서 정의한 상태(count)와 상태 변경 함수(setCount)를 자식 컴포넌트에서 props로 안전하게 전달받아 사용할 수 있다
                 return (
                     <>
-                        <h1>COunt : {count}</h1>
+                        <h1>Count : {count}</h1>
                         <button onClick={() => setCount((count) => count + 1)}>증가</button>
                     </>
                 )

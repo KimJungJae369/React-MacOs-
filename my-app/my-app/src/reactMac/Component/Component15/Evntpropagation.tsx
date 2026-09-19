@@ -30,9 +30,14 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>handlerBubble</button></div>
+//     <button onClickCapture={handlerCaptrue}>
+//         Evntpropagation
+
+//         <button onClick={handlerBubble}>click</button>
+//     </button>
 //   )
 // }
+
 
 
 
@@ -114,7 +119,11 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>handlerBubble</button></div>
+//     <button onClick={handlerCaptrue}>
+//         Evntpropagation
+
+//         <button onClick={handlerBubble}>click</button>
+//     </button>
 //   )
 // }
 
@@ -192,6 +201,7 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
@@ -204,9 +214,15 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>handlerBubble</button></div>
+//     <button onClick={handlerCaptrue}>
+//         Evntpropagation
+
+//         <button onClick={handlerBubble}>click</button>
+//     </button>
 //   )
 // }
+
+
 
 
 
@@ -294,6 +310,7 @@ export default function Evntpropagation() {
     </form>
   )
 }
+
 
 
 

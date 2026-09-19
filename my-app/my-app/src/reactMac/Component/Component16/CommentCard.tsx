@@ -1,49 +1,76 @@
 import React from 'react'
 
-type CommentCardType = {
-    title : string,
-    price : number,
-    onBuy : () => void
-    children : React.ReactNode
+type ModalType = {
+    title: string
+    price: number
+    brand: string
+    onBuy: () => void
+    onCardClick: () => void
+    children: React.ReactNode
 }
 
-export default function CommentCard({title, price, onBuy, children} : CommentCardType) {
-    const handleCapture = () => {
-        console.log('DIV 캡처링');
+export default function CommentCard({
+    title,
+    price,
+    brand,
+    onBuy,
+    onCardClick,
+    children
+}: ModalType) {
+
+    // 구매 버튼 이벤트
+    const handleBuy = (e: React.MouseEvent<HTMLButtonElement>) => {
+        const target = e.currentTarget as HTMLElement
+
+        console.log(target.innerText)
+
+        // 부모의 클릭 이벤트로 전달되는 것을 막음
+        e.stopPropagation()
+
+        onBuy()
     }
 
-    const handleBubble = () => {
-        console.log('버블링 캡처링');
+    // 상품 상세보기 링크 이벤트
+    const handleLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        const target = e.currentTarget as HTMLElement
+
+        console.log(target.innerText)
     }
 
-    const handleBuy = (e : React.MouseEvent) => {
-        const target = e.currentTarget as HTMLElement;
-        e.stopPropagation();
-        onBuy();
-    }
-    
-    const handleLink = (e : React.MouseEvent<HTMLAnchorElement>) => {
-        const target = e.currentTarget as HTMLAnchorElement
-        e.preventDefault();
-        console.log(target.href);
-    } 
-  return (
-    <div onClickCapture={handleCapture} onClick={handleBubble}>
-        <h1>{title}</h1>
+    return (
+        <div
+            onClickCapture={() => console.log('상품 카드 캡처링')}
+            onClick={onCardClick}
+        >
+            <h1>{brand}</h1>
 
-        <p>가격 : {price.toLocaleString()}원</p>
+            <h2>{title}</h2>
 
-        {children}
+            <p>
+                가격 : {price.toLocaleString()}원
+            </p>
 
-        <a href="https://www.naver.com" onClick={handleLink}>
-            네이버 이동
-        </a>
+            <p>
+                추가 정보 : {React.Children.count(children)}
+            </p>
 
-        <br />
-        
-        <button onClick={handleBuy}>구매하기</button>
-    </div>
-  )
+            {children}
+
+            <a
+                href="https://example.com"
+                onClick={handleLink}
+            >
+                상품 상세보기
+            </a>
+
+            <br />
+
+            <button onClick={handleBuy}>
+                구매하기
+            </button>
+        </div>
+    )
 }
-
-

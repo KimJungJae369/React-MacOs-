@@ -2,15 +2,19 @@ import User from './User'
 import React from 'react'
 
 export default function Children() {
-  return (
-    <div>
-      <User title='맥북 프로' price={2790000}>
-        <p>M4 Pro</p>
-        <p>24GB RAM</p>
-        <p>512GB SSD</p>
-      </User>
-    </div>
-  )
+    return (
+        <>
+            <User
+                title="MacBook Pro 14"
+                price={2790000}
+                brand="Apple"
+                >
+                <p>M4 Pro</p>
+                <p>24GB RAM</p>
+                <p>512GB SSD</p>
+            </User>
+        </>
+    )
 }
 
 

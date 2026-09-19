@@ -15,25 +15,27 @@
 //     )
 // }
 
-type UserProps = {
+import React from 'react'
+
+type UserType = {
   name : string,
   age : number,
   body : string,
-  clickHandler : () => void;
+  Handler : () => void;
 }
 
-import React from 'react'
-
-export default function User({name, age, body, clickHandler} : UserProps) {
+export default function User({name, age, body, Handler} : UserType) {
   return (
     <div>
       <h1>name : {name}</h1>
       <h2>age : {age}</h2>
       <h3>body : {body}</h3>
-      <button onClick={clickHandler}>click</button>
+      <button onClick={Handler}>click</button>
     </div>
   )
 }
+
+
 
 
 

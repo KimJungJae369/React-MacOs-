@@ -79,7 +79,7 @@ function Nav(){
 function Section(){
   return(
     <section>
-      <h4>Seciton</h4>
+      <h4>Section</h4>
     </section>
   )
 }

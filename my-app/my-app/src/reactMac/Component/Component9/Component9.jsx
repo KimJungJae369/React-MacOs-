@@ -30,11 +30,11 @@ export default function Component9() {
     const handlerClick = () => {
         console.log('click');
     }
-    return (
-        <>
-            <User Obj={UserObj} Handler={handlerClick}/>
-        </>
-    )
+  return (
+    <div>
+        <User Obj={UserObj} Handler={handlerClick}/>
+    </div>
+  )
 }
 
 
