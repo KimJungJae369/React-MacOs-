@@ -26,17 +26,15 @@
 //         console.log('부모');
 //     }
 
+
 //     const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <button onClickCapture={handlerCaptrue}>
-//         Evntpropagation
-
-//         <button onClick={handlerBubble}>click</button>
-//     </button>
+//     <div onClickCapture={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
 
 
 
@@ -115,15 +113,12 @@
 //         console.log('부모');
 //     }
 
+
 //     const handlerBubble = () => {
 //         console.log('자식');
 //     }
 //   return (
-//     <button onClick={handlerCaptrue}>
-//         Evntpropagation
-
-//         <button onClick={handlerBubble}>click</button>
-//     </button>
+//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
 
@@ -209,18 +204,16 @@
 //         console.log('부모');
 //     }
 
+
 //     const handlerBubble = (e : React.MouseEvent<HTMLButtonElement>) => {
 //         e.stopPropagation();
 //         console.log('자식');
 //     }
 //   return (
-//     <button onClick={handlerCaptrue}>
-//         Evntpropagation
-
-//         <button onClick={handlerBubble}>click</button>
-//     </button>
+//     <div onClick={handlerCaptrue}>Evntpropagation <button onClick={handlerBubble}>click</button></div>
 //   )
 // }
+
 
 
 
@@ -303,45 +296,13 @@ import React from 'react'
 
 export default function Evntpropagation() {
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit = {(e) => e.preventDefault()}>
         <input type="text" />
         <input type="password" />
-        <button type='submit'>click</button>
+        <button type='submit'>전송</button>
     </form>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

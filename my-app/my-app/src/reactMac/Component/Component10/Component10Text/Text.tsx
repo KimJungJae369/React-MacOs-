@@ -1,39 +1,39 @@
 type HeaderType = {
-  title : string
+  title : string,
 }
 
 function Header({title} : HeaderType){
-  return <h1>{title}</h1>
+  return <p>{title}</p>
 }
 
-type SubType = {
+type subType = {
   id : number,
   name : string,
   age : number
 }
 
 type SectionType = {
-  lists : SubType[]
+  lists : subType[];
 }
 
 function Section({lists} : SectionType){
   return(
     <ul>
-      {lists.map((itme) => (
-        <li key={itme.id}>
-          {itme.name} : {itme.age}
-        </li>
+      {lists.map((item) => (
+          <li key={item.id}>
+            {item.name} : {item.age}
+          </li>
       ))}
     </ul>
   )
 }
 
-type FooterType = {
+type Footer = {
   footers : string
 }
 
-function Footer({footers} : FooterType){
-  return <h2>{footers}</h2>
+function Footer({footers} : Footer){
+  return <p>{footers}</p>
 }
 
 export default function Text() {

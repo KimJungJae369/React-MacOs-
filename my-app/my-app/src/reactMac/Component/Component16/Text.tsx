@@ -1,7 +1,6 @@
 import CommentCard from './CommentCard'
 
 export default function Text() {
-
   const handleBuy = () => {
     console.log('구매 완료')
   }

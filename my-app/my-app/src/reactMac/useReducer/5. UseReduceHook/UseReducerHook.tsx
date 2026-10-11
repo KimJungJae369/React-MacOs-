@@ -22,16 +22,16 @@ import CountDisplay from './CountDisplay';
 import ConutButton from './ConutButton';
 
 export default function UseReducerHook() {
-    const [count, setCopunt] = useState(0);
-    const incerement = () => setCopunt(prev => prev + 1);
-    const decrement = () =>  setCopunt(prev => prev - 1);
-    const reset = () =>  setCopunt(0);
-  return (
-    <div>
-        <CountDisplay count={count}/>
-        <ConutButton incerement={incerement} decrement={decrement} reset={reset}/>
-    </div>
-  )
+    const [count, setCount] = useState(0);
+    const incerement = () => setCount(count + 1);
+    const decrement = () => setCount(count - 1);
+    const reset = () => setCount(0);
+    return (
+        <div>
+            <CountDisplay  count={count}/>
+            <ConutButton  incerement={incerement} decrement={decrement} reset={reset}/>
+        </div>
+    )
 }
 
 

@@ -32,11 +32,11 @@ import {use, useState} from 'react'
 
 // export default function UseStateHook3() {
 //     const [name, setName] = useState<string | null>(null);
-//     const [age, setAge] = useState<number | null>(0);
+//     const [age, setAge] = useState<number | null>(null);
 //     const [gender, setGender] = useState<string | null>(null);
 
 //     const handlerClick = () => {
-//         setName('홍길동');
+//         setName('Juner');
 //         setAge(31);
 //         setGender('남자');
 //     }
@@ -49,6 +49,7 @@ import {use, useState} from 'react'
 //     </div>
 //   )
 // }
+
 
 
 
@@ -90,8 +91,8 @@ import {use, useState} from 'react'
 
 // export default function UseStateHook3() {
 //     const [count, setCount] = useState(0);
-
 //     const handlerClick = () => {
+//         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
@@ -160,8 +161,8 @@ import React from 'react'
 
 export default function UseStateHook3() {
     const [count, setCount] = useState(0);
-
     const handlerClick = () => {
+        setCount(count => count + 1);
         setCount(count => count + 1);
         setCount(count => count + 1);
         setCount(count => count + 1);

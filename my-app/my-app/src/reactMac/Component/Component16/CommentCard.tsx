@@ -1,76 +1,84 @@
-import React from 'react'
+// import React from 'react'
 
-type ModalType = {
-    title: string
-    price: number
-    brand: string
-    onBuy: () => void
-    onCardClick: () => void
-    children: React.ReactNode
+// type CommentCardType = {
+//     title : string,
+//     price : number,
+//     brand : string 
+//     onBuy : () => void,
+//     onCardClick  : () => void,
+//     children : React.ReactNode
+// }
+
+// export default function CommentCard({title,price,brand,onBuy,onCardClick,children} : CommentCardType) {
+//     const handlerBuy = (e : React.MouseEvent<HTMLButtonElement>) => {
+//         const trag = e.currentTarget as HTMLElement; 
+//         // const trag = e.currentTarget as HTMLElement : 이벤트가 발생한 요소를 HTMLElement로 타입 단언
+//         // currentTarget : 이벤트가 발생한 요소를 가리킴
+//         console.log(trag.innerText);
+//         e.stopPropagation();
+//         onBuy();
+//     } 
+
+//     const handleLink = (e : React.MouseEvent<HTMLAnchorElement>) => {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         const targ = e.currentTarget as HTMLElement
+//         console.log(targ.innerText);
+//     }
+//   return (
+//     <div
+//         onClickCapture={() => console.log('상품 카드 캡처링')}
+//         onClick={onCardClick}
+//     >
+//         <h1>{brand}</h1>
+//         <h2>{title}</h2>
+//         <p>가격 : {price.toLocaleString()}원</p>
+//         <p>추가정보 : {React.Children.count(children)}개</p>
+//         {children}
+//         <a href="https://naver.com" onClick={handleLink}>상품 상세페이지</a>
+//         <br />
+//         <button onClick={handlerBuy}>click</button>
+//     </div>
+//   )
+// }
+
+import React from 'react'
+type CommentCardType = {
+    title : string,
+    price : number,
+    brand : string 
+    onBuy : () => void,
+    onCardClick  : () => void,
+    children : React.ReactNode
 }
 
-export default function CommentCard({
-    title,
-    price,
-    brand,
-    onBuy,
-    onCardClick,
-    children
-}: ModalType) {
-
-    // 구매 버튼 이벤트
-    const handleBuy = (e: React.MouseEvent<HTMLButtonElement>) => {
-        const target = e.currentTarget as HTMLElement
-
-        console.log(target.innerText)
-
-        // 부모의 클릭 이벤트로 전달되는 것을 막음
-        e.stopPropagation()
-
-        onBuy()
+export default function CommentCard({title,price,brand,onBuy,onCardClick,children} : CommentCardType) {
+    const handlerBuy = (e : React.MouseEvent<HTMLButtonElement>) => {
+        const targe = e.currentTarget as HTMLElement;
+        console.log(targe.innerText);
+        e.stopPropagation();
+        onBuy();
     }
 
-    // 상품 상세보기 링크 이벤트
-    const handleLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault()
-        e.stopPropagation()
-
-        const target = e.currentTarget as HTMLElement
-
-        console.log(target.innerText)
+    const handleLink = (e : React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const targe = e.currentTarget as HTMLElement;
+        console.log(targe.innerText);
     }
-
-    return (
-        <div
-            onClickCapture={() => console.log('상품 카드 캡처링')}
-            onClick={onCardClick}
-        >
-            <h1>{brand}</h1>
-
-            <h2>{title}</h2>
-
-            <p>
-                가격 : {price.toLocaleString()}원
-            </p>
-
-            <p>
-                추가 정보 : {React.Children.count(children)}
-            </p>
-
-            {children}
-
-            <a
-                href="https://example.com"
-                onClick={handleLink}
-            >
-                상품 상세보기
-            </a>
-
-            <br />
-
-            <button onClick={handleBuy}>
-                구매하기
-            </button>
-        </div>
-    )
+  return (
+    <div
+        onClickCapture={() => console.log('상품 카드 캡처링')}
+        onClick={onCardClick}
+    >
+        <h1>{brand}</h1>
+        <h2>{title}</h2>
+        <p>가격 : {price.toLocaleString()}원</p>
+        <p>추가정보 : {React.Children.count(children)}개</p>
+        {children}
+        <a href="https//:naver.com" onClick={handleLink}>상품 상세페이지</a>
+        <br />
+        <button onClick={handlerBuy}>click</button>
+    </div>
+  )
 }

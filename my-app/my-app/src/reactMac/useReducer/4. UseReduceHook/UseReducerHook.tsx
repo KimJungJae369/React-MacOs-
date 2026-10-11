@@ -1,4 +1,4 @@
-import {use, useState} from 'react'
+import {useState} from 'react'
 import Count from './Count'
 
 // 첫 번째 방법
@@ -27,6 +27,7 @@ import Count from './Count'
 
 
 
+
 // 두 번째 방법
 // export default function UseReducerHook() {
 //     const [count, setCount] = useState(0);
@@ -40,16 +41,13 @@ import Count from './Count'
 
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
-    const increment = () => setCount(prev => prev + 1);
+    const increment = () => setCount((count) => count + 1);
   return (
     <div>
-        <Count count={count} increment={increment}/>
+        <Count count={count} increment={increment} />
     </div>
   )
 }
-
-
-
 
 
 

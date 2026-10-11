@@ -18,31 +18,69 @@
 //   )
 // }
 
+// import { css } from '@emotion/css'
+// export default function Emotion() {
+//   return (
+//     <div>
+//         <button
+//             className={css`
+//                 background : transparent;
+//                 border-radius : 3px;
+//                 border : 2px solid #fff;
+//                 color : #fff;
+//                 margin : 0.1em;
+//                 padding : 0.25em 1em;
+//             `}
+//         >click</button>
+//     </div>
+//   )
+// }
+
 
 
 
 
 
 // 2. 동적 emotion 스타일
-import { css } from '@emotion/css'
+// import { css } from '@emotion/css'
 
-export default function Emotion() {
+// export default function Emotion() {
+//     const isAction = true;
+//   return (
+//     <div>
+//         <button
+//             className={css`
+//                 background : ${isAction ? 'red' : 'transparent'};
+//                 border-radius : 3px;
+//                 border : 2px solid #fff;
+//                 color : ${isAction ? 'blue' : '#fff'};
+//                 margin : 0.1em;
+//                 padding : 0.25em 1em;
+//             `}
+//         >Click Me</button>
+//     </div>
+//   )
+// }
+
+import {css} from '@emotion/css';
+export default function Emotion(){
     const isAction = true;
-  return (
-    <div>
-        <button
-            className={css`
-                background : ${isAction ? 'red' : 'transparent'};
-                border-radius : 3px;
-                border : 2px solid #fff;
-                color : ${isAction ? 'blue' : '#fff'};
-                margin : 0.1em;
-                padding : 0.25em 1em;
-            `}
-        >Click Me</button>
-    </div>
-  )
+    return(
+        <div>
+            <button
+                className={css`
+                    backgroundColor : ${isAction ? 'red' : 'transparent'}
+                    border-radius : 3px;
+                    border : 2px solid #fff;
+                    color : ${isAction ? 'blue' : '#fff'};
+                    margin : 0.1em;
+                    padding : 0.25em 1em;
+                `}
+            >click</button>
+        </div>
+    )
 }
+
 /*
     emotion
     = 'emotion'은 현대 웹 개발에서 널리 사용하는 강력하고 유연한 'CSS-in-JS' 라이브러리

@@ -52,7 +52,7 @@ import './index.css'
 // import ComponentState from './reactMac/ComponentState/6. ComponentState/UseStateHook'
 // import ComponentState from './reactMac/ComponentState/7. ComponentState/UseStateHook2'
 // import ComponentState from './reactMac/ComponentState/8. ComponentState/UseStateHook3'
-// import Text from './reactMac/ComponentState/9. Text/Text.jsx'
+// import StateText from './reactMac/ComponentState/9. Text/Text.jsx'
 // state, state 변수, useState, useState Hook
 
 // import UseReduceHook from './reactMac/useReducer/1. UseReduceHook/UseReduceHook'
@@ -77,8 +77,11 @@ import './index.css'
 // import Emotion from './reactMac/ComponentStyle2/4. Emotion'
 // import VanillaExtract from './reactMac/ComponentStyle2/5. VanillaExtract'
 // import VanillaExtract from './reactMac/ComponentStyle2/6. VanillaExtract_2/App'
-import VanillaExtract from './reactMac/ComponentStyle2/7. VanillaExtract_3/App'
+// import VanillaExtract from './reactMac/ComponentStyle2/7. VanillaExtract_3/App'
 // 컴포넌트 스타일_02 : CSS-in-JS로 스타일링
+
+import TailwindCss from './reactMac/TailwindCss/1. TailwindCssStyle/1. TailwindCssStyle'
+// TailwindCss 스타일링
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -125,7 +128,7 @@ createRoot(document.getElementById('root')).render(
 
 
     {/* <ComponentState /> */}
-    {/* <Text /> */}
+    {/* <StateText /> */}
     {/* state, state 변수, useState, useState Hook */}
 
     {/* <UseReducerHook /> */}
@@ -143,7 +146,10 @@ createRoot(document.getElementById('root')).render(
     {/* <StyledComponent /> */}
     {/* <StyledComponent2 /> */}
     {/* <Emotion /> */}
-    <VanillaExtract />
+    {/* <VanillaExtract /> */}
     {/* 컴포넌트 스타일_02 : CSS-in-JS로 스타일링 */}
+
+    <TailwindCss />
+    {/* TailwindCssStyle 스타일링*/}
   </StrictMode>
 )

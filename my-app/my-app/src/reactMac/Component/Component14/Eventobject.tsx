@@ -13,7 +13,7 @@
 
 // export default function Eventobject() {
 //   return (
-//     <button onClick={(e) => alert(e])}>Eventobject</button>
+//     <button onClick={(e) => alert(e)}>Eventobject</button>
 //   )
 // }
 
@@ -136,15 +136,16 @@
 //     )
 // }
 
+
 import React from 'react'
 
 export default function Eventobject() {
-    const handlerClick = (e : React.MouseEvent<HTMLButtonElement>, title : string) => {
+    const handlerClick = (e : React.MouseEvent<HTMLButtonElement>,title : string) => {
         console.log(e);
         alert(title);
     }
   return (
-    <button onClick={(e) => handlerClick(e, '객체와 매개변수')}>Eventobject</button>
+    <button onClick={(e) => handlerClick(e, '함수참조 + 매개변수')}>Eventobject</button>
   )
 }
 

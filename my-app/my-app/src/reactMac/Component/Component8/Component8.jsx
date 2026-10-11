@@ -21,17 +21,17 @@ import User from './User.jsx'
 
 export default function Component8() {
     const UserObj = {
-        name : 'KimJungJae',
+        name : 'kim',
         age : 31,
         body : '180cm'
     }
 
     const handlerClick = () => {
-        console.log('click')
+        console.log('click');
     }
     return (
         <>
-            <User Obj={UserObj} Handler={handlerClick}/>
+            <User Obj={UserObj} click={handlerClick}/>
         </>
     )
 }

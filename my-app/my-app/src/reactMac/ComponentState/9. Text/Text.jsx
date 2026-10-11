@@ -19,7 +19,6 @@ export default function Text() {
           <p>M4 Pro</p>
           <p>24GB RAM</p>
           <p>512GB SSD</p>
-        
       </Productitem>
     </div>
   )

@@ -1,64 +1,63 @@
-import { useReducer } from 'react'
+import {useReducer} from 'react'
 
 // type Action = {
-//   type: string
+//   type : string
 // }
 
-// function reducer(
-//   state: number,
-//   action: Action
-// ) {
-//   switch (action.type) {
-//     case 'INCREMENT':
-//       return state + 1
+// function reducer(state : number, action : Action){
+//   switch(action.type){
+//     case "INCREMENT" : 
+//       return state + 1;
 
-//     case 'DECREMENT':
-//       return state - 1
+//     case "DECREMENT" : 
+//       return state - 1;
 
-//     default:
-//       return state
+//       default : 
+//         return state;
 //   }
 // }
 
 // export default function Text() {
-//   const [count, dispatch] =
-//     useReducer(reducer, 0)
-
+//   const [count, dispatch] = useReducer(reducer, 0);
 //   return (
-//     <>
-//       <h1>Count : {count}</h1>
-
-//       <button
-//         onClick={() =>
-//           dispatch({ type: 'INCREMENT' })
-//         }
-//       >
-//         INCREMENT
-//       </button>
-
-//       <button
-//         onClick={() =>
-//           dispatch({ type: 'DECREMENT' })
-//         }
-//       >
-//         DECREMENT
-//       </button>
-//     </>
+//     <div>
+//           <h1>Count : {count}</h1>
+      
+      
+//     <button
+//       onClick={() =>
+//         dispatch({ type: 'INCREMENT' })
+//       }
+//     >
+//       INCREMENT
+//     </button>
+    
+    
+//     <button
+//       onClick={() =>
+//         dispatch({ type: 'DECREMENT' })
+//       }
+//     >
+//       DECREMENT
+//     </button>
+//     </div>
 //   )
 // }
 
 type Action = {
-  type : string
+  type : string,
 }
 
-function reducer(staet : number, action : Action){
+function reducer(state : number, action : Action){
   switch(action.type){
-    case 'INCREMENT':
-        return staet + 1;
-    case 'DECREMENT':
-        return staet - 1;
-      default : 
-        return staet
+    case 'INCREMENT' : 
+      return state + 1;
+
+    case 'DECREMENT' : 
+      return state - 1;
+
+    default : 
+      return state;
   }
 }
 
@@ -72,6 +71,8 @@ export default function Text() {
     </div>
   )
 }
+
+
 
 
 
