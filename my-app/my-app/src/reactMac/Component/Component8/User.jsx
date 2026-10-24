@@ -20,7 +20,7 @@ export default function User(props) {
         <p>name : {props.Obj.name}</p>
         <p>age : {props.Obj.age}</p>
         <p>body : {props.Obj.body}</p>
-        <button onClick={props.click}>click</button>
+        <button onClick={props.Handler}>click</button>
     </>
   )
 }

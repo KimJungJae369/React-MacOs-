@@ -80,7 +80,8 @@ import './index.css'
 // import VanillaExtract from './reactMac/ComponentStyle2/7. VanillaExtract_3/App'
 // 컴포넌트 스타일_02 : CSS-in-JS로 스타일링
 
-import TailwindCss from './reactMac/TailwindCss/1. TailwindCssStyle/1. TailwindCssStyle'
+// import TailwindCss from './reactMac/TailwindCss/1. TailwindCssStyle/1. TailwindCssStyle'
+import TailwindMerge from './reactMac/TailwindCss/2. TailwindMerge/TailwindMerge'
 // TailwindCss 스타일링
 
 createRoot(document.getElementById('root')).render(
@@ -149,7 +150,8 @@ createRoot(document.getElementById('root')).render(
     {/* <VanillaExtract /> */}
     {/* 컴포넌트 스타일_02 : CSS-in-JS로 스타일링 */}
 
-    <TailwindCss />
+    {/* <TailwindCss /> */}
+    <TailwindMerge />
     {/* TailwindCssStyle 스타일링*/}
   </StrictMode>
 )

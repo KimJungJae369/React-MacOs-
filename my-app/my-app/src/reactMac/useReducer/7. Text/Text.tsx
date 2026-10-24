@@ -45,16 +45,19 @@ import {useReducer} from 'react'
 // }
 
 type Action = {
-  type : string,
+  type : string
 }
 
 function reducer(state : number, action : Action){
   switch(action.type){
-    case 'INCREMENT' : 
+    case "INCREMENT" : 
       return state + 1;
 
-    case 'DECREMENT' : 
+    case "DECREMENT" : 
       return state - 1;
+
+    case "RESET" : 
+      return 0;
 
     default : 
       return state;
@@ -62,16 +65,16 @@ function reducer(state : number, action : Action){
 }
 
 export default function Text() {
-  const [count, dispatch] = useReducer(reducer, 0);
+  const [count, countDispacht] = useReducer(reducer, 0);
   return (
     <div>
       <h1>Count : {count}</h1>
-      <button onClick={() => dispatch({type : 'INCREMENT'})}>INCREMENT</button>
-      <button onClick={() => dispatch({type : 'DECREMENT'})}>DECREMENT</button>
+      <button onClick={() => countDispacht({type : 'INCREMENT'})}>INCREMENT</button>
+      <button onClick={() => countDispacht({type : 'DECREMENT'})}>DECREMENT</button>
+      <button onClick={() => countDispacht({type : 'RESET'})}>RESET</button>
     </div>
   )
 }
-
 
 
 

@@ -1,27 +1,24 @@
-import Productitem from "./Productitem";
+import Productitem from './Productitem';
 
-export default function Text() {
+export default function Product() {
   const handleBuy = () => {
-    console.log('구매 완료');
-  }
-  const handleCard = () => {
-    console.log('상품 카드 클릭');
-  }
+    console.log('구매 완료: MacBook Pro 14');
+  };
+
   return (
     <div>
       <Productitem
-          title="MacBook Pro 14"
-          price={2790000}
-          brand="Apple"
-          onBuy={handleBuy}
-          onCard={handleCard}
-        >
-          <p>M4 Pro</p>
-          <p>24GB RAM</p>
-          <p>512GB SSD</p>
+        title="MacBook Pro 14"
+        brand="Apple"
+        price={2790000}
+        onBuy={handleBuy}
+      >
+        <p>M4 Pro</p>
+        <p>24GB RAM</p>
+        <p>512GB SSD</p>
       </Productitem>
     </div>
-  )
+  );
 }
 
 
@@ -44,4 +41,6 @@ export default function Text() {
   삼항 연산자
   = 이거 아니면 저거"를 결정해야 하는 상황(로그인 vs 로그아웃, 켜짐 vs 꺼짐)에서는 삼항 연산자가 최고의 스위치
   = 화면 스위치("로그인 했니?"처럼 조건에 따라 화면을 통째로 갈아끼우고 싶을 때 사용하는 리액트 전용 스위치)
+
+  HTMLDivElement : HTML div 요소를 참조하는 데 사용되는 타입, 즉 <div> 태그를 의미
 */

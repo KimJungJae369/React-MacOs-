@@ -8,6 +8,7 @@
     "react-chartjs-2": "^5.3.1",
     "styled-component": "^2.8.0",
     "styled-components": "^6.4.3",
+    "tailwind-merge": "^3.7.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {

@@ -7,18 +7,19 @@
 //   children : React.ReactNode
 // }
 
-// export default function User({title, price, brand, children} : UserType) {
+// export default function User({title,price,brand,children} : UserType) {
 //   return (
 //     <div>
-//       <h1>{brand}</h1>
-//       <h2>{title}</h2>
-//       <p>가격 : {price.toLocaleString()}원</p>
-//       <br />
-//       <p>추가 정보 : {React.Children.count(children)}</p>
-//       {children}
+//         <h1>{title}</h1>
+//         <p>브랜드 : {brand}</p>
+//         <h2>가격 : {price.toLocaleString()}원</h2>
+
+//         <p>추가 정보 : {React.Children.count(children)}</p>
+//         {children}
 //     </div>
 //   )
 // }
+
 
 import React from 'react'
 
@@ -32,10 +33,10 @@ type UserType = {
 export default function User({title,price,brand,children} : UserType) {
   return (
     <div>
-      <h1>{brand}</h1>
-      <h2>{title}</h2>
-      <p>가격 : {price.toLocaleString()}원</p>
-      <p>추가정보 : {React.Children.count(children)}</p>
+      <h1>{title}</h1>
+      <p>브랜드 : {brand}</p>
+      <p>가격 : ${price.toLocaleString()}원</p>
+      <p>추가 정보 : {React.Children.count(children)}</p>
       {children}
     </div>
   )

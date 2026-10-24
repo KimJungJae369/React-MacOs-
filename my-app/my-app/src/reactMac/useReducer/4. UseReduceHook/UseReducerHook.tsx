@@ -15,7 +15,7 @@ import Count from './Count'
 //     const [count, setCount] = useState(0);
 //   return (
 //     <div>
-//         <Count count={count} setCount={setCount}/>
+//         <Count count={count} setCount={setCount} />
 //     </div>
 //   )
 // }
@@ -43,11 +43,10 @@ export default function UseReducerHook() {
     const [count, setCount] = useState(0);
     const increment = () => setCount((count) => count + 1);
   return (
-    <div>
-        <Count count={count} increment={increment} />
-    </div>
+    <div><Count count={count} increment={increment} /></div>
   )
 }
+
 
 
 

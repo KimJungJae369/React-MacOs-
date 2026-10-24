@@ -24,13 +24,11 @@ export default function User(props : UserType) {
   } = props;
   return (
     <div>
-      <p>name : {name}</p>
-      <p>age : {age}</p>
-      <p>body : {body}</p>
-      <button onClick={Handler}>click</button>
+        <p>name : {name}</p>
+        <p>age : {age}</p>
+        <p>body : {body}</p>
+        <button onClick={Handler}>click</button>
     </div>
   )
 }
-
-
 

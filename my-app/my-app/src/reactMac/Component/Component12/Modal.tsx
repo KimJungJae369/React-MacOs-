@@ -1,34 +1,35 @@
 // import React from 'react'
 
-// type MadalType = {
+// type ModalType = {
 //   title : string,
 //   price : number,
 //   brand : string,
-//   onBuy : () => void,
+//   onBuy : () => void
 //   children : React.ReactNode
 // }
 
-// export default function Modal({title, price, brand, onBuy, children} : MadalType) {
-//   const handlerClick = (e : React.MouseEvent<HTMLButtonElement>) => {
-//     const tareat = e.currentTarget as HTMLElement
-//     console.log(tareat.innerText);
+// export default function Modal({title,price,brand,onBuy,children} : ModalType) {
+//   const Buy = (e : React.MouseEvent<HTMLButtonElement>) => {
+//     const targat = e.currentTarget as HTMLElement;
+//     console.log(targat.innerText);
 //     onBuy();
 //   }
 //   return (
 //     <div>
-//       <h1>{brand}</h1>
-//       <h2>{title}</h2>
-//       <p>가격 : {price.toLocaleString()}원</p>
-//       <p>추가 정보 : {React.Children.count(children)}</p>
-//       {children}
-//       <button onClick={handlerClick}>구매하기</button>
+//         <h1>{title}</h1>
+//         <p>{brand}</p>
+//         <h2>가격 : {price.toLocaleString()}원</h2>
+//         <p>추가 정보 : {React.Children.count(children)}</p>
+//         {children}
+//         <button onClick={Buy}>click</button>
 //     </div>
 //   )
 // }
 
+
 import React from 'react'
 
-type MadalType = {
+type ModalType = {
   title : string,
   price : number,
   brand : string,
@@ -36,25 +37,20 @@ type MadalType = {
   children : React.ReactNode
 }
 
-export default function Modal({
-title
-,price
-,brand
-,onBuy
-,children} : MadalType) {
-  const handlerClick = (e : React.MouseEvent<HTMLButtonElement>) => {
-    const targe = e.currentTarget as HTMLElement;
-    console.log(targe.innerText);
+export default function Modal({title,price,brand,onBuy,children} : ModalType) {
+  const Buy = (e : React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.currentTarget as HTMLElement;
+    console.log(target.innerText);
     onBuy();
   }
   return (
     <div>
-      <h1>{brand}</h1>
-      <h2>{title}</h2>
-      <p>가격 : {price.toLocaleString()}원</p>
-      <p>추가 정보 : {React.Children.count(children)}</p>
-      {children}
-      <button onClick={handlerClick}>클릭</button>
+        <h1>{title}</h1>
+        <p>{brand}</p>
+        <h2>가격 : {price.toLocaleString()}원</h2>
+        <p>추가 정보 : {React.Children.count(children)}</p>
+        {children}
+        <button onClick={Buy}>click</button>
     </div>
   )
 }

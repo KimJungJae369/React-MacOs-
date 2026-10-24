@@ -10,7 +10,7 @@ interface UserType{
   Obj : {
     name : string,
     age : number,
-    body : string
+    body : stirng
   }
   Handler : () => void;
 }

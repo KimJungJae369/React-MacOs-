@@ -15,7 +15,10 @@ export default function TailwindCssStyle() {
 
             }}
         >일반 버튼</button>
+
         <br /><br /><br />
+
+        
         <button
             className="bg-transparent border-2 border-red-500 text-red-500 py-2 px-4 cursor-pointer"
         >

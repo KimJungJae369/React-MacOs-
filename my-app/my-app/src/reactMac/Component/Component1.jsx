@@ -51,19 +51,18 @@
 // }
 // // Footer 컴포넌트 : 저작권 정보, 연락처
 
-function  Header(){
+function Header(){
   return(
     <header>
       <h1>Header</h1>
-      <Nav></Nav>
     </header>
   )
 }
 
-function  Nav(){
+function Nav(){
   return(
     <nav>
-      <h2>nav</h2>
+      <h2>Nav</h2>
     </nav>
   )
 }
@@ -79,7 +78,8 @@ function Article(){
 function Section(){
   return(
     <section>
-      <h4>Section</h4>
+      <h4>Seciton</h4>
+      <Nav />
     </section>
   )
 }
@@ -94,7 +94,9 @@ function Aside(){
 
 function Footer(){
   return(
-    <h6>Footer</h6>
+    <footer>
+      <h6>Footer</h6>
+    </footer>
   )
 }
 

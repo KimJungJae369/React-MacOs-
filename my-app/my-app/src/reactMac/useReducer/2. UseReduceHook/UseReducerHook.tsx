@@ -1,5 +1,5 @@
 import { useReducer } from 'react'
-import { counterReducer } from './counterReducer'
+import  counterReducer  from './counterReducer'
 
 // export default function UseReducerHook() {
 //     const [count, countDispatch] = useReducer(counterReducer, 0);
@@ -18,9 +18,9 @@ export default function UseReducerHook() {
   return (
     <div>
         <h1>Count : {count}</h1>
-        <button onClick={() => countDispatch({type : 'INCREMENT'})}>INCREMENT</button>
-        <button onClick={() => countDispatch({type : 'RESET'})}>RESET</button>
-        <button onClick={() => countDispatch({type : 'DECREMENT'})}>DECREMENT</button>
+        <button onClick={() => countDispatch({type : "INCREMENT"})}>INCREMENT</button>
+        <button onClick={() => countDispatch({type : "RESET"})}>RESET</button>
+        <button onClick={() => countDispatch({type : "DECREMENT"})}>DECREMENT</button>
     </div>
   )
 }

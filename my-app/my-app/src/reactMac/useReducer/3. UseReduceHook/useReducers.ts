@@ -5,6 +5,7 @@
 // export function userReducer(state: typeof initialUser, action: { type: string; payload?: any }) { 
 	// state : 현재 사용자 상태 객체, action : 액션 객체로 type 속성과 선택적으로 payload 속성을 포함한다
 	// payload?: any  : 액션 객체의 payload 속성은 선택적이며, 액션에 따라 필요한 경우에만 포함될 수 있다
+	// payload : any : 액션에 따라 다양한 형태의 데이터를 전달할 수 있는 속성으로, 사용자 정보를 업데이트할 때 사용된다
 	// any : payload의 타입이 명확하지 않거나 다양한 형태의 데이터를 허용할 때 사용되는 타입이다
 
 // 	switch (action.type) {
@@ -20,10 +21,10 @@
 
 export const initialUser = {name : ''}
 export function userReducer(state : typeof initialUser, action : {type : string; payload? : any}){
-  switch (action.type) {
-	  case 'SET_USER':
-		  return { ...state, ...action.payload };
-    default:
-	    return state;
-  }
+	switch(action.type){
+		case 'SET_USER' : 
+			return {...state, ...action.payload};
+		default : 
+			return state;
+	}
 }

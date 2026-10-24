@@ -1,39 +1,98 @@
+// type HeaderType = {
+//   title : string
+// }
+
+// function Header({title} : HeaderType){
+//   return <h1>{title}</h1>
+// }
+
+// type Subtype = {
+//   id : number,
+//   name : string,
+//   age : number
+// }
+
+// type SectionType = {
+//   lists : Subtype[];
+// }
+
+// function Section({lists} : SectionType){
+//   return(
+//     <ul>
+//       {lists.map((item) => (
+//         <li key={item.id}>
+//           {item.name} : {item.age}
+//         </li>
+//       ))}
+//     </ul>
+//   )
+// }
+
+// type FooterType = {
+//   footers : string
+// }
+
+// function Footer({footers} : FooterType){
+//   return <h2>{footers}</h2>
+// }
+
+// export default function Text() {
+//   const list = [
+//     { id: 1, name: 'Jone', age: 20 },
+//     { id: 2, name: 'Hund', age: 25 },
+//     { id: 3, name: 'Jena', age: 24 },
+//   ]
+
+//   return (
+//     <div style={{ border: '1px solid #fff' }}>
+//       <Header title="Header"/>
+//       <Section lists={list}/>
+//       <Footer footers='Footer'/>
+//     </div>
+//   )
+// }
+
+
 type HeaderType = {
-  title : string,
+  title : string
 }
 
 function Header({title} : HeaderType){
-  return <p>{title}</p>
+  return(
+    <h1>{title}</h1>
+  )
 }
 
-type subType = {
+type SubType = {
   id : number,
   name : string,
   age : number
 }
 
 type SectionType = {
-  lists : subType[];
+  lists : SubType[];
 }
 
-function Section({lists} : SectionType){
-  return(
+function Section({ lists }: SectionType) {
+  return (
     <ul>
       {lists.map((item) => (
-          <li key={item.id}>
-            {item.name} : {item.age}
-          </li>
+        <li key={item.id}>
+          {item.name} : {item.age}
+        </li>
       ))}
     </ul>
+  );
+}
+
+type FooterType = {
+  footers : string,
+}
+
+function Footer({footers} : FooterType){
+  return(
+    <h2>{footers}</h2>
   )
-}
-
-type Footer = {
-  footers : string
-}
-
-function Footer({footers} : Footer){
-  return <p>{footers}</p>
 }
 
 export default function Text() {
@@ -42,6 +101,7 @@ export default function Text() {
     { id: 2, name: 'Hund', age: 25 },
     { id: 3, name: 'Jena', age: 24 },
   ]
+
 
   return (
     <div style={{ border: '1px solid #fff' }}>

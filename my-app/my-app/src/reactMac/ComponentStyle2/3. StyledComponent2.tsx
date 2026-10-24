@@ -72,5 +72,5 @@ export default function StyledComponent2() {
 
         Tip)
             - 2025년 3월 'styled-components' 공식 팀은 새로운 기능 개발을 중단하고 버그 수정 및 보안 패치와 같은 유지보수에만 집중하겠다고 발표
-            - 따라서 현재 시점에서는 새로운 프로젝트에 'styled-components'를 사용하는 것은 권장하지 않는다 
+            - 따라서 현재 시점에서는 새로운 프로젝트에 'styled-components'를 사용하는 것은 권장하지 않는다
 */

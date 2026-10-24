@@ -28,8 +28,8 @@ export default function UseReducerHook() {
     const reset = () => setCount(0);
     return (
         <div>
-            <CountDisplay  count={count}/>
-            <ConutButton  incerement={incerement} decrement={decrement} reset={reset}/>
+            <CountDisplay count={count}/>
+            <ConutButton incerement={incerement} decrement={decrement} reset={reset}/>
         </div>
     )
 }

@@ -1,13 +1,14 @@
-import CommentCard from './CommentCard'
+import CommentCard from './CommentCard';
 
 export default function Text() {
   const handleBuy = () => {
-    console.log('구매 완료')
-  }
+    console.log('구매 완료: MacBook Pro 14');
+  };
 
   const handleCardClick = () => {
-    console.log('상품 카드 클릭')
-  }
+    console.log('상품 카드 버블링');
+  };
+
   return (
     <div>
       <CommentCard
@@ -22,7 +23,7 @@ export default function Text() {
         <p>512GB SSD</p>
       </CommentCard>
     </div>
-  )
+  );
 }
 
 

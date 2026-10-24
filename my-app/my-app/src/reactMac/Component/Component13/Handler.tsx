@@ -44,6 +44,8 @@
 
 
 
+
+
 // 2. 함수 참조 방식
 // export default function Handler() {
 //     const clickHeandler = () => {
@@ -128,11 +130,11 @@
 import React from 'react'
 
 export default function Handler() {
-    const handlerClick = (title : string) => {
+    const handlerClilck = (title : string) => {
         console.log(title);
-    }
+    } 
   return (
-    <button onClick={() => handlerClick('함수참조 + 매개변수')}>Handler</button>
+    <button onClick={() => handlerClilck('Hello')}>Handler</button>
   )
 }
 

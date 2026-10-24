@@ -62,24 +62,27 @@
 //   )
 // }
 
-import {css} from '@emotion/css';
-export default function Emotion(){
-    const isAction = true;
-    return(
-        <div>
-            <button
-                className={css`
-                    backgroundColor : ${isAction ? 'red' : 'transparent'}
-                    border-radius : 3px;
-                    border : 2px solid #fff;
-                    color : ${isAction ? 'blue' : '#fff'};
-                    margin : 0.1em;
-                    padding : 0.25em 1em;
-                `}
-            >click</button>
-        </div>
-    )
+import React from 'react'
+import { css } from '@emotion/css'
+
+export default function Emotion() {
+    const trues = true;
+  return (
+    <div>
+        <button
+            className={css`
+                background : ${trues ? 'red' : 'transparent'}
+                border-radius : 3px;
+                border : 2px solid #fff;
+                color : ${trues ? 'blue' : '#fff'}
+                margin : 0.1em;
+                padding : 0.25em 1em;
+            `}
+        >click</button>
+    </div>
+  )
 }
+
 
 /*
     emotion
