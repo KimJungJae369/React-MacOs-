@@ -20,11 +20,11 @@
 
 
 export const initialUser = {name : ''}
-export function userReducer(state : typeof initialUser, action : {type : string; payload? : any}){
-	switch(action.type){
+export function userReducer(state : typeof initialUser, aciton : {type : string; payload? : any}){
+	switch(aciton.type){
 		case 'SET_USER' : 
-			return {...state, ...action.payload};
-		default : 
+			return {...state, ...aciton.payload}
+		default : 	
 			return state;
 	}
 }

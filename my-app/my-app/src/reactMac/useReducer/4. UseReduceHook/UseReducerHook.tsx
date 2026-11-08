@@ -27,7 +27,6 @@ import Count from './Count'
 
 
 
-
 // 두 번째 방법
 // export default function UseReducerHook() {
 //     const [count, setCount] = useState(0);
@@ -41,12 +40,13 @@ import Count from './Count'
 
 export default function UseReducerHook() {
     const [count, setCount] = useState(0);
-    const increment = () => setCount((count) => count + 1);
+    const increment = () => setCount(prev => prev + 1)
   return (
-    <div><Count count={count} increment={increment} /></div>
+    <div>
+        <Count count={count} increment={increment} />
+    </div>
   )
 }
-
 
 
 

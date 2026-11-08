@@ -3,7 +3,7 @@ import React from 'react'
 export default function React2() {
   return (
     <div>
-             <>
+            <>
             {/* 
                 <React>
                 = 사용자 인터페이스(UI : User Interface)를 구축하기 위한 JavaScript 라이브러리

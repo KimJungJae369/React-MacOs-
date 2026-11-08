@@ -19,6 +19,8 @@
 // }
 
 // import { css } from '@emotion/css'
+// import React from 'react'
+
 // export default function Emotion() {
 //   return (
 //     <div>
@@ -31,7 +33,7 @@
 //                 margin : 0.1em;
 //                 padding : 0.25em 1em;
 //             `}
-//         >click</button>
+//         >Click Me</button>
 //     </div>
 //   )
 // }
@@ -62,26 +64,25 @@
 //   )
 // }
 
-import React from 'react'
 import { css } from '@emotion/css'
+import React from 'react'
 
 export default function Emotion() {
-    const trues = true;
+    const isAction = true;
   return (
     <div>
-        <button
-            className={css`
-                background : ${trues ? 'red' : 'transparent'}
-                border-radius : 3px;
-                border : 2px solid #fff;
-                color : ${trues ? 'blue' : '#fff'}
-                margin : 0.1em;
-                padding : 0.25em 1em;
-            `}
-        >click</button>
+        <button className={css`
+            background : ${isAction ? 'red' : 'transparent'};
+            border-radius : 10px;
+            border : 2px solid #fff;
+            color : ${isAction ? 'white' : 'gray'};
+            margin : 0.1em;
+            padding : 0.25em 1em;
+        `}>button</button>
     </div>
   )
 }
+
 
 
 /*

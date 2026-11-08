@@ -25,9 +25,9 @@ export default function UseStateHook2() {
     const [gender, setGender] = useState<string | null>(null);
 
     const [all, setAll] = useState({
-        name : 'KimJungJae',
+        name : '홍길동',
         age : 31,
-        gernder : "mem"
+        gedner : '남자'
     });
 }
 /*

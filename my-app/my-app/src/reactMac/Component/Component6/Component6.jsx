@@ -23,11 +23,12 @@ export default function Component6() {
   return (
     <div>
       <Header />
-      <Main />
-      <Footer />
+      <Main/>
+      <Footer/>
     </div>
   )
 }
+
 
 
 

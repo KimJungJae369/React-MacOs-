@@ -28,21 +28,24 @@ import {use, useState} from 'react'
 //     )
 // }
 
+// import React from 'react'
+
 // export default function UseStateHook3() {
-//     const [name, setName] = useState<string | null>(null);
-//     const [age, setAge] = useState<number | null>(null);
-//     const [gender, setGender] = useState<string | null>(null);
+//     const [name, setName] = useState(null);
+//     const [age, setAge] = useState(null);
+//     const [gender, setGender] = useState(null);
+
 //     const handlerClick = () => {
-//         setName('홍길동');
-//         setAge(31);
-//         setGender('남성');
+//         setName('Maike'),
+//         setAge(30), 
+//         setGender('Male')
 //     }
 //   return (
 //     <div>
-//         <p>name : {name}</p>
-//         <p>age : {age}</p>
-//         <p>gender : {gender}</p>
-//         <button onClick={handlerClick}>click</button>
+//         <p>이름 : {name}</p>
+//         <p>나이 : {age}</p>
+//         <p>성별 : {gender}</p>
+//         <button onClick={handlerClick}>변경</button>
 //     </div>
 //   )
 // }
@@ -90,7 +93,6 @@ import {use, useState} from 'react'
 // export default function UseStateHook3() {
 //     const [count, setCount] = useState(0);
 //     const handlerClick = () => {
-//         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
 //         setCount(count + 1);
@@ -152,24 +154,6 @@ import {use, useState} from 'react'
 //     )
 // }'
 
-import React from 'react'
-
-export default function UseStateHook3() {
-    const [count, setCount] = useState(0);
-    const handlerClick = () => {
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-        setCount(count => count + 1);
-    }
-  return (
-    <div>
-        <h1>Count : {count}</h1>
-        <button onClick={handlerClick}>click</button>
-    </div>
-  )
-}
 
 
 
@@ -193,7 +177,23 @@ export default function UseStateHook3() {
 //     )
 // }
 
+import React from 'react'
 
+export default function UseStateHook3() {
+    const [count, setCount] = useState(0);
+    const handlerClick = () => {
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+    }
+  return (
+    <div>
+        <h1>Count : {count}</h1>
+        <button onClick={handlerClick}>click</button>
+    </div>
+  )
+}
 
 
 

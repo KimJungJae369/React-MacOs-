@@ -1,33 +1,47 @@
-// import { useReducer } from "react";
-// import counterReducer from "./counterReducer.ts";
-// import { userReducer, initialUser } from './useReducer.ts';
-// import { cartReducer as CartReducer, CartItem } from './cartReducer .ts';
+// import { useReducer } from 'react'
+// import counterReducer from './counterReducer'
+// import { userReducer, initialUser } from './useReducers'
+// import { cartReducer, type CartItem } from './cartReducer'
 
-// export default function      UseReducerHook() {
-//     // 카운터 상태 관리
-//     const [count, countDispatch] = useReducer(counterReducer, 0);
+// export default function UseReducerHook() {
+//   // 1) count 상태를 관리하는 reducer
+//   // - counterReducer를 사용해서 숫자를 관리함
+//   // - INCREMENT 액션이 오면 숫자 1이 증가함
+//   // const [count, countDispatch] = useReducer(counterReducer, 0)
 
-//     // 사용자 상태 관리
-//     const [user, userDispatch] = useReducer(userReducer, initialUser);
+//   // 2) user 상태를 관리하는 reducer
+//   // - userReducer를 사용해서 사용자 정보를 관리함
+//   // - SET_USER 액션이 오면 name 값을 'Alice'로 바꿈
+//   // const [user, userDispatch] = useReducer(userReducer, initialUser)
 
-//     // 장바구니 상태 관리
-//     const [cart, cartDispatch] = useReducer(CartReducer, [] as CartItem[]); 
-//     return (
-//         <>
-//             <h1>Count : {count}</h1>
-//             <button onClick={() => countDispatch({ type: "INCREMENT" })}>Increment</button>
+//   // 3) cart 상태를 관리하는 reducer
+//   // - cartReducer를 사용해서 장바구니 배열을 관리함
+//   // - ADD_ITEM 액션이 오면 상품을 배열에 추가함
+//   // - [] as CartItem[] 는 빈 배열을 CartItem 타입의 배열로 지정하는 문법
+//   // const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[])
 
-//             <br />
+//   const [count, countDispatch] = useReducer(counterReducer, 0)
+//   const [user, userDispatch] = useReducer(userReducer, initialUser)
+//   const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[])
 
-//             <h2>User : {user.name}</h2>
-//             <button onClick={() => userDispatch({type : 'SET_USER', payload : {name : 'Alice'}})}>Set User</button>
+//   return (
+//     <div>
+//       {/* count 상태 화면에 출력 */}
+//       <h1>Count : {count}</h1>
+//       {/* 버튼 클릭 시 INCREMENT 액션을 보냄 */}
+//       <button onClick={() => countDispatch({ type: 'INCREMENT' })}>Increment</button>
 
-//             <br />
+//       {/* user 상태 화면에 출력 */}
+//       <h2>User : {user.name}</h2>
+//       {/* 버튼 클릭 시 SET_USER 액션을 보냄 */}
+//       <button onClick={() => userDispatch({ type: 'SET_USER', payload: { name: 'Alice' } })}>Set User</button>
 
-//             <h3>Cart Items : {cart.length}</h3>
-//             <button onClick={() => cartDispatch({type : 'ADD_ITEM', payload : {id : 1, name : 'Item 1'}})}>Add Item</button>
-//         </>
-//     )
+//       {/* cart 상태의 길이를 화면에 출력 */}
+//       <h3>Cart Items : {cart.length}</h3>
+//       {/* 버튼 클릭 시 ADD_ITEM 액션을 보냄 */}
+//       <button onClick={() => cartDispatch({ type: 'ADD_ITEM', payload: { id: 1, name: 'Item 1' } })}>Add Item</button>
+//     </div>
+//   )
 // }
 
 import { useReducer } from 'react'
@@ -36,46 +50,22 @@ import { userReducer, initialUser } from './useReducers'
 import { cartReducer, type CartItem } from './cartReducer'
 
 export default function UseReducerHook() {
-  // 1) count 상태를 관리하는 reducer
-  // - counterReducer를 사용해서 숫자를 관리함
-  // - INCREMENT 액션이 오면 숫자 1이 증가함
-  // const [count, countDispatch] = useReducer(counterReducer, 0)
-
-  // 2) user 상태를 관리하는 reducer
-  // - userReducer를 사용해서 사용자 정보를 관리함
-  // - SET_USER 액션이 오면 name 값을 'Alice'로 바꿈
-  // const [user, userDispatch] = useReducer(userReducer, initialUser)
-
-  // 3) cart 상태를 관리하는 reducer
-  // - cartReducer를 사용해서 장바구니 배열을 관리함
-  // - ADD_ITEM 액션이 오면 상품을 배열에 추가함
-  // - [] as CartItem[] 는 빈 배열을 CartItem 타입의 배열로 지정하는 문법
-  // const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[])
-
-  const [count, countDispatch] = useReducer(counterReducer, 0)
-  const [user, userDispatch] = useReducer(userReducer, initialUser)
-  const [cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[])
-
+  const [count, countDispatch] = useReducer(counterReducer, 0);
+  const [user, userDispatch] = useReducer(userReducer, initialUser);
+  const [ cart, cartDispatch] = useReducer(cartReducer, [] as CartItem[]);
   return (
     <div>
-      {/* count 상태 화면에 출력 */}
-      <h1>Count : {count}</h1>
-      {/* 버튼 클릭 시 INCREMENT 액션을 보냄 */}
-      <button onClick={() => countDispatch({ type: 'INCREMENT' })}>Increment</button>
+        <h1>Count : {count}</h1>
+        <button onClick={() => countDispatch({ type: 'INCREMENT' })}>Increment</button>
 
-      {/* user 상태 화면에 출력 */}
-      <h2>User : {user.name}</h2>
-      {/* 버튼 클릭 시 SET_USER 액션을 보냄 */}
-      <button onClick={() => userDispatch({ type: 'SET_USER', payload: { name: 'Alice' } })}>Set User</button>
+        <h2>User : {user.name}</h2>
+        <button onClick={() => userDispatch({ type: 'SET_USER', payload: { name: 'Alice' } })}>Set User</button>
 
-      {/* cart 상태의 길이를 화면에 출력 */}
-      <h3>Cart Items : {cart.length}</h3>
-      {/* 버튼 클릭 시 ADD_ITEM 액션을 보냄 */}
-      <button onClick={() => cartDispatch({ type: 'ADD_ITEM', payload: { id: 1, name: 'Item 1' } })}>Add Item</button>
+        <h3>Cart Items : {cart.length}</h3>
+        <button onClick={() => cartDispatch({ type: 'ADD_ITEM', payload: { id: 1, name: 'Item 1' } })}>Add Item</button>
     </div>
   )
 }
-
 
 
 

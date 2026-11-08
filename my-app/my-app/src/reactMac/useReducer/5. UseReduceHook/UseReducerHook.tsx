@@ -26,15 +26,13 @@ export default function UseReducerHook() {
     const incerement = () => setCount(count + 1);
     const decrement = () => setCount(count - 1);
     const reset = () => setCount(0);
-    return (
-        <div>
-            <CountDisplay count={count}/>
-            <ConutButton incerement={incerement} decrement={decrement} reset={reset}/>
-        </div>
-    )
+  return (
+    <div>
+        <CountDisplay count={count} />
+        <ConutButton incerement={incerement} decrement={decrement} reset={reset} />
+    </div>
+  )
 }
-
-
 
 
 

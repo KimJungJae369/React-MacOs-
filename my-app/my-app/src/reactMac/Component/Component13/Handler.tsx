@@ -62,13 +62,12 @@
 
 // export default function Handler() {
 //     const handlerClick = () => {
-//         console.log('함수 참조');
+//         console.log('함수참조');
 //     }
 //   return (
 //     <button onClick={handlerClick}>Handler</button>
 //   )
 // }
-
 
 
 
@@ -130,13 +129,14 @@
 import React from 'react'
 
 export default function Handler() {
-    const handlerClilck = (title : string) => {
+    const handlerClick = (title : string) => {
         console.log(title);
-    } 
+    }
   return (
-    <button onClick={() => handlerClilck('Hello')}>Handler</button>
+    <button onClick={() => handlerClick('이벤트 핸들러 매개변수')}>Handler</button>
   )
 }
+
 
 
 

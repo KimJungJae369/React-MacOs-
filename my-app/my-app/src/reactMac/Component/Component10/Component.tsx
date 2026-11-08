@@ -40,7 +40,7 @@ export default function Component() {
 
 
 /*
-    props와 전개 연산자(Deploying Operator : 디폴로이먼트 아퍼레이터)
+    props와 전개 연산자(Deploying Operator)
     = 여기서 'uerObj' 객체를 props로 전달할 때 'uerObj' 전체를 하나의 속성으로 설정해 전달
     = 따라서 'User' 컴포넌트에서 'props.uerObj'로 객체 전체에 접근할 수 있다
     = 만약 'uerObj' 객체의 속성을 각각 전달하고 싶다면 '전개연산자(...)'를 사용

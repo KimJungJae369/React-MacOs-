@@ -17,9 +17,9 @@ import React from 'react'
 export default function User(props) {
   return (
     <>  
-        <p>name : {props.Obj.name}</p>
-        <p>age : {props.Obj.age}</p>
-        <p>body : {props.Obj.body}</p>
+        <p>Name : {props.Obj.name}</p>
+        <p>Age : {props.Obj.age}</p>
+        <p>Body : {props.Obj.body}</p>
         <button onClick={props.Handler}>click</button>
     </>
   )

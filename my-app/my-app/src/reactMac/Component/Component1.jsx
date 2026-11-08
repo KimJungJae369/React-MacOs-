@@ -70,6 +70,7 @@ function Nav(){
 function Article(){
   return(
     <article>
+      <Nav />
       <h3>Article</h3>
     </article>
   )
@@ -78,8 +79,7 @@ function Article(){
 function Section(){
   return(
     <section>
-      <h4>Seciton</h4>
-      <Nav />
+      <h4>Section</h4>
     </section>
   )
 }
@@ -137,7 +137,7 @@ export default Component1
     footer : 저작권 정보, 연락처
 
   <컴포넌트 단위로 애플리케이션을 구성하면 이점>
-    1) 재사용 가능
+  1) 재사용 가능
   = 컴포넌트 여러 위치에서 반복적으로 사용
   = 에를 들어 헤더와 푸터는 대부분의 페이지에서 공통으로 사용한다 따라서 이를 컴포넌트로 분리해두면 중복 코드 없이 필요한 곳에서 쉽게 불러와서 사용할 수 있다
 

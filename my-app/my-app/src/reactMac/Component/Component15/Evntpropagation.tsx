@@ -19,7 +19,6 @@
 //     )
 // }
 
-
 // import React from 'react'
 
 // export default function Evntpropagation() {
@@ -31,16 +30,12 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <>
-//         <div 
-//             onClickCapture={handlerCaptrue}
-//             style={{padding : 50, backgroundColor : '#0f0f0f'}}
-//         >Parent
-//             <button onClick={handlerBubble} style={{marginLeft : 20,}}>Click Me</button>
-//         </div>
-//     </>
+//     <div onClickCapture={handlerCaptrue}>
+//         <button onClick={handlerBubble}>click</button>
+//     </div>
 //   )
 // }
+
 
 
 
@@ -114,6 +109,7 @@
 //     )
 // }
 
+
 // import React from 'react'
 
 // export default function Evntpropagation() {
@@ -125,14 +121,9 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <>
-//         <div 
-//             onClick={handlerCaptrue}
-//             style={{padding : 50, backgroundColor : '#0f0f0f'}}
-//         >Parent
-//             <button onClick={handlerBubble} style={{marginLeft : 20,}}>Click Me</button>
-//         </div>
-//     </>
+//     <div onClick={handlerCaptrue}>
+//         <button onClick={handlerBubble}>click</button>
+//     </div>
 //   )
 // }
 
@@ -221,14 +212,9 @@
 //         console.log('자식');
 //     }
 //   return (
-//     <>
-//         <div 
-//             onClick={handlerCaptrue}
-//             style={{padding : 50, backgroundColor : '#0f0f0f'}}
-//         >Parent
-//             <button onClick={handlerBubble} style={{marginLeft : 20,}}>Click Me</button>
-//         </div>
-//     </>
+//     <div onClick={handlerCaptrue}>
+//         <button onClick={handlerBubble}>click</button>
+//     </div>
 //   )
 // }
 
@@ -362,7 +348,7 @@ export default function Evntpropagation() {
             - 웹 브라우저 콘솔창을 보면 'Parent' -> 'Child' 순서로 출력됨
 
         2. 버블링
-        = 이벤트가 '자식 요소'에서 '부모 요소'로 전파되는 방식
+        = 이벤트가 '자식 요소'에서 '부모 요소'로 올라가는 전파되는 방식
         = 예를 들어 '<button>' 요소에서 발생한 클릭 이벤트는 해당 버튼을 포함한 '<div>, <body>, <html>' 요소로 차례대로 전달
         = 리액트에서는 '버블링이 기본 동작이므로 '캡처링' 처럼 'Captrue' 수식어가 붙은 별도의 이벤트를 속성이 필요하지 않는다
         = 이벤트 속성 이름을 그대로 사용하면 된다

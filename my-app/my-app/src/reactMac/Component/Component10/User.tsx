@@ -20,17 +20,16 @@ import React from 'react'
 type UserType = {
   name : string,
   age : number,
-  body : string
-  Handler : () => void
+  body : string,
+  Handler : () => void;
 }
 
-export default function User(props : UserType) {
-  const {name, age, body, Handler} = props;
+export default function User({name, age, body, Handler} : UserType) {
   return (
     <div>
-        <p>name : {name}</p>
-        <p>age : {age}</p>
-        <p>body : {body}</p>
+        <p>Name : {name}</p>
+        <p>Age : {age}</p>
+        <p>Body : {body}</p>
         <button onClick={Handler}>click</button>
     </div>
   )
